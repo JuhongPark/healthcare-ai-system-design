@@ -13,31 +13,93 @@ Format, once a real reference is added:
 
 ## Drug efficacy evaluation
 
-- TODO: add foundational references on trial design and
-  endpoints.
-- TODO: add references on heterogeneity of treatment effect.
-- TODO: add references on safety signaling.
+- ICH. *ICH E9(R1) Addendum on Estimands and Sensitivity
+  Analysis in Clinical Trials.* ICH, 2019.
+  - Regulatory framework defining how trial objectives
+    translate into estimands and sensitivity analyses.
+  - Track 1: foundational standard for efficacy endpoints.
+- Kent DM, Steyerberg EW, van Klaveren D. *Personalized
+  evidence based medicine: predictive approaches to
+  heterogeneous treatment effects.* BMJ, 2018; 363:k4245.
+  - Reviews risk-based approaches for predicting HTE at
+    the individual patient level.
+  - Track 1: why average treatment effects can mislead.
+- Kent DM, Paulus JK, van Klaveren D, et al. *The Predictive
+  Approaches to Treatment effect Heterogeneity (PATH)
+  Statement.* Annals of Internal Medicine, 2020; 172(1):35-45.
+  - Consensus guidance recommending routine HTE examination
+    using baseline risk as the primary dimension.
+  - Track 1: methodological standard for HTE in trials.
 
 ## Real-world evidence and observational healthcare data
 
-- TODO: add overviews of real-world evidence frameworks.
-- TODO: add methodological papers on cohort construction.
-- TODO: add empirical comparisons of observational and trial
-  estimates.
+- U.S. FDA. *Framework for FDA's Real-World Evidence Program.*
+  FDA, 2018.
+  - Defines when and how RWE from EHR, claims, and registries
+    can support regulatory decisions.
+  - Track 1: foundational regulatory document for RWE.
+- Hripcsak G, Duke JD, Shah NH, et al. *Observational Health
+  Data Sciences and Informatics (OHDSI): Opportunities for
+  Observational Researchers.* Studies in Health Technology and
+  Informatics, 2015; 216:574-578.
+  - Introduces the OHDSI collaborative and OMOP-based
+    infrastructure for reproducible observational studies.
+  - Track 1: largest international RWE data infrastructure.
+- Hernan MA, Robins JM. *Using Big Data to Emulate a Target
+  Trial When a Randomized Trial Is Not Available.* American
+  Journal of Epidemiology, 2016; 183(8):758-764.
+  - Formalizes target trial emulation for designing rigorous
+    causal studies from observational data.
+  - Track 1: foundational cohort construction methodology.
 
 ## Comparative effectiveness and treatment outcomes
 
-- TODO: add methodological reviews.
-- TODO: add case studies where comparator choice changed the
-  conclusion.
-- TODO: add frameworks for clinical utility.
+- Lund JL, Richardson DB, Sturmer T. *The Active Comparator,
+  New User Study Design in Pharmacoepidemiology.* Current
+  Epidemiology Reports, 2015; 2:221-228.
+  - Reviews the ACNU design for reducing confounding by
+    indication by comparing active treatment initiators.
+  - Track 1: standard design for observational CER.
+- Concato J, Shah N, Horwitz RI. *Randomized, Controlled
+  Trials, Observational Studies, and the Hierarchy of Research
+  Designs.* NEJM, 2000; 342(25):1887-1892.
+  - Shows well-designed observational studies do not
+    systematically overestimate treatment effects vs. RCTs.
+  - Track 1: landmark challenge to the rigid evidence hierarchy.
+- Schneeweiss S, Rassen JA, Glynn RJ, et al. *High-dimensional
+  Propensity Score Adjustment in Studies of Treatment Effects
+  Using Health Care Claims Data.* Epidemiology, 2009;
+  20(4):512-522.
+  - Algorithm that empirically identifies hundreds of potential
+    confounders from claims data for propensity score models.
+  - Track 1: scalable confounder adjustment for claims data.
 
 ## Causal inference and association limits
 
-- TODO: add textbook references on causal inference.
-- TODO: add papers on propensity score methods and their
-  failures.
-- TODO: add papers on negative controls and bias detection.
+- Rosenbaum PR, Rubin DB. *The Central Role of the Propensity
+  Score in Observational Studies for Causal Effects.* Biometrika,
+  1983; 70(1):41-55.
+  - Proves conditioning on the propensity score removes bias
+    from all observed covariates.
+  - Track 1: foundational paper for propensity score methods.
+- VanderWeele TJ, Ding P. *Sensitivity Analysis in
+  Observational Research: Introducing the E-Value.* Annals of
+  Internal Medicine, 2017; 167(4):268-274.
+  - Introduces the E-value for quantifying robustness to
+    unmeasured confounding.
+  - Track 1: practical sensitivity analysis tool.
+- Lipsitch M, Tchetgen Tchetgen E, Cohen T. *Negative Controls:
+  A Tool for Detecting Confounding and Bias in Observational
+  Studies.* Epidemiology, 2010; 21(3):383-388.
+  - Formalizes negative control exposures and outcomes as
+    diagnostic tools for unmeasured confounding.
+  - Track 1: standard falsification check for observational
+    studies.
+- Hernan MA, Robins JM. *Causal Inference: What If.* Chapman &
+  Hall/CRC, 2020.
+  - Comprehensive textbook covering counterfactual theory,
+    causal diagrams, IPW, and target trial emulation.
+  - Track 1: definitive reference for modern causal inference.
 
 ## Precision medicine
 

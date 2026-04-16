@@ -24,11 +24,11 @@ can and cannot contribute.
 - How is safety signaling handled, both within trials and after
   approval?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: foundational references on trial design and endpoints.
-- TODO: references on heterogeneity of treatment effect.
-- TODO: references on safety signal evaluation.
+- ICH. *ICH E9(R1) Addendum on Estimands and Sensitivity Analysis in Clinical Trials.* 2019.
+- Kent DM et al. *Personalized evidence based medicine: predictive approaches to heterogeneous treatment effects.* BMJ, 2018.
+- Kent DM et al. *The Predictive Approaches to Treatment effect Heterogeneity (PATH) Statement.* Annals of Internal Medicine, 2020.
 
 ## Real-world evidence and observational healthcare data
 
@@ -46,12 +46,11 @@ and dismissing the data wholesale.
 - What roles do registries, claims, and electronic health
   records play, and how do their biases differ?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: overviews of real-world evidence frameworks.
-- TODO: methodological papers on cohort construction.
-- TODO: empirical comparisons of observational and trial
-  estimates.
+- U.S. FDA. *Framework for FDA's Real-World Evidence Program.* 2018.
+- Hripcsak G et al. *OHDSI: Opportunities for Observational Researchers.* Studies in Health Technology and Informatics, 2015.
+- Hernan MA, Robins JM. *Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available.* American Journal of Epidemiology, 2016.
 
 ## Comparative effectiveness and treatment outcomes
 
@@ -69,13 +68,11 @@ decision making rather than regulatory approval.
 - How is clinical utility distinguished from statistical
   significance?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: methodological reviews of comparative effectiveness
-  research.
-- TODO: case studies where comparator choice changed the
-  conclusion.
-- TODO: frameworks for clinical utility.
+- Lund JL et al. *The Active Comparator, New User Study Design in Pharmacoepidemiology.* Current Epidemiology Reports, 2015.
+- Concato J et al. *Randomized, Controlled Trials, Observational Studies, and the Hierarchy of Research Designs.* NEJM, 2000.
+- Schneeweiss S et al. *High-dimensional Propensity Score Adjustment in Studies of Treatment Effects Using Health Care Claims Data.* Epidemiology, 2009.
 
 ## Causal inference and association limits
 
@@ -92,11 +89,12 @@ the core honesty of this line of work.
 - When are negative controls and E-values useful, and when do
   they mislead?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: textbook references on causal inference.
-- TODO: papers on propensity score methods and their failures.
-- TODO: papers on negative controls and bias detection.
+- Rosenbaum PR, Rubin DB. *The Central Role of the Propensity Score in Observational Studies for Causal Effects.* Biometrika, 1983.
+- VanderWeele TJ, Ding P. *Sensitivity Analysis in Observational Research: Introducing the E-Value.* Annals of Internal Medicine, 2017.
+- Lipsitch M et al. *Negative Controls: A Tool for Detecting Confounding and Bias in Observational Studies.* Epidemiology, 2010.
+- Hernan MA, Robins JM. *Causal Inference: What If.* Chapman & Hall/CRC, 2020.
 
 ## Precision medicine
 
