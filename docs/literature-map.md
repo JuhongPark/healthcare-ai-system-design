@@ -111,11 +111,13 @@ reviews.
   have not?
 - How is uncertainty communicated to patients and clinicians?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: overviews of precision medicine concepts.
-- TODO: critical reviews of precision medicine claims.
-- TODO: patient-communication studies.
+- Collins FS, Varmus H. *A New Initiative on Precision Medicine.* NEJM, 2015.
+- Ashley EA. *Towards Precision Medicine.* Nature Reviews Genetics, 2016.
+- Relling MV, Evans WE. *Pharmacogenomics in the Clinic.* Nature, 2015.
+- Miotto R et al. *Deep Patient: An Unsupervised Representation to Predict the Future of Patients from the EHR.* Scientific Reports, 2016.
+- Topol EJ. *High-Performance Medicine: The Convergence of Human and Artificial Intelligence.* Nature Medicine, 2019.
 
 ## Multimodal healthcare data integration
 
@@ -132,11 +134,13 @@ those integration problems.
   medical settings?
 - How is cross-modality validation designed?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: reviews of multimodal medical learning.
-- TODO: papers on missing-modality robustness.
-- TODO: papers on cross-site and cross-modality validation.
+- Acosta JN et al. *Multimodal Biomedical AI.* Nature Medicine, 2022.
+- Baltrusaitis T et al. *Multimodal Machine Learning: A Survey and Taxonomy.* IEEE TPAMI, 2019.
+- Stahlschmidt SR et al. *Multimodal Deep Learning for Biomedical Data Fusion: A Review.* Briefings in Bioinformatics, 2022.
+- Chen RJ et al. *Pan-Cancer Integrative Histology-Genomic Analysis via Multimodal Deep Learning.* Cancer Cell, 2022.
+- Lipkova J et al. *Artificial Intelligence for Multimodal Data Integration in Oncology.* Cancer Cell, 2022.
 
 ## Clinical decision support and workflow integration
 

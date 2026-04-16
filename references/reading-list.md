@@ -103,15 +103,75 @@ Format, once a real reference is added:
 
 ## Precision medicine
 
-- TODO: add overviews of precision medicine concepts.
-- TODO: add critical reviews.
-- TODO: add patient-communication studies.
+- Collins FS, Varmus H. *A New Initiative on Precision
+  Medicine.* NEJM, 2015; 372:793-795.
+  - Outlines the U.S. Precision Medicine Initiative and the
+    case for genomic and clinical data in individualized care.
+  - Track 2: foundational policy statement for precision
+    medicine.
+- Ashley EA. *Towards Precision Medicine.* Nature Reviews
+  Genetics, 2016; 17:507-522.
+  - Reviews technical and conceptual hurdles for integrating
+    genome sequencing into clinical decision-making.
+  - Track 2: comprehensive review of genomics-driven
+    patient-level prediction.
+- Relling MV, Evans WE. *Pharmacogenomics in the Clinic.*
+  Nature, 2015; 526:343-350.
+  - Synthesizes evidence for actionable pharmacogenes and
+    barriers to translating pharmacogenomics into prescribing.
+  - Track 2: pharmacogenomics implementation in routine care.
+- Miotto R, Li L, Kidd BA, Dudley JT. *Deep Patient: An
+  Unsupervised Representation to Predict the Future of Patients
+  from the Electronic Health Records.* Scientific Reports, 2016;
+  6:26094.
+  - Demonstrates deep learning on EHR data from ~700K patients
+    for general-purpose disease prediction.
+  - Track 2: early deep learning approach to patient-level risk
+    stratification from clinical records.
+- Topol EJ. *High-Performance Medicine: The Convergence of
+  Human and Artificial Intelligence.* Nature Medicine, 2019;
+  25:44-56.
+  - Reviews AI capabilities at clinician, health system, and
+    patient levels, noting bias and transparency limitations.
+  - Track 2: authoritative overview connecting AI to
+    individualized care.
 
 ## Multimodal healthcare data integration
 
-- TODO: add reviews of multimodal medical learning.
-- TODO: add papers on missing-modality robustness.
-- TODO: add papers on cross-site and cross-modality validation.
+- Acosta JN, Falcone GJ, Rajpurkar P, Topol EJ. *Multimodal
+  Biomedical AI.* Nature Medicine, 2022; 28:1773-1784.
+  - Surveys the landscape of multimodal AI in health,
+    identifying data heterogeneity and privacy as principal
+    barriers.
+  - Track 2: leading review of biomedical multimodal fusion
+    challenges.
+- Baltrusaitis T, Ahuja C, Morency L-P. *Multimodal Machine
+  Learning: A Survey and Taxonomy.* IEEE TPAMI, 2019;
+  41(2):423-443.
+  - Proposes a taxonomy of five core multimodal ML challenges:
+    representation, translation, alignment, fusion, co-learning.
+  - Track 2: foundational methodological taxonomy for fusion
+    work.
+- Stahlschmidt SR, Ulfenborg B, Synnergren J. *Multimodal Deep
+  Learning for Biomedical Data Fusion: A Review.* Briefings in
+  Bioinformatics, 2022; 23(2):bbab569.
+  - Reviews deep fusion strategies for biomedical applications
+    and proposes a taxonomy of architectures.
+  - Track 2: fusion architecture selection for clinical,
+    genomic, and imaging data.
+- Chen RJ, Lu MY, Williamson DFK, et al. *Pan-Cancer
+  Integrative Histology-Genomic Analysis via Multimodal Deep
+  Learning.* Cancer Cell, 2022; 40(8):865-878.
+  - Fuses whole-slide pathology images with genomic profiles
+    across 14 cancer types for survival prediction.
+  - Track 2: large-scale demonstration of histopathology and
+    multi-omic fusion.
+- Lipkova J, Chen RJ, Chen B, et al. *Artificial Intelligence
+  for Multimodal Data Integration in Oncology.* Cancer Cell,
+  2022; 40(10):1095-1110.
+  - Reviews AI for integrating radiology, histology, genomics,
+    and EHR data, addressing missing-modality challenges.
+  - Track 2: cross-modality heterogeneity and deployability.
 
 ## Clinical decision support and workflow integration
 
