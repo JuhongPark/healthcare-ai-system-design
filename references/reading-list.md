@@ -175,21 +175,83 @@ Format, once a real reference is added:
 
 ## Clinical decision support and workflow integration
 
-- TODO: add histories and reviews of clinical decision support.
-- TODO: add post-mortems of deployed systems.
-- TODO: add studies on workflow and adoption.
+- Bates DW, Kuperman GJ, Wang S, et al. *Ten commandments for
+  effective clinical decision support: making the practice of
+  evidence-based medicine a reality.* JAMIA, 2003;
+  10(6):523-530.
+  - Distills CDS implementation experience into ten principles
+    including workflow integration and point-of-care delivery.
+  - Track 3: foundational framework for CDS design.
+- Kawamoto K, Houlihan CA, Balas EA, Lobach DF. *Improving
+  clinical practice using clinical decision support systems: a
+  systematic review of trials to identify features critical to
+  success.* BMJ, 2005; 330(7494):765.
+  - Systematic review of 70 RCTs finding four features critical
+    to CDS success, including automatic workflow integration.
+  - Track 3: most cited evidence base for CDS adoption factors.
+- Middleton B, Sittig DF, Wright A. *Clinical decision support:
+  a 25 year retrospective and a 25 year vision.* Yearbook of
+  Medical Informatics, 2016; Suppl 1:S103-S116.
+  - Reviews 25 years of CDS evolution and projects a
+    forward-looking vision through 2040.
+  - Track 3: definitive historical survey of the CDS field.
 
 ## Deployment-aware AI systems
 
-- TODO: add reviews of deployment-aware machine learning.
-- TODO: add case studies of deployed medical AI systems.
-- TODO: add frameworks for validation and monitoring stages.
+- Sculley D, Holt G, Golovin D, et al. *Hidden technical debt
+  in machine learning systems.* NeurIPS, 2015.
+  - Argues real-world ML systems incur massive maintenance costs
+    from feedback loops, entanglement, and data dependencies.
+  - Track 3: foundational paper on why ML systems fail in
+    production.
+- Kelly CJ, Karthikesalingam A, Suleyman M, et al. *Key
+  challenges for delivering clinical impact with artificial
+  intelligence.* BMC Medicine, 2019; 17:195.
+  - Maps the gap between benchmark performance and real-world
+    clinical impact for healthcare AI.
+  - Track 3: position paper on deployment barriers.
+- Subbaswamy A, Saria S. *From development to deployment:
+  dataset shift, causality, and shift-stable models in health
+  AI.* Biostatistics, 2020; 21(2):345-352.
+  - Proposes a causal framework for anticipating distribution
+    shifts during model training rather than post-deployment.
+  - Track 3 and 4: shift-stable model design.
+- Beede E, Baylor E, Hersch F, et al. *A human-centered
+  evaluation of a deep learning system deployed in clinics for
+  the detection of diabetic retinopathy.* ACM CHI, 2020.
+  - Reports that Google's DR screening AI encountered
+    significant real-world deployment challenges across 11 Thai
+    clinics despite >90% lab accuracy.
+  - Track 3: canonical case study of lab-to-clinic gap.
 
 ## Human-centered AI and interpretability
 
-- TODO: add surveys of interpretability methods.
-- TODO: add user studies on explanation use.
-- TODO: add critiques of interpretability claims.
+- Ribeiro MT, Singh S, Guestrin C. *"Why should I trust you?":
+  Explaining the predictions of any classifier.* ACM KDD, 2016;
+  1135-1144.
+  - Introduces LIME for model-agnostic local explanations via
+    interpretable surrogate models.
+  - Track 3: foundational paper for local post-hoc
+    explanations.
+- Lundberg SM, Lee SI. *A unified approach to interpreting
+  model predictions.* NeurIPS, 2017; 4766-4777.
+  - Presents SHAP values as the unique additive feature
+    attribution method satisfying key axioms.
+  - Track 3: dominant feature-attribution method in clinical ML.
+- Rudin C. *Stop explaining black box machine learning models
+  for high stakes decisions and use interpretable models
+  instead.* Nature Machine Intelligence, 2019; 1:206-215.
+  - Argues post-hoc explanations are fundamentally unreliable
+    for high-stakes domains like healthcare.
+  - Track 3: most influential critique of the post-hoc
+    explanation paradigm.
+- Tonekaboni S, Joshi S, McCradden MD, Goldenberg A. *What
+  clinicians want: contextualizing explainable machine learning
+  for clinical end use.* MLHC, PMLR 106:359-380, 2019.
+  - Surveys clinicians to identify what ML explanations they
+    actually find useful, finding needs are context-dependent.
+  - Track 3: user study grounding interpretability in clinical
+    needs.
 
 ## Monitoring and dataset shift
 

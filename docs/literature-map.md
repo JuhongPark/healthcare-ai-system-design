@@ -155,11 +155,11 @@ history is useful before designing the next system.
 - Which have failed, and why?
 - How is workflow integration actually measured?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: histories and reviews of clinical decision support.
-- TODO: post-mortems of deployed systems.
-- TODO: studies on workflow and adoption.
+- Bates DW et al. *Ten commandments for effective clinical decision support.* JAMIA, 2003.
+- Kawamoto K et al. *Improving clinical practice using clinical decision support systems: a systematic review.* BMJ, 2005.
+- Middleton B et al. *Clinical decision support: a 25 year retrospective and a 25 year vision.* Yearbook of Medical Informatics, 2016.
 
 ## Deployment-aware AI systems
 
@@ -177,11 +177,12 @@ repository.
   time?
 - What is the smallest useful version of each?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: reviews of deployment-aware machine learning.
-- TODO: case studies of deployed medical AI systems.
-- TODO: frameworks for validation and monitoring stages.
+- Sculley D et al. *Hidden technical debt in machine learning systems.* NeurIPS, 2015.
+- Kelly CJ et al. *Key challenges for delivering clinical impact with artificial intelligence.* BMC Medicine, 2019.
+- Subbaswamy A, Saria S. *From development to deployment: dataset shift, causality, and shift-stable models in health AI.* Biostatistics, 2020.
+- Beede E et al. *A human-centered evaluation of a deep learning system deployed in clinics for the detection of diabetic retinopathy.* ACM CHI, 2020.
 
 ## Human-centered AI and interpretability
 
@@ -197,11 +198,12 @@ tool among several for meeting that need.
 - When does an explanation improve user decisions, and when
   does it mislead them?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: surveys of interpretability methods.
-- TODO: user studies on explanation use.
-- TODO: critiques of interpretability claims.
+- Ribeiro MT et al. *"Why should I trust you?": Explaining the predictions of any classifier.* ACM KDD, 2016.
+- Lundberg SM, Lee SI. *A unified approach to interpreting model predictions.* NeurIPS, 2017.
+- Rudin C. *Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead.* Nature Machine Intelligence, 2019.
+- Tonekaboni S et al. *What clinicians want: contextualizing explainable machine learning for clinical end use.* MLHC, 2019.
 
 ## Monitoring and dataset shift
 
