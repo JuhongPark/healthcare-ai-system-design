@@ -208,3 +208,11 @@ __marimo__/
 
 # Claude Code
 .claude/
+
+# macOS
+.DS_Store
+
+# Data (no raw or private data committed to this repo)
+data/raw/
+data/private/
+*.env
