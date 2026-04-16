@@ -255,12 +255,70 @@ Format, once a real reference is added:
 
 ## Monitoring and dataset shift
 
-- TODO: add surveys of dataset shift.
-- TODO: add papers on monitoring in healthcare AI.
-- TODO: add reports from deployed monitoring systems.
+- Finlayson SG, Subbaswamy A, Singh K, et al. *The Clinician
+  and Dataset Shift in Artificial Intelligence.* NEJM, 2021;
+  385(3):283-286.
+  - Introduces dataset shift as a key failure mode for clinical
+    AI and explains it for a clinical audience.
+  - Track 4: widely cited clinical primer on dataset shift.
+- Nestor B, McDermott MBA, Boag W, et al. *Feature Robustness
+  in Non-stationary Health Records: Caveats to Deployable Model
+  Performance in Common Clinical Machine Learning Tasks.* MLHC,
+  PMLR 106:381-405, 2019.
+  - Shows clinical ML models suffer up to 0.29 AUROC drop under
+    temporal shift in EHR data.
+  - Track 4: early empirical study quantifying temporal drift in
+    clinical prediction.
+- Vela D, Sharp A, Zhang R, et al. *Temporal Quality
+  Degradation in AI Models.* Scientific Reports, 2022;
+  12:11654.
+  - Large-scale analysis showing 91% of ML models degrade over
+    time as data distributions drift.
+  - Track 4: empirical evidence for near-universal temporal
+    performance decay.
+- Guo LL, Pfohl SR, Fries J, et al. *Systematic Review of
+  Approaches to Preserve Machine Learning Performance in the
+  Presence of Temporal Dataset Shift in Clinical Medicine.*
+  Applied Clinical Informatics, 2021; 12(4):808-815.
+  - Reviews 15 studies on temporal shift, finding calibration
+    decay is more common than discrimination decay.
+  - Track 4: first systematic review of shift mitigation in
+    clinical ML.
 
 ## Governance and safety
 
-- TODO: add regulatory and policy frameworks.
-- TODO: add institutional governance templates.
-- TODO: add incident reports and post-mortems.
+- U.S. FDA. *Artificial Intelligence/Machine Learning
+  (AI/ML)-Based Software as a Medical Device (SaMD) Action
+  Plan.* FDA, 2021.
+  - Five-action regulatory strategy for AI/ML medical devices
+    including predetermined change control plans.
+  - Track 4: primary U.S. regulatory roadmap for AI/ML in
+    healthcare.
+- World Health Organization. *Ethics and Governance of
+  Artificial Intelligence for Health: WHO Guidance.* WHO, 2021.
+  - Six ethical principles and governance recommendations for
+    equitable, transparent, and rights-respecting health AI.
+  - Track 4: first global intergovernmental AI health governance
+    framework.
+- Mitchell M, Wu S, Zaldivar A, et al. *Model Cards for Model
+  Reporting.* FAT*, 2019.
+  - Proposes standardized model documentation detailing
+    performance across demographic and contextual conditions.
+  - Track 4: foundational transparency tool for AI deployment.
+- Gebru T, Morgenstern J, Vecchione B, et al. *Datasheets for
+  Datasets.* Communications of the ACM, 2021; 64(12):86-92.
+  - Standardized dataset documentation covering motivation,
+    composition, collection, and intended uses.
+  - Track 4: data governance companion to model cards.
+- Reddy S, Allan S, Coghlan S, Cooper P. *A Governance Model
+  for the Application of AI in Health Care.* JAMIA, 2020;
+  27(3):491-497.
+  - Structured governance model for healthcare AI encompassing
+    fairness, transparency, and clinical safety assessment.
+  - Track 4: governance framework tailored to healthcare AI.
+- Raji ID, Smart A, White RN, et al. *Closing the AI
+  Accountability Gap: Defining an End-to-End Framework for
+  Internal Algorithmic Auditing.* FAT*, 2020; pp. 33-44.
+  - Introduces SMACTR, an end-to-end internal algorithmic
+    auditing framework for operationalizing AI ethics.
+  - Track 4: practical auditing methodology for accountability.

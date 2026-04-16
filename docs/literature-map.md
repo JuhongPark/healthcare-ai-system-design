@@ -218,11 +218,12 @@ way anyone notices.
   informative and maintainable?
 - How is a detected shift translated into an action?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: surveys of dataset shift.
-- TODO: papers on monitoring in healthcare AI.
-- TODO: reports from deployed monitoring systems.
+- Finlayson SG et al. *The Clinician and Dataset Shift in Artificial Intelligence.* NEJM, 2021.
+- Nestor B et al. *Feature Robustness in Non-stationary Health Records.* MLHC, 2019.
+- Vela D et al. *Temporal Quality Degradation in AI Models.* Scientific Reports, 2022.
+- Guo LL et al. *Systematic Review of Approaches to Preserve Machine Learning Performance in the Presence of Temporal Dataset Shift in Clinical Medicine.* Applied Clinical Informatics, 2021.
 
 ## Governance and safety
 
@@ -237,8 +238,11 @@ social problem as much as a technical one.
 - What does a minimum viable governance structure look like at
   a single site?
 
-**Readings to add.**
+**Readings.**
 
-- TODO: regulatory and policy frameworks.
-- TODO: institutional governance templates.
-- TODO: incident reports and post-mortems.
+- U.S. FDA. *AI/ML-Based Software as a Medical Device (SaMD) Action Plan.* 2021.
+- WHO. *Ethics and Governance of Artificial Intelligence for Health.* 2021.
+- Mitchell M et al. *Model Cards for Model Reporting.* FAT*, 2019.
+- Gebru T et al. *Datasheets for Datasets.* Communications of the ACM, 2021.
+- Reddy S et al. *A Governance Model for the Application of AI in Health Care.* JAMIA, 2020.
+- Raji ID et al. *Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing.* FAT*, 2020.
