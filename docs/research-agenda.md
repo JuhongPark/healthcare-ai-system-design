@@ -22,6 +22,13 @@ independent — a model trained in Track 2 still needs the
 governance of Track 4 to be usable, and the modeling choices in
 Track 1 constrain what claims can be communicated in Track 3.
 
+The tracks are read through a systems-engineering-and-management
+lens: architecture, lifecycle, portfolio, organization, and risk,
+developed in Track 7 and the cross-cutting topics below. The
+lens applies across the other tracks — a Track 2 multimodal
+model, for example, is designed, validated, deployed, and
+retired inside the architecture and governance in Track 7.
+
 ## Track 1 — Real-world evidence and drug efficacy evaluation
 
 ### Motivation
@@ -319,6 +326,88 @@ biomarkers anchor the trial.
   candidates by virtue of being generated.
 - Public datasets only; no proprietary compound libraries and
   no licensed assay data.
+
+## Track 7 — AI systems architecture and management
+
+### Motivation
+
+Tracks 1 through 6 describe what to build and why; Track 7
+describes how an AI system is designed, operated, and
+managed as an engineered artifact in a healthcare
+organization. The framing is systems engineering and
+management: reference architecture, lifecycle, portfolio
+strategy, organizational design, risk and reliability,
+and formal systems methods. The aim is to put the other
+tracks on a footing that can be operated, audited, and
+evolved.
+
+### Open questions
+
+- What does a minimum viable reference architecture look
+  like for a clinical AI system at a single site, and
+  which interface contracts break most often in practice?
+- How should stage gates for clinical ML be calibrated so
+  that gate reviews change decisions rather than
+  rubber-stamp them?
+- Which AI capabilities are best centralized across a
+  hospital network or pharma portfolio, and which belong
+  per program?
+- How are organizational roles (model owner, validator,
+  operations, clinical champion, governance chair)
+  divided so that review is independent of delivery?
+- Which SLOs and failure modes are most informative for
+  clinical AI, given the delay between score and
+  outcome?
+- Which formal methods (DSM, system dynamics, axiomatic
+  design, stakeholder value) change decisions in
+  practice, and which are notation overhead?
+
+### Possible prototype ideas
+
+- A reference-architecture description for a synthetic
+  hospital AI deployment, with explicit interface
+  contracts and deployment topology options.
+- A stage-gate artifact template covering Gates 0-9
+  (problem, data, baseline, internal validation, external
+  validation, shadow, go-live, operational stability,
+  update, retirement).
+- A failure-mode catalog and FMEA worksheet for a
+  synthetic clinical AI system, with SLO candidates and
+  incident-response runbook sketches.
+- A Design Structure Matrix for a synthetic hospital AI
+  deployment, with a paired organizational DSM showing
+  coordination mismatches.
+- A system-dynamics causal-loop diagram for alert
+  fatigue and for the model-output-to-training-data
+  loop.
+- A build/buy/partner matrix template for a hospital AI
+  capability portfolio.
+
+### Topical notes supporting this track
+
+- `docs/ai-systems-architecture.md` — five-plane reference
+  architecture and interface contracts.
+- `docs/ai-lifecycle-management.md` — V-model and stage
+  gates.
+- `docs/ai-portfolio-and-strategy.md` — capability
+  maturity, build/buy/partner, real options.
+- `docs/ai-organizational-design.md` — stakeholder map,
+  roles, RACI, governance operating model.
+- `docs/ai-risk-and-reliability.md` — FMEA, SLO/SLI,
+  incident response, technical debt.
+- `docs/systems-engineering-methods.md` — DSM, system
+  dynamics, axiomatic design, stakeholder value, OPM.
+- `docs/drug-discovery-program-architecture.md` —
+  program-level view of AI in drug discovery.
+
+### Limitations and cautions
+
+- Architecture and governance descriptions are
+  descriptive, not prescriptive, and do not represent any
+  specific institution.
+- Stage gates and RACI templates are coordination devices,
+  not project plans.
+- Formal methods are tools; they do not decide designs.
 
 ## Cross-cutting topics
 
