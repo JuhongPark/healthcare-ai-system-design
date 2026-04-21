@@ -322,3 +322,136 @@ Format, once a real reference is added:
   - Introduces SMACTR, an end-to-end internal algorithmic
     auditing framework for operationalizing AI ethics.
   - Track 4: practical auditing methodology for accountability.
+
+## Hospital information systems and operations
+
+- Mandl KD, Kohane IS. *Escaping the EHR Trap — The Future
+  of Health IT.* NEJM, 2012; 366(24):2240-2242.
+  - Argues that the EHR market is locked in by data and
+    interface monopolies, and lays out the case for an
+    apps-on-data ecosystem.
+  - Track 5: foundational critique of EHR architecture and
+    case for interoperability.
+- Sittig DF, Singh H. *A new sociotechnical model for
+  studying health information technology in complex adaptive
+  healthcare systems.* Quality and Safety in Health Care,
+  2010; 19(Suppl 3):i68-i74.
+  - Eight-dimensional sociotechnical model covering hardware,
+    software, content, interface, people, workflow, policy,
+    and measurement.
+  - Track 5: standard framework for analyzing health IT
+    failures and successes.
+- Adler-Milstein J, Jha AK. *HITECH Act drove large gains in
+  hospital electronic health record adoption.* Health
+  Affairs, 2017; 36(8):1416-1422.
+  - Documents the policy-driven jump in U.S. hospital EHR
+    adoption following the HITECH Act.
+  - Track 5: empirical anchor for the modern EHR landscape.
+- Mandel JC, Kreda DA, Mandl KD, Kohane IS, Ramoni RB. *SMART
+  on FHIR: a standards-based, interoperable apps platform
+  for electronic health records.* JAMIA, 2016;
+  23(5):899-908.
+  - Describes SMART on FHIR as an open, standards-based
+    platform for substitutable EHR apps.
+  - Track 5: reference architecture for hospital-side
+    interoperability.
+- Bates DW, Saria S, Ohno-Machado L, Shah A, Escobar G. *Big
+  data in health care: Using analytics to identify and
+  manage high-risk and high-cost patients.* Health Affairs,
+  2014; 33(7):1123-1131.
+  - Surveys six application areas where hospital analytics on
+    EHR data can improve care for high-risk patients.
+  - Track 5: framing for hospital-scale analytics on
+    routinely collected data.
+- Sendak MP, Gao M, Brajer N, Balu S. *Presenting machine
+  learning model information to clinical end users with
+  model facts labels.* npj Digital Medicine, 2020; 3:41.
+  - Proposes a model facts label modeled on nutrition labels
+    for communicating ML model information to clinicians.
+  - Track 5: hospital-side documentation pattern for deployed
+    models.
+- Wong A, Otles E, Donnelly JP, et al. *External Validation
+  of a Widely Implemented Proprietary Sepsis Prediction
+  Model in Hospitalized Patients.* JAMA Internal Medicine,
+  2021; 181(8):1065-1070.
+  - External validation of the Epic Sepsis Model finding
+    substantially worse performance than the vendor reported.
+  - Track 5: case study of hospital-side validation revealing
+    a deployed model's limits.
+
+## Drug discovery and computational drug design
+
+- Vamathevan J, Clark D, Czodrowski P, et al. *Applications
+  of machine learning in drug discovery and development.*
+  Nature Reviews Drug Discovery, 2019; 18:463-477.
+  - Broad review of where ML is being applied across the
+    drug discovery pipeline, with a balanced view on
+    limitations.
+  - Track 6: orientation review for ML in drug discovery.
+- Schneider P, Walters WP, Plowright AT, et al. *Rethinking
+  drug design in the artificial intelligence era.* Nature
+  Reviews Drug Discovery, 2020; 19:353-364.
+  - Argues that AI is changing drug design but emphasizes the
+    need for chemist-in-the-loop workflows and realistic
+    expectations.
+  - Track 6: design-process framing for AI-assisted medicinal
+    chemistry.
+- Stokes JM, Yang K, Swanson K, et al. *A Deep Learning
+  Approach to Antibiotic Discovery.* Cell, 2020;
+  180(4):688-702.
+  - Uses a graph neural network to screen for antibacterial
+    activity, identifying halicin from a chemical library.
+  - Track 6: well-known case of screening ML yielding a
+    candidate of interest.
+- Jumper J, Evans R, Pritzel A, et al. *Highly accurate
+  protein structure prediction with AlphaFold.* Nature,
+  2021; 596:583-589.
+  - Presents AlphaFold's neural-network architecture for
+    protein structure prediction at near-experimental
+    accuracy.
+  - Track 6: structural input that has reshaped what
+    structure-based design can use.
+- Gomez-Bombarelli R, Wei JN, Duvenaud D, et al. *Automatic
+  Chemical Design Using a Data-Driven Continuous
+  Representation of Molecules.* ACS Central Science, 2018;
+  4(2):268-276.
+  - Variational autoencoder over SMILES strings enabling
+    optimization in a learned latent chemical space.
+  - Track 6: foundational generative chemistry paper.
+- Segler MHS, Preuss M, Waller MP. *Planning chemical
+  syntheses with deep neural networks and symbolic AI.*
+  Nature, 2018; 555:604-610.
+  - Combines neural networks with Monte Carlo tree search to
+    propose multi-step retrosynthetic routes.
+  - Track 6: synthetic accessibility tooling that
+    complements generative design.
+- Wu Z, Ramsundar B, Feinberg EN, et al. *MoleculeNet: A
+  Benchmark for Molecular Machine Learning.* Chemical
+  Science, 2018; 9(2):513-530.
+  - Standardized benchmark suite of molecular datasets and
+    tasks for evaluating ML models.
+  - Track 6: shared evaluation ground for molecular property
+    prediction.
+- Pushpakom S, Iorio F, Eyers PA, et al. *Drug repurposing:
+  progress, challenges and recommendations.* Nature Reviews
+  Drug Discovery, 2019; 18:41-58.
+  - Surveys computational and experimental approaches to
+    drug repurposing and the regulatory and economic
+    context.
+  - Track 6: orientation reference for the repurposing
+    setting.
+- Yang K, Swanson K, Jin W, et al. *Analyzing Learned
+  Molecular Representations for Property Prediction.*
+  Journal of Chemical Information and Modeling, 2019;
+  59(8):3370-3388.
+  - Introduces directed message passing networks (Chemprop)
+    and analyzes learned chemical representations.
+  - Track 6: widely used baseline for molecular property
+    prediction.
+- Walters WP, Murcko M. *Assessing the impact of generative
+  AI on medicinal chemistry.* Nature Biotechnology, 2020;
+  38:143-145.
+  - Cautious assessment of generative chemistry's track
+    record, distinguishing demonstrations from impact on
+    real medicinal chemistry workflows.
+  - Track 6: corrective viewpoint against over-claiming.
