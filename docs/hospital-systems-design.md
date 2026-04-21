@@ -139,6 +139,74 @@ governance.
 - How are model retirement criteria written so that a stale
   system actually gets retired?
 
+## Process mining for clinical pathways
+
+Process mining methods extract event logs from clinical
+information systems and reconstruct the actual paths
+patients take through care, distinct from the paths that
+guidelines or care maps describe. Mans, van der Aalst, and
+Vanwersch (2015) collect the methodology and applications;
+Rojas and colleagues (2016) review the healthcare
+literature. The method is interesting at the
+hospital-system layer because the same data underlying
+operational dashboards can be used to discover where
+pathways diverge from intent.
+
+### Open questions
+
+- Which event-log sources at a hospital are usable for
+  process mining without bespoke extraction work?
+- How are deviations from documented care pathways
+  attributed to clinical reasoning versus operational
+  constraints?
+- How should process-mining outputs be presented to
+  clinical and operational audiences who use different
+  vocabularies?
+
+## Telehealth integration
+
+Telehealth changed the encounter envelope in ways that are
+still being absorbed by hospital information systems and AI
+deployments. Webster (2020) frames the immediate
+acceleration during the COVID-19 pandemic; subsequent
+literature debates which changes will persist. The relevant
+question for systems design is what data is captured during
+a telehealth encounter, how it flows into the same EHR
+infrastructure as in-person care, and how AI systems
+trained on in-person data behave on telehealth-generated
+records.
+
+### Open questions
+
+- How are telehealth encounters represented in the same
+  data structures as in-person encounters, and where do
+  schemas diverge?
+- What does data drift look like when an AI model trained
+  on in-person encounters meets a population whose recent
+  encounters were largely telehealth?
+- How are quality and safety metrics defined for AI
+  systems whose inputs include teleconsultation data?
+
+## Cybersecurity
+
+Hospital cybersecurity is a system-wide concern that
+affects whether AI components can be relied on at all. A
+ransomware event that takes the EHR offline removes the
+data feed that an AI system depends on; a compromised
+endpoint is also a compromised AI input. Coventry and
+Branley (2018) review the threat landscape and the
+particular weaknesses of healthcare environments.
+
+### Open questions
+
+- How are AI systems explicitly included in incident
+  response and recovery plans?
+- How is the integrity of model inputs and outputs assured
+  when source systems may be compromised?
+- What is the smallest useful continuity plan for a
+  hospital-deployed model when its data feeds are
+  unavailable?
+
 ## Limitations and cautions
 
 - Discussion is descriptive, not prescriptive policy.
@@ -149,3 +217,5 @@ governance.
   details are used.
 - Hospital governance descriptions reflect general patterns
   in the literature, not any specific institution.
+- Cybersecurity discussion is high-level orientation, not
+  a security recommendation for any environment.
