@@ -305,3 +305,212 @@ modes at each stage.
 - Pushpakom S, Iorio F, Eyers PA, et al. *Drug repurposing: progress, challenges and recommendations.* Nature Reviews Drug Discovery, 2019.
 - Yang K, Swanson K, Jin W, et al. *Analyzing Learned Molecular Representations for Property Prediction.* Journal of Chemical Information and Modeling, 2019.
 - Walters WP, Murcko M. *Assessing the impact of generative AI on medicinal chemistry.* Nature Biotechnology, 2020.
+
+## Clinical AI deployment case studies
+
+**Why this matters.** Principles about deployment become
+sharp when read through specific cases. Published case
+studies of clinical AI — successful and failed — anchor
+abstract design questions in observed sociotechnical
+behavior.
+
+**Questions to track.**
+
+- Which features distinguish deployments that survive
+  contact with the clinic from those that do not?
+- How are external validation results received in
+  comparison to vendor-reported performance?
+- Which failure modes recur across cases, and which are
+  particular to one setting?
+
+**Readings.**
+
+- Habib AR, Lin AL, Grant RW. *The Epic Sepsis Model Falls Short — The Importance of External Validation.* JAMA Internal Medicine, 2021.
+- Strickland E. *IBM Watson, Heal Thyself.* IEEE Spectrum, 2019.
+- Char DS, Shah NH, Magnus D. *Implementing Machine Learning in Health Care — Addressing Ethical Challenges.* NEJM, 2018.
+- Coiera E. *The Last Mile: Where Artificial Intelligence Meets Reality.* Journal of Medical Internet Research, 2019.
+- Shah NH, Milstein A, Bagley SC. *Making Machine Learning Models Clinically Useful.* JAMA, 2019.
+
+## Regulatory landscape for healthcare AI
+
+**Why this matters.** Regulation shapes evaluation, change
+control, and post-market evidence requirements. Reading
+regulators directly is part of building systems that can
+be deployed responsibly.
+
+**Questions to track.**
+
+- How are AI/ML medical devices being approved across
+  jurisdictions, and what does the trend look like?
+- How are predetermined change control plans being
+  operationalized?
+- What does regulatory attention to bias and equity look
+  like in practice?
+
+**Readings.**
+
+- U.S. FDA, Health Canada, MHRA. *Good Machine Learning Practice for Medical Device Development: Guiding Principles.* 2021.
+- U.S. FDA, Health Canada, MHRA. *Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices: Guiding Principles.* 2023.
+- Muehlematter UJ, Daniore P, Vokinger KN. *Approval of artificial intelligence and machine learning-based medical devices in the USA and Europe (2015-20): a comparative analysis.* Lancet Digital Health, 2021.
+- Benjamens S, Dhunnoo P, Mesko B. *The state of artificial intelligence-based FDA-approved medical devices and algorithms: an online database.* npj Digital Medicine, 2020.
+- Vokinger KN, Feuerriegel S, Kesselheim AS. *Continual learning in medical devices: FDA's action plan and beyond.* Lancet Digital Health, 2021.
+- European Commission. *Regulation (EU) 2017/745 on medical devices (MDR).* 2017.
+
+## Foundation models in healthcare
+
+**Why this matters.** Foundation models are now part of
+the clinical and discovery toolset. Their evaluation,
+deployment, and governance raise familiar questions at
+larger scale.
+
+**Questions to track.**
+
+- When does domain pretraining still matter relative to
+  prompting a sufficiently capable general model?
+- What does meaningful out-of-distribution evaluation look
+  like for foundation models in clinical and chemical
+  domains?
+- How are deployment costs and governance overheads
+  accounted for at hospital and lab scale?
+
+**Readings.**
+
+- Bommasani R, Hudson DA, Adeli E, et al. *On the Opportunities and Risks of Foundation Models.* arXiv:2108.07258, 2021.
+- Singhal K, Azizi S, Tu T, et al. *Large language models encode clinical knowledge.* Nature, 2023.
+- Yang X, Chen A, PourNejatian N, et al. *A large language model for electronic health records.* npj Digital Medicine, 2022.
+- Lehman E, Hernandez E, Mahajan D, et al. *Do We Still Need Clinical Language Models?* Conference on Health, Inference, and Learning (CHIL), 2023.
+- Moor M, Banerjee O, Abad ZSH, et al. *Foundation models for generalist medical artificial intelligence.* Nature, 2023.
+- Chithrananda S, Grand G, Ramsundar B. *ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property Prediction.* arXiv:2010.09885, 2020.
+- Ross J, Belgodere B, Chenthamarakshan V, et al. *Large-scale chemical language representations capture molecular structure and properties.* Nature Machine Intelligence, 2022.
+- Lin Z, Akin H, Rao R, et al. *Evolutionary-scale prediction of atomic-level protein structure.* Science, 2023.
+
+## Federated and privacy-preserving learning
+
+**Why this matters.** Multi-institution learning is one of
+the few practical options for combining evidence across
+hospitals without combining their data. Federated
+learning, differential privacy, and related methods sit at
+the center of that conversation.
+
+**Questions to track.**
+
+- How are non-IID effects across sites characterized and
+  reported?
+- How are privacy budgets chosen and explained?
+- What threat models do specific federated and
+  privacy-preserving deployments actually defend against?
+
+**Readings.**
+
+- McMahan HB, Moore E, Ramage D, et al. *Communication-Efficient Learning of Deep Networks from Decentralized Data.* AISTATS, 2017.
+- Rieke N, Hancox J, Li W, et al. *The future of digital health with federated learning.* npj Digital Medicine, 2020.
+- Sheller MJ, Edwards B, Reina GA, et al. *Federated learning in medicine: facilitating multi-institutional collaborations without sharing patient data.* Scientific Reports, 2020.
+- Kaissis GA, Makowski MR, Ruckert D, Braren RF. *Secure, privacy-preserving and federated machine learning in medical imaging.* Nature Machine Intelligence, 2020.
+- Pati S, Baid U, Edwards B, et al. *Federated learning enables big data for rare cancer boundary detection.* Nature Communications, 2022.
+- Dwork C, Roth A. *The Algorithmic Foundations of Differential Privacy.* Foundations and Trends in Theoretical Computer Science, 2014.
+
+## Fairness and equity in healthcare AI
+
+**Why this matters.** Healthcare AI inherits the
+inequities of its training data, evaluation populations,
+and deployment settings. Fairness here is not a constraint
+added on top but a question about whose errors the system
+absorbs.
+
+**Questions to track.**
+
+- Which design choices most often introduce or magnify
+  disparities, and at what stage do they enter?
+- How are subgroup performance and post-hoc fairness
+  adjustments distinguished from upstream design fixes?
+- How do equity questions in drug discovery, trials, and
+  clinical deployment connect to each other?
+
+**Readings.**
+
+- Obermeyer Z, Powers B, Vogeli C, Mullainathan S. *Dissecting racial bias in an algorithm used to manage the health of populations.* Science, 2019.
+- Pierson E, Cutler DM, Leskovec J, Mullainathan S, Obermeyer Z. *An algorithmic approach to reducing unexplained pain disparities in underserved populations.* Nature Medicine, 2021.
+- Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY, Ghassemi M. *Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations.* Nature Medicine, 2021.
+- Rajkomar A, Hardt M, Howell MD, Corrado G, Chin MH. *Ensuring Fairness in Machine Learning to Advance Health Equity.* Annals of Internal Medicine, 2018.
+- Chen IY, Joshi S, Ghassemi M. *Treating health disparities with artificial intelligence.* Nature Medicine, 2020.
+- Ghassemi M, Naumann T, Pierson E. *The False Hope of Current Approaches to Explainable Artificial Intelligence in Health Care.* Lancet Digital Health, 2021.
+
+## Reproducibility in healthcare ML
+
+**Why this matters.** Reporting, code release, and
+benchmark design determine whether a healthcare ML claim
+can be checked. Reproducibility is a precondition for
+accumulating evidence.
+
+**Questions to track.**
+
+- What is the minimum reporting standard that lets a
+  third party challenge or replicate a clinical ML claim?
+- How are chemistry benchmarks designed to expose
+  generalization rather than reward memorization?
+- Where do reproducibility critiques themselves rely on
+  evidence rather than assertion?
+
+**Readings.**
+
+- McDermott MBA, Wang S, Marinsek N, et al. *Reproducibility in machine learning for health research: still a ways to go.* Science Translational Medicine, 2021.
+- Stupple A, Singerman D, Celi LA. *The reproducibility crisis in the age of digital medicine.* npj Digital Medicine, 2019.
+- Wynants L, Van Calster B, Collins GS, et al. *Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal.* BMJ, 2020.
+- Roberts M, Driggs D, Thorpe M, et al. *Common pitfalls and recommendations for using machine learning to detect and prognosticate for COVID-19 using chest radiographs and CT scans.* Nature Machine Intelligence, 2021.
+- Wallach IZ, Heifets A. *Most Ligand-Based Classification Benchmarks Reward Memorization Rather than Generalization.* Journal of Chemical Information and Modeling, 2018.
+- Bender A, Cortes-Ciriano I. *Artificial intelligence in drug discovery: what is realistic, what are illusions? Part 1.* Drug Discovery Today, 2021.
+- Bender A, Cortes-Ciriano I. *Artificial intelligence in drug discovery: what is realistic, what are illusions? Part 2.* Drug Discovery Today, 2021.
+
+## Hospital cybersecurity, telehealth, and process mining
+
+**Why this matters.** AI deployments share infrastructure
+with the rest of the hospital. Cybersecurity events,
+telehealth data flows, and the actual paths patients take
+through care all shape what a deployed AI system sees.
+
+**Questions to track.**
+
+- How are AI components included in hospital incident
+  response?
+- How does the data captured during telehealth differ
+  from in-person data, and how does that affect models
+  trained on either?
+- Which clinical pathways diverge from documented care
+  maps, and how do those divergences appear in event logs?
+
+**Readings.**
+
+- Coventry L, Branley D. *Cybersecurity in healthcare: A narrative review of trends, threats and ways forward.* Maturitas, 2018.
+- Webster P. *Virtual health care in the era of COVID-19.* Lancet, 2020.
+- Mans RS, van der Aalst WMP, Vanwersch RJB. *Process Mining in Healthcare: Evaluating and Exploiting Operational Healthcare Processes.* Springer, 2015.
+- Rojas E, Munoz-Gama J, Sepulveda M, Capurro D. *Process mining in healthcare: A literature review.* Journal of Biomedical Informatics, 2016.
+
+## Drug discovery extensions: knowledge graphs, protein design, trials, and pharmacovigilance
+
+**Why this matters.** Beyond small-molecule chemistry,
+discovery and post-market work depend on biomedical
+knowledge organization, protein design, AI-assisted trial
+design, and signal detection. Each of these connects
+upstream design to downstream evidence.
+
+**Questions to track.**
+
+- How are biomedical knowledge graphs curated, and how
+  stale do they become?
+- How is in-silico protein design validated, and what is
+  the failure rate from sequence to functional assay?
+- How are AI-assisted trial-design choices documented for
+  regulatory review?
+- How are pharmacovigilance signals fed back into the
+  design pipeline?
+
+**Readings.**
+
+- Reker D, Schneider G. *Active-learning strategies in computer-assisted drug discovery.* Drug Discovery Today, 2015.
+- Himmelstein DS, Lizee A, Hessler C, et al. *Systematic integration of biomedical knowledge prioritizes drugs for repurposing.* eLife, 2017.
+- Zitnik M, Agrawal M, Leskovec J. *Modeling polypharmacy side effects with graph convolutional networks.* Bioinformatics, 2018.
+- Dauparas J, Anishchenko I, Bennett N, et al. *Robust deep learning-based protein sequence design using ProteinMPNN.* Science, 2022.
+- Watson JL, Juergens D, Bennett NR, et al. *De novo design of protein structure and function with RFdiffusion.* Nature, 2023.
+- Harrer S, Shah P, Antony B, Hu J. *Artificial Intelligence for Clinical Trial Design.* Trends in Pharmacological Sciences, 2019.
+- Liu R, Rizzo S, Whipple S, et al. *Evaluating eligibility criteria of oncology trials using real-world data and AI.* Nature, 2021.
+- Ball R, Dal Pan G. *"Artificial Intelligence" for Pharmacovigilance: Ready for Prime Time?* Drug Safety, 2022.
