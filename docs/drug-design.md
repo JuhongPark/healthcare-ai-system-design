@@ -244,6 +244,18 @@ considerations covered earlier in this repository.
 - How are pharmacovigilance signals fed back into design
   and trial planning for next-generation candidates?
 
+## Program-level framing
+
+AI methods in drug design live inside discovery programs
+with stage gates, capability sourcing decisions, and
+portfolio pressures. The program-level view is developed
+in `docs/drug-discovery-program-architecture.md`, which
+treats the pipeline as a system of systems and makes
+explicit how AI evidence enters go/no-go decisions, how
+capabilities are sourced, and how documentation flows to
+regulatory review. The method-level notes above are
+inputs to that architecture, not substitutes for it.
+
 ## Limitations and cautions
 
 - No claim is made that any candidate, target, or repurposed

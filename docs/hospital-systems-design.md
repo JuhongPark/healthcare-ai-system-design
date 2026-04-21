@@ -187,6 +187,23 @@ records.
 - How are quality and safety metrics defined for AI
   systems whose inputs include teleconsultation data?
 
+## Reference architecture and stakeholder map
+
+The hospital-system concerns above decompose onto the
+five-plane reference architecture described in
+`docs/ai-systems-architecture.md`: data, model, serving,
+monitoring, and governance. Each plane has a hospital-side
+owner and a vendor-side owner, and the interface between
+them is where most hospital-scale failures occur.
+
+The stakeholder map for hospital AI (detailed in
+`docs/ai-organizational-design.md`) identifies patients,
+clinicians, informatics, administration, vendors, and
+regulators as first-class actors, each with distinct
+decision rights and incentives. Architectural decisions
+that ignore stakeholder value tend to deploy successfully
+once and fail on the second site.
+
 ## Cybersecurity
 
 Hospital cybersecurity is a system-wide concern that
