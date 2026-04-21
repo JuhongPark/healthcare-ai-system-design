@@ -156,6 +156,21 @@ A portfolio is not a static set. Sequencing decisions:
   interaction with the drug program portfolio change
   outsourcing choices?
 
+## Related notes
+
+- `docs/pharma-ai-systems-architecture.md` — pharma
+  instantiation of the reference architecture that
+  capability maturity applies to.
+- `docs/pharma-ai-system-of-systems.md` — portfolio
+  considerations change shape when constituents span
+  discovery through pharmacovigilance.
+- `docs/drug-discovery-program-architecture.md` —
+  program-level sourcing, portfolio, and attrition
+  framing that interacts with AI capability
+  portfolios.
+- `docs/ai-evaluation-strategy.md` — the evaluation
+  evidence portfolio decisions rely on.
+
 ## Limitations and cautions
 
 - Strategy frameworks are descriptive and heuristic; they

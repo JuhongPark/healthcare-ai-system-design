@@ -148,6 +148,32 @@ operating points. Relevant design parameters:
   discovery program compared to a clinical deployment, and
   what maps cleanly between them?
 
+## Related architectural notes
+
+The five-plane framing here applies to clinical AI
+systems. Companion notes develop adjacent surfaces:
+
+- `docs/pharma-ai-systems-architecture.md` — the same
+  decomposition specialized for pharma R&D
+  (compound/assay/structure/KG data plane, chemistry
+  and structure models, batch and interactive serving,
+  prospective-assay monitoring, IP- and provenance-
+  aware governance).
+- `docs/interface-contracts-for-healthcare-ai.md` —
+  deeper treatment of contracts between planes.
+- `docs/multi-model-orchestration-patterns.md` —
+  composition patterns when a deployed system hosts
+  more than one model.
+- `docs/ai-evaluation-strategy.md` — evaluation as an
+  architectural concern rather than a one-time
+  activity.
+- `docs/mlops-for-regulated-ai.md` — how the
+  architecture meets SaMD and MIDD documentation
+  expectations.
+- `docs/pharma-ai-system-of-systems.md` — cross-stage
+  view spanning discovery, preclinical, clinical
+  development, manufacturing, and pharmacovigilance.
+
 ## Limitations and cautions
 
 - A reference architecture is a starting template, not a

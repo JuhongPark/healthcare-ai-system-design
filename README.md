@@ -34,3 +34,17 @@ and deployed in healthcare workflows.
   platform designs, digital endpoints
 - Pharma AI program case studies — reading AI-enabled discovery
   and development programs for systems lessons
+- AI systems architecture — reference architectures, interface
+  contracts, multi-model orchestration patterns, and the
+  pharma R&D specialization
+- AI lifecycle and regulated MLOps — V-model, stage gates,
+  predetermined change control, GLP/GCP/GMP integration, MIDD
+  documentation discipline
+- Human-AI interaction — interaction patterns for clinicians,
+  medicinal chemists, pharmacologists, and reviewers
+- AI evaluation strategy — evaluation as an architectural
+  concern, slice-based evaluation, evaluation registry,
+  benchmark hygiene
+- Pharma AI system of systems — cross-stage integration
+  spanning discovery, preclinical, clinical development,
+  manufacturing, and pharmacovigilance

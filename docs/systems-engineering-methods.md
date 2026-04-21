@@ -185,6 +185,25 @@ change a decision is not worth its notation cost.
 - Are there healthcare AI DSMs or OPM models published as
   worked examples?
 
+## Applied reading across the repository
+
+The methods above are used, sometimes implicitly,
+across other notes:
+
+- `docs/pharma-ai-system-of-systems.md` carries a
+  cross-stage DSM sketch and a naming of emergent
+  behavior patterns.
+- `docs/human-ai-interaction-patterns.md` develops
+  the trust-loop and alert-fatigue feedback loops
+  into interaction design patterns.
+- `docs/ai-organizational-design.md` and
+  `docs/ai-portfolio-and-strategy.md` enact
+  stakeholder-value analysis at the organization and
+  portfolio level.
+- `docs/interface-contracts-for-healthcare-ai.md`
+  makes axiomatic-design coupling concrete for the
+  interface layer.
+
 ## Limitations and cautions
 
 - Formal methods do not make decisions. They structure

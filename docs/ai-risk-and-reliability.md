@@ -153,6 +153,26 @@ Each entry has an owner, a mitigation, and a review date.
 - Which debts in clinical ML pay down fastest, and which
   compound?
 
+## Related notes
+
+- `docs/interface-contracts-for-healthcare-ai.md` —
+  many FMEA entries are contract-breach failure modes;
+  the contract catalog is the companion reading.
+- `docs/multi-model-orchestration-patterns.md` —
+  orchestration introduces its own failure modes
+  (silent fallback, mis-routing, entanglement) that
+  enter the FMEA.
+- `docs/mlops-for-regulated-ai.md` — incident response
+  in regulated contexts has reporting and CAPA
+  obligations beyond internal postmortem.
+- `docs/ai-evaluation-strategy.md` — monitoring as
+  continuous evaluation turns into alerts that feed
+  incident response.
+- `docs/pharma-ai-system-of-systems.md` — failure
+  modes that cross constituents are hidden in
+  single-constituent FMEAs and surface only at the
+  SoS level.
+
 ## Limitations and cautions
 
 - FMEA exercises are only as good as the failure-mode

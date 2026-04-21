@@ -168,6 +168,21 @@ Observable failure modes in organization design:
 - How is stakeholder value flow documented and kept
   current as the system changes?
 
+## Related notes
+
+- `docs/pharma-ai-system-of-systems.md` — cross-stage
+  roles and boundary-spanning responsibilities that
+  complement the within-system RACI here.
+- `docs/human-ai-interaction-patterns.md` — how
+  user-facing roles interact with the system, which
+  the organizational structure has to support.
+- `docs/mlops-for-regulated-ai.md` — role separation
+  and access control under SaMD and MIDD
+  expectations.
+- `docs/ai-risk-and-reliability.md` — incident
+  response structure that these roles have to
+  execute.
+
 ## Limitations and cautions
 
 - Organization design is descriptive here; no single set

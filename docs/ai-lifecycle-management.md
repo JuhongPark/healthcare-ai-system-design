@@ -146,6 +146,22 @@ its own postmortem.
 - How does the lifecycle change when the model is itself a
   continual learner?
 
+## Related lifecycle notes
+
+- `docs/pharma-ai-lifecycle-management.md` — V-model
+  and Gates M0-M9 specialized for discovery and
+  development ML models, including DMTA integration
+  and mapping to program-level Gates A-F.
+- `docs/mlops-for-regulated-ai.md` — how the
+  lifecycle meets SaMD, MIDD, GLP, GCP, and GMP
+  expectations, with predetermined change control
+  plans as the update governance mechanism.
+- `docs/ai-evaluation-strategy.md` — the evaluations
+  that populate each gate and that continue post-
+  deployment.
+- `docs/interface-contracts-for-healthcare-ai.md` —
+  contracts versioning under the change-control plan.
+
 ## Limitations and cautions
 
 - The V-model presentation is a management framing, not a

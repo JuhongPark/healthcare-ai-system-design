@@ -415,36 +415,80 @@ evolved.
 - A reference-architecture description for a synthetic
   hospital AI deployment, with explicit interface
   contracts and deployment topology options.
+- A reference-architecture description for a synthetic
+  pharma R&D deployment that parallels the hospital
+  sketch, for cross-domain comparison.
 - A stage-gate artifact template covering Gates 0-9
   (problem, data, baseline, internal validation, external
   validation, shadow, go-live, operational stability,
-  update, retirement).
+  update, retirement) and a companion template for
+  Gates M0-M9 for a discovery ML model.
+- A contract catalog template (feature, prediction,
+  event, outcome, audit) applied to a synthetic
+  deployment, including a breaking-change scenario and
+  a versioning response.
+- A multi-model orchestration worksheet that labels a
+  synthetic deployment with its composition patterns
+  (cascade, gating, ensemble, fallback,
+  champion-challenger) and the observability each
+  requires.
 - A failure-mode catalog and FMEA worksheet for a
   synthetic clinical AI system, with SLO candidates and
   incident-response runbook sketches.
 - A Design Structure Matrix for a synthetic hospital AI
   deployment, with a paired organizational DSM showing
-  coordination mismatches.
+  coordination mismatches, and a cross-stage SoS DSM
+  sketch spanning discovery through pharmacovigilance.
 - A system-dynamics causal-loop diagram for alert
-  fatigue and for the model-output-to-training-data
-  loop.
+  fatigue, for the model-output-to-training-data
+  loop, and for the DMTA cycle as a reinforcing loop.
 - A build/buy/partner matrix template for a hospital AI
-  capability portfolio.
+  capability portfolio, and a companion matrix for a
+  pharma AI capability portfolio.
+- An evaluation-registry template that carries a single
+  model through internal, external, local, shadow,
+  prospective, and monitoring evaluations with shared
+  identifiers and consumers.
+- An interaction-design storyboard for one clinician
+  workflow and one medicinal-chemistry workflow,
+  labeling staged presentation, uncertainty surfacing,
+  applicability-domain flagging, override, and
+  logging.
 
 ### Topical notes supporting this track
 
 - `docs/ai-systems-architecture.md` — five-plane reference
   architecture and interface contracts.
+- `docs/pharma-ai-systems-architecture.md` — the same
+  decomposition specialized for pharma R&D.
+- `docs/interface-contracts-for-healthcare-ai.md` —
+  deep treatment of contracts between planes.
+- `docs/multi-model-orchestration-patterns.md` —
+  cascade, ensemble, gating, fallback, champion-
+  challenger, and physics-ML hybrid composition.
 - `docs/ai-lifecycle-management.md` — V-model and stage
   gates.
+- `docs/pharma-ai-lifecycle-management.md` — V-model
+  and Gates M0-M9 for discovery and development ML
+  models, with DMTA integration.
+- `docs/mlops-for-regulated-ai.md` — MLOps under SaMD,
+  MIDD, GLP/GCP/GMP expectations.
+- `docs/ai-evaluation-strategy.md` — evaluation as an
+  architectural concern rather than a single activity.
 - `docs/ai-portfolio-and-strategy.md` — capability
   maturity, build/buy/partner, real options.
 - `docs/ai-organizational-design.md` — stakeholder map,
   roles, RACI, governance operating model.
 - `docs/ai-risk-and-reliability.md` — FMEA, SLO/SLI,
   incident response, technical debt.
+- `docs/human-ai-interaction-patterns.md` — interaction
+  patterns for clinicians, chemists, and reviewers
+  across the system surface.
 - `docs/systems-engineering-methods.md` — DSM, system
   dynamics, axiomatic design, stakeholder value, OPM.
+- `docs/pharma-ai-system-of-systems.md` — cross-stage
+  SoS view of pharma AI from discovery through
+  pharmacovigilance.
 - `docs/drug-discovery-program-architecture.md` —
   program-level view of AI in drug discovery.
 
@@ -506,6 +550,35 @@ that the tracks above need to share.
   `docs/pharmacoepidemiology-methods.md`. Active
   comparator new-user, target trial emulation, signal
   detection, and distributed data networks.
+- **Interface contracts** —
+  `docs/interface-contracts-for-healthcare-ai.md`.
+  Feature, prediction, event, outcome, and audit
+  contracts with versioning, testing, and failure-mode
+  vocabulary.
+- **Multi-model orchestration patterns** —
+  `docs/multi-model-orchestration-patterns.md`. Cascade,
+  ensemble, gating, fallback, champion-challenger,
+  physics-ML hybrid, and retrieval-augmented patterns
+  for composed systems.
+- **MLOps for regulated AI** —
+  `docs/mlops-for-regulated-ai.md`. MLOps specialized
+  for SaMD, MIDD, GLP/GCP/GMP contexts, including
+  predetermined change control plans and reproducibility
+  as regulatory artifact.
+- **Human-AI interaction patterns** —
+  `docs/human-ai-interaction-patterns.md`. Staged
+  presentation, uncertainty and applicability-domain
+  surfacing, override, alert staging, and logging for
+  clinicians, chemists, and reviewers.
+- **AI evaluation strategy** —
+  `docs/ai-evaluation-strategy.md`. Evaluation as an
+  architectural concern, stage-keyed evaluation types,
+  slice-based evaluation, and the evaluation registry.
+- **Pharma AI system of systems** —
+  `docs/pharma-ai-system-of-systems.md`. Cross-stage
+  view of pharma AI from discovery through
+  pharmacovigilance with handoff contracts and
+  emergent-behavior vocabulary.
 - **AI for clinical trials** —
   `docs/ai-for-clinical-trials.md`. Recruitment and site
   selection, external comparator arms, adaptive designs,
