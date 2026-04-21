@@ -1394,3 +1394,325 @@ Format, once a real reference is added:
     candidates and their pipeline progression.
   - Cross-cutting: portfolio-level snapshot of AI in
     discovery.
+
+## Interface contracts and data validation in ML systems
+
+- Polyzotis N, Roy S, Whang SE, Zinkevich M. *Data
+  Management Challenges in Production Machine
+  Learning.* SIGMOD, 2017.
+  - Surveys data-management problems specific to
+    production ML including schema evolution and
+    training-serving skew.
+  - Track 7: foundational framing for contract-layer
+    thinking.
+- Schelter S, Lange D, Schmidt P, Celikel M, Biessmann
+  F, Grafberger A. *Automating Large-Scale Data Quality
+  Verification.* VLDB, 2018.
+  - Introduces Amazon's Deequ library for declarative
+    data-quality checks at scale.
+  - Track 7: reference implementation for contract
+    testing.
+- Breck E, Polyzotis N, Roy S, Whang SE, Zinkevich M.
+  *Data Validation for Machine Learning.* SysML /
+  MLSys, 2019.
+  - Introduces TensorFlow Data Validation and
+    formalizes anomaly detection at the schema and
+    distribution level for ML pipelines.
+  - Track 7: industry reference for contract-style
+    data validation.
+- Gebru T, Morgenstern J, Vecchione B, et al.
+  *Datasheets for Datasets.* Communications of the
+  ACM, 2021; 64(12):86-92.
+  - Proposes datasheets as a documentation artifact
+    capturing dataset provenance, composition, and
+    intended use.
+  - Track 7: a per-dataset contract artifact that
+    complements interface contracts.
+- Mitchell M, Wu S, Zaldivar A, et al. *Model Cards for
+  Model Reporting.* FAT*, 2019.
+  - Proposes model cards as a documentation artifact
+    capturing intended use, performance, and
+    limitations.
+  - Track 7: the prediction-contract counterpart of
+    datasheets.
+- Mandel JC, Kreda DA, Mandl KD, Kohane IS, Ramoni RB.
+  *SMART on FHIR: a standards-based, interoperable apps
+  platform for electronic health records.* JAMIA, 2016;
+  23(5):899-908.
+  - Defines the SMART on FHIR app-launch contract over
+    the FHIR data contract for clinical apps.
+  - Track 7: healthcare-specific contract stack.
+- Hripcsak G, Duke JD, Shah NH, et al. *Observational
+  Health Data Sciences and Informatics (OHDSI):
+  Opportunities for Observational Researchers.* Studies
+  in Health Technology and Informatics, 2015;
+  216:574-578.
+  - Introduces the OHDSI collaboration and the OMOP
+    common data model as a shared canonical contract
+    for observational data.
+  - Track 7: canonical example of a shared contract in
+    healthcare data.
+
+## Multi-model orchestration and composition
+
+- Dietterich TG. *Ensemble Methods in Machine
+  Learning.* Multiple Classifier Systems, LNCS 1857,
+  Springer, 2000; 1-15.
+  - Classical survey establishing the theoretical and
+    practical basis for ensembling.
+  - Track 7: foundational reference for the ensemble
+    pattern.
+- Viola P, Jones M. *Rapid Object Detection Using a
+  Boosted Cascade of Simple Features.* CVPR, 2001.
+  - Introduces the cascade classifier pattern for
+    real-time object detection.
+  - Track 7: canonical reference for the cascade
+    pattern applied to inference efficiency.
+- Shazeer N, Mirhoseini A, Maziarz K, et al.
+  *Outrageously Large Neural Networks: The
+  Sparsely-Gated Mixture-of-Experts Layer.* ICLR, 2017.
+  - Introduces learned gating among experts at scale.
+  - Track 7: reference for the gating pattern inside
+    neural architectures.
+- Lewis P, Perez E, Piktus A, et al. *Retrieval-Augmented
+  Generation for Knowledge-Intensive NLP Tasks.*
+  NeurIPS, 2020.
+  - Introduces RAG, composing a retriever with a
+    generator for knowledge-grounded generation.
+  - Track 7: canonical reference for the retrieval-
+    augmented pattern.
+- Gama J, Zliobaite I, Bifet A, Pechenizkiy M,
+  Bouchachia A. *A Survey on Concept Drift Adaptation.*
+  ACM Computing Surveys, 2014; 46(4):44.
+  - Surveys adaptive learning under concept drift,
+    covering ensemble, sliding-window, and trigger-
+    based strategies.
+  - Track 7: reference for drift-aware composition
+    patterns.
+- Fedus W, Zoph B, Shazeer N. *Switch Transformer:
+  Scaling to Trillion Parameter Models with Simple
+  and Efficient Sparsity.* Journal of Machine Learning
+  Research, 2022; 23(120):1-39.
+  - Extends sparsely-gated mixture-of-experts to
+    trillion-parameter scales.
+  - Track 7: current-generation reference for gating
+    at scale.
+- Schrittwieser J, Antonoglou I, Hubert T, et al.
+  *Mastering Atari, Go, Chess and Shogi by Planning
+  with a Learned Model.* Nature, 2020; 588:604-609.
+  - Combines learned dynamics with planning, a
+    reference point for hybrid physics-ML composition.
+  - Track 7: reference for a learned-model-plus-planner
+    composition pattern.
+
+## MLOps for regulated, continual, and reviewable AI
+
+- Ashmore R, Calinescu R, Paterson C. *Assuring the
+  Machine Learning Lifecycle: Desiderata, Methods, and
+  Challenges.* ACM Computing Surveys, 2021;
+  54(5):111.
+  - Systematizes assurance desiderata across the ML
+    lifecycle and the methods available for each.
+  - Track 7: bridging reference between ML lifecycle
+    practice and assurance expectations.
+- Studer S, Bui TB, Drescher C, et al. *Towards
+  CRISP-ML(Q): A Machine Learning Process Model with
+  Quality Assurance Methodology.* Machine Learning and
+  Knowledge Extraction, 2021; 3(2):392-413.
+  - Extends CRISP-DM with quality-assurance steps for
+    ML projects.
+  - Track 7: process model oriented toward quality
+    assurance.
+- Hutchinson B, Smart A, Hanna A, et al. *Towards
+  Accountability for Machine Learning Datasets:
+  Practices from Software Engineering and
+  Infrastructure.* FAccT, 2021.
+  - Argues for applying software-engineering and
+    infrastructure practices to dataset accountability.
+  - Track 7: accountability framing for dataset
+    management in regulated contexts.
+- Raji ID, Smart A, White RN, et al. *Closing the AI
+  Accountability Gap: Defining an End-to-End Framework
+  for Internal Algorithmic Auditing.* FAT*, 2020.
+  - Proposes an internal audit framework spanning
+    scoping, mapping, artifact collection, testing, and
+    reflection.
+  - Track 7: auditing framework adaptable to
+    regulated AI.
+- Daneshjou R, Smith MP, Sun MD, Rotemberg V, Zou J.
+  *Lack of Transparency and Potential Bias in
+  Artificial Intelligence Data Sets and Algorithms: A
+  Scoping Review.* JAMA Dermatology, 2021;
+  157(11):1362-1369.
+  - Scoping review of dataset and algorithm
+    transparency gaps in clinical AI.
+  - Track 7: empirical snapshot of documentation
+    practice.
+- U.S. FDA. *Marketing Submission Recommendations for
+  a Predetermined Change Control Plan for Artificial
+  Intelligence/Machine Learning (AI/ML)-Enabled Device
+  Software Functions.* Draft Guidance, FDA, 2023.
+  - Provides FDA's recommended content for a PCCP in
+    device submissions.
+  - Track 7: regulatory anchor for operational change
+    control in clinical AI.
+- Wang Y, Zhu H, Madabushi R, Liu Q, Huang S-M, Zineh
+  I. *Model-Informed Drug Development: Current US
+  Regulatory Practice and Future Considerations.*
+  Clinical Pharmacology & Therapeutics, 2019;
+  105(4):899-911.
+  - FDA review of current MIDD practice and
+    submission expectations.
+  - Track 7: bridging reference between MIDD and
+    regulated MLOps.
+
+## Human-AI interaction in healthcare and research
+
+- Bansal G, Nushi B, Kamar E, Lasecki WS, Weld DS,
+  Horvitz E. *Beyond Accuracy: The Role of Mental
+  Models in Human-AI Team Performance.* AAAI HCOMP,
+  2019.
+  - Shows that mental-model alignment between humans
+    and AI matters for team performance beyond
+    model-only accuracy.
+  - Track 7: foundational argument that interface and
+    cognition matter beyond model metrics.
+- Cai CJ, Reif E, Hegde N, et al. *"Hello AI":
+  Uncovering the Onboarding Needs of Medical
+  Practitioners for Human-AI Collaborative
+  Decision-Making.* CSCW, 2019.
+  - Qualitative study of onboarding and collaboration
+    needs of clinicians using AI tools.
+  - Track 7: empirical design guidance for
+    clinician-facing AI.
+- Jacobs M, Pradier MF, McCoy TH, Perlis RH,
+  Doshi-Velez F, Gajos KZ. *How machine-learning
+  recommendations influence clinician treatment
+  selections: the example of antidepressant
+  selection.* Translational Psychiatry, 2021;
+  11(1):108.
+  - Experimental study of how clinician decisions shift
+    with ML recommendations, including incorrect ones.
+  - Track 7: direct evidence that interface design
+    alters clinical action.
+- Gaube S, Suresh H, Raue M, et al. *Do as AI say:
+  susceptibility in deployment of clinical decision-
+  aids.* npj Digital Medicine, 2021; 4:31.
+  - Demonstrates clinician susceptibility to incorrect
+    AI advice across experience levels.
+  - Track 7: empirical backing for override-discipline
+    design.
+- Bussone A, Stumpf S, O'Sullivan D. *The Role of
+  Explanations on Trust and Reliance in Clinical
+  Decision Support Systems.* IEEE International
+  Conference on Healthcare Informatics, 2015.
+  - Experimental study showing explanations shift
+    trust and reliance patterns on CDSS outputs.
+  - Track 7: early evidence for explanation-interface
+    effects.
+- Cabitza F, Rasoini R, Gensini GF. *Unintended
+  Consequences of Machine Learning in Medicine.* JAMA,
+  2017; 318(6):517-518.
+  - Short commentary on unintended effects of ML
+    adoption on clinical reasoning and workflows.
+  - Track 7: concise orientation to the
+    sociotechnical view of clinical ML.
+- Ghassemi M, Naumann T, Pierson E. *The False Hope of
+  Current Approaches to Explainable Artificial
+  Intelligence in Health Care.* Lancet Digital Health,
+  2021; 3(11):e745-e750.
+  - Argues that current explainability approaches
+    often mislead clinical consumers and proposes
+    alternative framings.
+  - Track 7: cautionary reading on explanation-first
+    interaction design.
+- Rudin C. *Stop explaining black box machine learning
+  models for high stakes decisions and use
+  interpretable models instead.* Nature Machine
+  Intelligence, 2019; 1:206-215.
+  - Argues for interpretable models over post-hoc
+    explanations in high-stakes settings.
+  - Track 7: foundational argument for
+    interpretability over explainability.
+
+## AI evaluation strategy and benchmarking
+
+- Vickers AJ, Elkin EB. *Decision Curve Analysis: A
+  Novel Method for Evaluating Prediction Models.*
+  Medical Decision Making, 2006; 26(6):565-574.
+  - Introduces decision curve analysis, a clinical
+    utility metric that compares prediction models on
+    net benefit across threshold probabilities.
+  - Track 7: decision-impact metric with clinical
+    interpretability.
+- Steyerberg EW, Vickers AJ, Cook NR, et al.
+  *Assessing the Performance of Prediction Models: A
+  Framework for Traditional and Novel Measures.*
+  Epidemiology, 2010; 21(1):128-138.
+  - Synthesizes discrimination, calibration, and
+    clinical usefulness into a coherent framework for
+    prediction-model evaluation.
+  - Track 7: anchor reference for
+    multi-dimensional evaluation.
+- Goel K, Rajani N, Vig J, et al. *Robustness Gym:
+  Unifying the NLP Evaluation Landscape.* NAACL, 2021.
+  - Introduces Robustness Gym, a toolkit for
+    slice-based and subpopulation evaluation.
+  - Track 7: toolkit reference for slice-based
+    evaluation.
+- Chen IY, Johansson FD, Sontag D. *Why Is My
+  Classifier Discriminatory?* NeurIPS, 2018.
+  - Analyzes sources of disparity in ML classifiers
+    and proposes targeted remediations.
+  - Track 7: diagnostic framing for subgroup
+    evaluation.
+- Saria S, Subbaswamy A. *Tutorial: Safe and Reliable
+  Machine Learning.* arXiv:1904.07204, 2019.
+  - Tutorial on safety, reliability, and shift-stable
+    ML aimed at clinical contexts.
+  - Track 7: pedagogical anchor for safety-oriented
+    evaluation.
+- Park Y, Hernandez-Boussard T, Gombar S, Larson DB,
+  Shah N. *Testing models on external data is
+  essential for performance validation.* Journal of
+  the American Medical Informatics Association, 2019;
+  26(12):1514-1518.
+  - Empirical argument for external validation as
+    standard practice for clinical prediction models.
+  - Track 7: evidence base for external-validation
+    discipline.
+- Futoma J, Simons M, Panch T, Doshi-Velez F, Celi LA.
+  *The myth of generalisability in clinical research
+  and machine learning in health care.* Lancet Digital
+  Health, 2020; 2(9):e489-e492.
+  - Questions generalizability claims in clinical ML
+    and argues for site-specific validation.
+  - Track 7: caution against over-claiming from
+    aggregate benchmarks.
+- Collins GS, Reitsma JB, Altman DG, Moons KG.
+  *Transparent Reporting of a multivariable prediction
+  model for Individual Prognosis Or Diagnosis
+  (TRIPOD): The TRIPOD Statement.* Annals of Internal
+  Medicine, 2015; 162(1):55-63.
+  - Reporting guideline for prediction-model studies
+    adopted widely in clinical journals.
+  - Track 7: reporting-standard anchor for prediction
+    model evaluation.
+- Collins GS, Moons KGM, Dhiman P, et al. *TRIPOD+AI
+  statement: updated guidance for reporting clinical
+  prediction models that use regression or machine
+  learning methods.* BMJ, 2024; 385:e078378.
+  - Updates TRIPOD to cover ML-based clinical
+    prediction models with specific reporting
+    requirements.
+  - Track 7: current reporting standard for clinical
+    prediction ML.
+- Wallach IZ, Heifets A. *Most Ligand-Based
+  Classification Benchmarks Reward Memorization
+  Rather than Generalization.* Journal of Chemical
+  Information and Modeling, 2018; 58(5):916-932.
+  - Shows that common chemistry benchmarks favor
+    memorization over generalization and proposes
+    stricter split policies.
+  - Track 7: benchmark-hygiene reference for discovery
+    ML evaluation.

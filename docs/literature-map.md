@@ -768,3 +768,166 @@ often elides.
 - Abramson J, Adler J, Dunger J, et al. *Accurate structure prediction of biomolecular interactions with AlphaFold 3.* Nature, 2024.
 - Celik S, Hutchinson JP, Yang KK, et al. *Building, benchmarking, and exploring perturbative maps of transcriptional and morphological data.* PLOS Computational Biology / Recursion disclosures, 2024.
 - Jayatunga MKP, Xie W, Ruder L, Schulze U, Meier C. *AI in small-molecule drug discovery: a coming wave?* Nature Reviews Drug Discovery, 2022.
+
+## Interface contracts and data validation in ML systems
+
+**Why this matters.** Healthcare AI systems fail more
+often at the contract layer — feature semantics, event
+definitions, unit conventions, outcome drift — than at
+the model layer. A catalog of contract patterns,
+validation tools, and schema-evolution practices
+supports the deeper treatment in
+`docs/interface-contracts-for-healthcare-ai.md`.
+
+**Questions to track.**
+
+- Which contract patterns survive real production
+  pressure, and which degrade into informal
+  assumptions?
+- What does data validation tooling cover, and what is
+  left to process discipline?
+- How are cross-organization contracts governed when
+  producer and consumer sit in different regulatory
+  regimes?
+
+**Readings.**
+
+- Polyzotis N, Roy S, Whang SE, Zinkevich M. *Data Management Challenges in Production Machine Learning.* SIGMOD, 2017.
+- Schelter S, Lange D, Schmidt P, Celikel M, Biessmann F, Grafberger A. *Automating Large-Scale Data Quality Verification.* VLDB, 2018.
+- Breck E, Polyzotis N, Roy S, Whang SE, Zinkevich M. *Data Validation for Machine Learning.* SysML (MLSys), 2019.
+- Gebru T, Morgenstern J, Vecchione B, et al. *Datasheets for Datasets.* Communications of the ACM, 2021.
+- Mitchell M, Wu S, Zaldivar A, et al. *Model Cards for Model Reporting.* FAT*, 2019.
+- Mandel JC, Kreda DA, Mandl KD, Kohane IS, Ramoni RB. *SMART on FHIR: a standards-based, interoperable apps platform for electronic health records.* JAMIA, 2016.
+- Hripcsak G, Duke JD, Shah NH, et al. *Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers.* Studies in Health Technology and Informatics, 2015.
+
+## Multi-model orchestration and composition
+
+**Why this matters.** Deployed healthcare and pharma AI
+systems rarely serve a single model. Cascade,
+ensemble, gating, fallback, champion-challenger, and
+physics-ML hybrid patterns compose into the working
+system. Each pattern carries its own failure modes and
+observability needs; the literature base is scattered
+across general ML and clinical ML applications.
+
+**Questions to track.**
+
+- Which composition patterns are most often used in
+  regulated pharma and clinical AI deployments, and
+  which remain experimental?
+- How should component-level SLOs aggregate into a
+  system-level SLO for a composed service?
+- How are physics-ML hybrid models evaluated for
+  regulatory submissions where neither pure-physics
+  nor pure-ML review applies cleanly?
+
+**Readings.**
+
+- Dietterich TG. *Ensemble Methods in Machine Learning.* Multiple Classifier Systems, 2000.
+- Viola P, Jones M. *Rapid Object Detection Using a Boosted Cascade of Simple Features.* CVPR, 2001.
+- Shazeer N, Mirhoseini A, Maziarz K, et al. *Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer.* ICLR, 2017.
+- Lewis P, Perez E, Piktus A, et al. *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.* NeurIPS, 2020.
+- Gama J, Zliobaite I, Bifet A, Pechenizkiy M, Bouchachia A. *A Survey on Concept Drift Adaptation.* ACM Computing Surveys, 2014.
+- Fedus W, Zoph B, Shazeer N. *Switch Transformer: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.* Journal of Machine Learning Research, 2022.
+- Schrittwieser J, Antonoglou I, Hubert T, et al. *Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model.* Nature, 2020. [hybrid planning-learning as a pattern reference]
+
+## MLOps for regulated, continual, and reviewable AI
+
+**Why this matters.** Clinical AI under SaMD and pharma
+AI under MIDD face documentation, change-control, and
+reviewability expectations that general MLOps does not
+address. The intersection — reproducibility as
+regulatory artifact, predetermined change control,
+quality-system integration — is where a regulated AI
+pipeline actually lives.
+
+**Questions to track.**
+
+- Which PCCP change categories are commonly submitted
+  and accepted, and what do their plans look like?
+- How does MIDD documentation discipline adapt when ML
+  augments classical pharmacometric models?
+- What does a minimum viable regulated-MLOps pipeline
+  look like for a single-site hospital using a
+  vendor-supplied device?
+- How are continual-learning models governed when
+  retraining is routine and formal stage-gate cadence
+  is too slow?
+
+**Readings.**
+
+- Ashmore R, Calinescu R, Paterson C. *Assuring the Machine Learning Lifecycle: Desiderata, Methods, and Challenges.* ACM Computing Surveys, 2021.
+- Studer S, Bui TB, Drescher C, et al. *Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology.* Machine Learning and Knowledge Extraction, 2021.
+- Hutchinson B, Smart A, Hanna A, et al. *Towards Accountability for Machine Learning Datasets: Practices from Software Engineering and Infrastructure.* FAccT, 2021.
+- Raji ID, Smart A, White RN, et al. *Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing.* FAT*, 2020.
+- Daneshjou R, Smith MP, Sun MD, Rotemberg V, Zou J. *Lack of transparency and potential bias in artificial intelligence data sets and algorithms: A scoping review.* JAMA Dermatology, 2021.
+- U.S. FDA, Health Canada, MHRA. *Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices: Guiding Principles.* 2023.
+- U.S. FDA. *Marketing Submission Recommendations for a Predetermined Change Control Plan for Artificial Intelligence/Machine Learning (AI/ML)-Enabled Device Software Functions.* Draft Guidance, 2023.
+- Marshall SF, Burghaus R, Cosson V, et al. *Good Practices in Model-Informed Drug Discovery and Development.* CPT: Pharmacometrics & Systems Pharmacology, 2016.
+- Wang Y, Zhu H, Madabushi R, et al. *Model-Informed Drug Development: Current US Regulatory Practice and Future Considerations.* Clinical Pharmacology & Therapeutics, 2019.
+
+## Human-AI interaction in healthcare and research
+
+**Why this matters.** Interaction design determines
+whether model accuracy translates into decision value.
+Clinicians, chemists, pharmacologists, and reviewers
+each consume AI outputs under different time, task, and
+consequence constraints, and the interface carries
+their reliance, trust, override, and feedback behavior.
+
+**Questions to track.**
+
+- Which interaction patterns carry sustained evidence
+  for use under operational pressure, and which are
+  mostly short-study artifacts?
+- How should explanation interfaces be evaluated when
+  the explanation alters user behavior independent of
+  model output?
+- When does interface design change deployment
+  outcomes in measurable ways, relative to underlying
+  model performance?
+
+**Readings.**
+
+- Bansal G, Nushi B, Kamar E, Lasecki WS, Weld DS, Horvitz E. *Beyond Accuracy: The Role of Mental Models in Human-AI Team Performance.* HCOMP, 2019.
+- Cai CJ, Reif E, Hegde N, et al. *"Hello AI": Uncovering the Onboarding Needs of Medical Practitioners for Human-AI Collaborative Decision-Making.* CSCW, 2019.
+- Jacobs M, Pradier MF, McCoy TH, Perlis RH, Doshi-Velez F, Gajos KZ. *How machine-learning recommendations influence clinician treatment selections: the example of antidepressant selection.* Translational Psychiatry, 2021.
+- Gaube S, Suresh H, Raue M, et al. *Do as AI say: susceptibility in deployment of clinical decision-aids.* npj Digital Medicine, 2021.
+- Bussone A, Stumpf S, O'Sullivan D. *The Role of Explanations on Trust and Reliance in Clinical Decision Support Systems.* IEEE International Conference on Healthcare Informatics, 2015.
+- Cabitza F, Rasoini R, Gensini GF. *Unintended Consequences of Machine Learning in Medicine.* JAMA, 2017.
+- Rudin C. *Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead.* Nature Machine Intelligence, 2019.
+- Ghassemi M, Naumann T, Pierson E. *The False Hope of Current Approaches to Explainable Artificial Intelligence in Health Care.* Lancet Digital Health, 2021.
+- Cai CJ, Winter S, Steiner D, Wilcox L, Terry M. *"Hello AI" for medicine and beyond — follow-up work on collaborative decision-making interfaces.* various, 2019-2021.
+
+## AI evaluation strategy and benchmarking
+
+**Why this matters.** Evaluation in a deployed AI
+system is a long-running artifact, not a one-time
+activity. Slice-based evaluation, decision-impact
+metrics, evaluation registries, and benchmark hygiene
+all contribute to whether evaluation actually informs
+decisions.
+
+**Questions to track.**
+
+- Which decision-impact metrics (net benefit,
+  clinical utility, portfolio NPV contribution) have
+  adoption, and which remain academic?
+- How should evaluation strategy evolve for continually
+  learning models with no frozen snapshot?
+- How is cross-stage evaluation consistency enforced in
+  a system of systems where constituents set their own
+  evaluation policies?
+
+**Readings.**
+
+- Vickers AJ, Elkin EB. *Decision Curve Analysis: A Novel Method for Evaluating Prediction Models.* Medical Decision Making, 2006.
+- Steyerberg EW, Vickers AJ, Cook NR, et al. *Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures.* Epidemiology, 2010.
+- Goel K, Rajani N, Vig J, et al. *Robustness Gym: Unifying the NLP Evaluation Landscape.* NAACL, 2021.
+- Chen IY, Johansson FD, Sontag D. *Why Is My Classifier Discriminatory?* NeurIPS, 2018.
+- Saria S, Subbaswamy A. *Tutorial: Safe and Reliable Machine Learning.* arXiv:1904.07204, 2019.
+- Wallach IZ, Heifets A. *Most Ligand-Based Classification Benchmarks Reward Memorization Rather than Generalization.* Journal of Chemical Information and Modeling, 2018.
+- Park Y, Hernandez-Boussard T, Gombar S, Larson DB, Shah N. *Testing models on external data is essential for performance validation.* Journal of the American Medical Informatics Association, 2019.
+- Futoma J, Simons M, Panch T, Doshi-Velez F, Celi LA. *The myth of generalisability in clinical research and machine learning in health care.* Lancet Digital Health, 2020.
+- Collins GS, Reitsma JB, Altman DG, Moons KG. *Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD): The TRIPOD Statement.* Annals of Internal Medicine, 2015.
+- Collins GS, Moons KGM, Dhiman P, et al. *TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods.* BMJ, 2024.
