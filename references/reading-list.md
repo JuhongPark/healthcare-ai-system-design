@@ -866,3 +866,147 @@ Format, once a real reference is added:
     and the evaluation challenges that remain.
   - Cross-cutting: orientation reference for AI in
     pharmacovigilance.
+
+## Systems engineering and architecture methods
+
+- Crawley E, Cameron B, Selva D. *System Architecture:
+  Strategy and Product Development for Complex Systems.*
+  Pearson, 2015.
+  - Treats system architecture as allocation of function
+    to form under stakeholder value constraints, with a
+    design process and worked examples.
+  - Track 7: primary MIT SDM architecture reference used
+    for stakeholder value and functional analysis.
+- de Weck OL, Roos D, Magee CL. *Engineering Systems:
+  Meeting Human Needs in a Complex Technological World.*
+  MIT Press, 2011.
+  - Positions engineering systems as a discipline
+    addressing complex, sociotechnical artifacts beyond
+    single-engineer scope.
+  - Track 7: framing reference for healthcare AI as an
+    engineering system.
+- Eppinger SD, Browning TR. *Design Structure Matrix
+  Methods and Applications.* MIT Press, 2012.
+  - Methodological reference for DSM analysis of product,
+    organization, and process architectures.
+  - Track 7: basis for component and organizational DSM
+    exercises on healthcare AI deployments.
+- Suh NP. *Axiomatic Design: Advances and Applications.*
+  Oxford University Press, 2001.
+  - Presents axiomatic design with Independence and
+    Information axioms, mapping functional requirements to
+    design parameters.
+  - Track 7: method for exposing functional coupling in
+    healthcare AI architectures.
+- Sterman JD. *Business Dynamics: Systems Thinking and
+  Modeling for a Complex World.* Irwin McGraw-Hill, 2000.
+  - Comprehensive treatment of system dynamics with
+    applications to feedback loops, delays, and stocks
+    and flows.
+  - Track 7: basis for causal-loop and stock-and-flow
+    models of alert fatigue, trust, and drift in clinical
+    AI.
+- Dori D. *Model-Based Systems Engineering with OPM and
+  SysML.* Springer, 2016.
+  - Introduces Object-Process Methodology alongside
+    SysML for model-based systems engineering.
+  - Track 7: candidate notation for cross-discipline
+    description of clinical AI systems.
+- INCOSE. *INCOSE Systems Engineering Handbook.* 5th
+  edition, Wiley, 2023.
+  - Reference handbook for systems engineering lifecycle,
+    processes, and management practices.
+  - Track 7: general systems-engineering reference used
+    as a baseline across tracks.
+
+## ML engineering, operations, and technical debt
+
+- Amershi S, Begel A, Bird C, et al. *Software Engineering
+  for Machine Learning: A Case Study.* International
+  Conference on Software Engineering (ICSE-SEIP), 2019;
+  pp. 291-300.
+  - Observes teams at Microsoft building ML applications
+    and articulates a nine-stage workflow with
+    engineering challenges specific to ML.
+  - Track 7: empirical reference for ML software
+    engineering practice.
+- Paleyes A, Urma RG, Lawrence ND. *Challenges in
+  Deploying Machine Learning: A Survey of Case Studies.*
+  ACM Computing Surveys, 2022; 55(6):Article 114.
+  - Surveys published ML deployment case studies and
+    maps challenges to stages of the deployment
+    workflow.
+  - Track 7: consolidated reference for ML deployment
+    failure modes.
+- Breck E, Cai S, Nielsen E, Salib M, Sculley D. *The ML
+  Test Score: A Rubric for ML Production Readiness and
+  Technical Debt Reduction.* IEEE International
+  Conference on Big Data, 2017.
+  - Rubric of tests across data, model, infrastructure,
+    and monitoring for scoring ML production readiness.
+  - Track 7: practical scorecard for clinical ML
+    deployment review.
+- Kreuzberger D, Kuhl N, Hirschl S. *Machine Learning
+  Operations (MLOps): Overview, Definition, and
+  Architecture.* IEEE Access, 2023; 11:31866-31879.
+  - Aggregates principles, components, roles, and
+    architecture for MLOps from literature, tool review,
+    and interviews.
+  - Track 7: reference for MLOps operating model.
+- Shankar S, Garcia R, Hellerstein JM, Parameswaran AG.
+  *Operationalizing Machine Learning: An Interview
+  Study.* arXiv:2209.09125, 2022.
+  - Qualitative interview study of ML practitioners
+    characterizing the gaps between research ML and
+    production ML.
+  - Track 7: ethnographic reference for ML operations
+    in practice.
+- Huyen C. *Designing Machine Learning Systems.*
+  O'Reilly, 2022.
+  - Book-length treatment of ML systems design covering
+    data, training, deployment, and monitoring.
+  - Track 7: accessible reference for end-to-end ML
+    systems design.
+- Wiens J, Saria S, Sendak M, et al. *Do no harm: a
+  roadmap for responsible machine learning for health
+  care.* Nature Medicine, 2019; 25:1337-1340.
+  - Roadmap for responsible healthcare ML covering
+    design, evaluation, reporting, and deployment
+    practices.
+  - Track 7: widely cited roadmap bridging clinical
+    research and ML engineering practice.
+
+## Pharmaceutical R&D economics and portfolio strategy
+
+- Paul SM, Mytelka DS, Dunwiddie CT, et al. *How to
+  improve R&D productivity: the pharmaceutical industry's
+  grand challenge.* Nature Reviews Drug Discovery, 2010;
+  9:203-214.
+  - Analyzes pharmaceutical R&D productivity with a
+    stage-by-stage attrition and cost model, proposing
+    shifts in investment across stages.
+  - Track 7 and 6: standard reference for the pharma R&D
+    economic model in which discovery AI investments sit.
+- Kola I, Landis J. *Can the pharmaceutical industry
+  reduce attrition rates?* Nature Reviews Drug Discovery,
+  2004; 3:711-715.
+  - Quantifies clinical-stage attrition by cause and
+    argues for reallocating effort toward early-stage
+    de-risking.
+  - Track 7 and 6: classic reference for attrition
+    drivers in drug development.
+- DiMasi JA, Grabowski HG, Hansen RW. *Innovation in the
+  pharmaceutical industry: new estimates of R&D costs.*
+  Journal of Health Economics, 2016; 47:20-33.
+  - Re-estimates capitalized R&D cost per approved drug
+    using proprietary data, with methodology discussion.
+  - Track 7 and 6: cost-side reference in pharma
+    portfolio analysis.
+- Wouters OJ, McKee M, Luyten J. *Estimated Research and
+  Development Investment Needed to Bring a New Medicine
+  to Market, 2009-2018.* JAMA, 2020; 323(9):844-853.
+  - Public-data estimate of capitalized R&D cost per new
+    therapeutic, offering a methodologically distinct
+    counterpoint to prior industry-data estimates.
+  - Track 7 and 6: public-data anchor for pharma R&D
+    cost discussions.
