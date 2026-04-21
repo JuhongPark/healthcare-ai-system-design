@@ -455,3 +455,414 @@ Format, once a real reference is added:
     record, distinguishing demonstrations from impact on
     real medicinal chemistry workflows.
   - Track 6: corrective viewpoint against over-claiming.
+
+## Clinical AI deployment case studies
+
+- Habib AR, Lin AL, Grant RW. *The Epic Sepsis Model Falls
+  Short — The Importance of External Validation.* JAMA
+  Internal Medicine, 2021; 181(8):1040-1041.
+  - Editorial framing the Epic Sepsis Model external
+    validation as a general argument for routine
+    independent evaluation of widely deployed clinical AI.
+  - Cross-cutting: case-study companion to the Wong et al.
+    validation paper.
+- Strickland E. *IBM Watson, Heal Thyself: How IBM
+  Overpromised and Underdelivered on AI Health Care.* IEEE
+  Spectrum, 2019.
+  - Long-form investigation of the IBM Watson for Oncology
+    program and the gap between marketing and capability.
+  - Cross-cutting: trade-press case study used as a
+    cautionary reference in the deployment literature.
+- Char DS, Shah NH, Magnus D. *Implementing Machine Learning
+  in Health Care — Addressing Ethical Challenges.* NEJM,
+  2018; 378(11):981-983.
+  - Frames implementation of ML in healthcare as an ethical
+    problem requiring attention to bias, accountability, and
+    informed consent.
+  - Cross-cutting: short, widely cited orientation piece on
+    ethical scoping at deployment.
+- Coiera E. *The Last Mile: Where Artificial Intelligence
+  Meets Reality.* Journal of Medical Internet Research,
+  2019; 21(11):e16323.
+  - Argues that closing the gap between model performance
+    and clinical impact is a sociotechnical problem, not a
+    purely technical one.
+  - Cross-cutting: framing for the deployment-gap question.
+- Shah NH, Milstein A, Bagley SC. *Making Machine Learning
+  Models Clinically Useful.* JAMA, 2019; 322(14):1351-1352.
+  - Argues that clinical usefulness requires reasoning
+    about decision context and counterfactual outcomes,
+    not only predictive accuracy.
+  - Cross-cutting: viewpoint on action-relevance for
+    clinical ML.
+
+## Regulatory landscape for healthcare AI
+
+- U.S. FDA, Health Canada, MHRA. *Good Machine Learning
+  Practice for Medical Device Development: Guiding
+  Principles.* 2021.
+  - Ten guiding principles jointly issued by three
+    regulators, framed as a starting point rather than a
+    regulation.
+  - Cross-cutting: most-cited regulator joint statement on
+    ML medical device development.
+- U.S. FDA, Health Canada, MHRA. *Predetermined Change
+  Control Plans for Machine Learning-Enabled Medical
+  Devices: Guiding Principles.* 2023.
+  - Joint guiding principles on managing model
+    modifications across the lifecycle without
+    re-submitting for every change.
+  - Cross-cutting: foundational document for change-control
+    practice.
+- Muehlematter UJ, Daniore P, Vokinger KN. *Approval of
+  artificial intelligence and machine learning-based
+  medical devices in the USA and Europe (2015-20): a
+  comparative analysis.* Lancet Digital Health, 2021;
+  3(3):e195-e203.
+  - Comparative analysis of AI/ML medical device approvals
+    in the U.S. and Europe over five years.
+  - Cross-cutting: empirical anchor for the regulator-side
+    landscape.
+- Benjamens S, Dhunnoo P, Mesko B. *The state of
+  artificial intelligence-based FDA-approved medical
+  devices and algorithms: an online database.* npj Digital
+  Medicine, 2020; 3:118.
+  - Curated database of FDA-cleared AI/ML medical devices
+    with category and modality breakdowns.
+  - Cross-cutting: reference dataset for tracking
+    approvals.
+- Vokinger KN, Feuerriegel S, Kesselheim AS. *Continual
+  learning in medical devices: FDA's action plan and
+  beyond.* Lancet Digital Health, 2021; 3(6):e337-e338.
+  - Critical reading of regulatory framing for continual
+    learning systems and what it leaves underspecified.
+  - Cross-cutting: regulator-policy commentary on
+    continual learning.
+- European Commission. *Regulation (EU) 2017/745 of the
+  European Parliament and of the Council on Medical
+  Devices (MDR).* 2017.
+  - EU Medical Device Regulation governing software and
+    AI as a medical device in the European Union.
+  - Cross-cutting: primary EU regulatory text for clinical
+    AI.
+
+## Foundation models in healthcare
+
+- Bommasani R, Hudson DA, Adeli E, et al. *On the
+  Opportunities and Risks of Foundation Models.*
+  arXiv:2108.07258, 2021.
+  - Stanford CRFM report defining foundation models and
+    surveying capabilities, applications, and risks across
+    domains.
+  - Cross-cutting: standard reference for the foundation
+    model concept itself.
+- Singhal K, Azizi S, Tu T, et al. *Large language models
+  encode clinical knowledge.* Nature, 2023; 620:172-180.
+  - Introduces Med-PaLM and reports on medical question
+    answering performance with prompt engineering and
+    instruction tuning.
+  - Cross-cutting: anchor paper for clinical LLM
+    evaluation.
+- Yang X, Chen A, PourNejatian N, et al. *A large
+  language model for electronic health records.* npj
+  Digital Medicine, 2022; 5:194.
+  - Introduces GatorTron, an EHR-pretrained LLM, and
+    reports gains on clinical NLP tasks.
+  - Cross-cutting: example of domain pretraining on
+    structured-plus-text clinical data.
+- Lehman E, Hernandez E, Mahajan D, et al. *Do We Still
+  Need Clinical Language Models?* Conference on Health,
+  Inference, and Learning (CHIL), 2023.
+  - Compares general and clinical LLMs across tasks and
+    asks under what conditions clinical pretraining still
+    pays off.
+  - Cross-cutting: empirical recalibration of when
+    in-domain pretraining matters.
+- Moor M, Banerjee O, Abad ZSH, et al. *Foundation models
+  for generalist medical artificial intelligence.* Nature,
+  2023; 616:259-265.
+  - Articulates a vision of generalist medical AI built on
+    foundation models, with explicit attention to
+    evaluation and governance gaps.
+  - Cross-cutting: framing piece for multimodal medical
+    foundation models.
+- Chithrananda S, Grand G, Ramsundar B. *ChemBERTa:
+  Large-Scale Self-Supervised Pretraining for Molecular
+  Property Prediction.* arXiv:2010.09885, 2020.
+  - Adapts BERT-style self-supervised pretraining to SMILES
+    strings for downstream molecular property prediction.
+  - Cross-cutting: early chemistry foundation model.
+- Ross J, Belgodere B, Chenthamarakshan V, et al.
+  *Large-scale chemical language representations capture
+  molecular structure and properties.* Nature Machine
+  Intelligence, 2022; 4:1256-1264.
+  - Introduces MoLFormer, a large-scale chemistry language
+    model, and benchmarks downstream property tasks.
+  - Cross-cutting: scaling chemistry language modeling.
+- Lin Z, Akin H, Rao R, et al. *Evolutionary-scale
+  prediction of atomic-level protein structure.* Science,
+  2023; 379:1123-1130.
+  - Introduces ESM-2 and ESMFold, demonstrating
+    evolutionary-scale protein language models for
+    structure prediction.
+  - Cross-cutting: foundation-scale alternative to
+    AlphaFold for structural biology.
+
+## Federated and privacy-preserving learning
+
+- McMahan HB, Moore E, Ramage D, Hampson S, Aguera y Arcas
+  B. *Communication-Efficient Learning of Deep Networks
+  from Decentralized Data.* AISTATS, 2017.
+  - Introduces federated averaging for training shared
+    models across decentralized data.
+  - Cross-cutting: foundational paper for federated
+    learning.
+- Rieke N, Hancox J, Li W, et al. *The future of digital
+  health with federated learning.* npj Digital Medicine,
+  2020; 3:119.
+  - Position paper on federated learning for medicine,
+    surveying applications and operational considerations.
+  - Cross-cutting: orientation reference for federated
+    learning in healthcare.
+- Sheller MJ, Edwards B, Reina GA, et al. *Federated
+  learning in medicine: facilitating multi-institutional
+  collaborations without sharing patient data.* Scientific
+  Reports, 2020; 10:12598.
+  - Multi-institutional federated learning experiment for
+    brain tumor segmentation, comparing federated and
+    centralized training.
+  - Cross-cutting: empirical demonstration in medical
+    imaging.
+- Kaissis GA, Makowski MR, Ruckert D, Braren RF. *Secure,
+  privacy-preserving and federated machine learning in
+  medical imaging.* Nature Machine Intelligence, 2020;
+  2:305-311.
+  - Reviews federated learning, differential privacy, and
+    secure computation for medical imaging.
+  - Cross-cutting: review tying federated and
+    privacy-preserving methods together.
+- Pati S, Baid U, Edwards B, et al. *Federated learning
+  enables big data for rare cancer boundary detection.*
+  Nature Communications, 2022; 13:7346.
+  - Reports on the FeTS federated learning effort for
+    rare-cancer boundary detection across many sites.
+  - Cross-cutting: large-scale federated medical imaging
+    case study.
+- Dwork C, Roth A. *The Algorithmic Foundations of
+  Differential Privacy.* Foundations and Trends in
+  Theoretical Computer Science, 2014; 9(3-4):211-407.
+  - Foundational monograph on differential privacy
+    definitions, mechanisms, and analyses.
+  - Cross-cutting: standard reference for differential
+    privacy.
+
+## Fairness and equity in healthcare AI
+
+- Obermeyer Z, Powers B, Vogeli C, Mullainathan S.
+  *Dissecting racial bias in an algorithm used to manage
+  the health of populations.* Science, 2019;
+  366(6464):447-453.
+  - Shows that a widely used commercial risk-prediction
+    algorithm under-allocated care to Black patients
+    because it used cost as a proxy for need.
+  - Cross-cutting: canonical case of label-choice bias in
+    a deployed clinical algorithm.
+- Pierson E, Cutler DM, Leskovec J, Mullainathan S,
+  Obermeyer Z. *An algorithmic approach to reducing
+  unexplained pain disparities in underserved
+  populations.* Nature Medicine, 2021; 27:136-140.
+  - Uses algorithmic methods to identify pain not
+    accounted for by standard radiographic measures,
+    disproportionately affecting Black patients.
+  - Cross-cutting: example of AI used to surface rather
+    than create disparities.
+- Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY,
+  Ghassemi M. *Underdiagnosis bias of artificial
+  intelligence algorithms applied to chest radiographs in
+  under-served patient populations.* Nature Medicine,
+  2021; 27:2176-2182.
+  - Demonstrates higher under-diagnosis rates by chest
+    radiograph classifiers for female, Black, Hispanic,
+    and low-SES patients across multiple datasets.
+  - Cross-cutting: empirical evidence for subgroup
+    disparities in deployed-class imaging AI.
+- Rajkomar A, Hardt M, Howell MD, Corrado G, Chin MH.
+  *Ensuring Fairness in Machine Learning to Advance Health
+  Equity.* Annals of Internal Medicine, 2018;
+  169(12):866-872.
+  - Frames fairness in clinical ML as a chain of design
+    choices spanning data, label, model, and deployment.
+  - Cross-cutting: orientation paper for the design-stage
+    framing of fairness.
+- Chen IY, Joshi S, Ghassemi M. *Treating health
+  disparities with artificial intelligence.* Nature
+  Medicine, 2020; 26:16-17.
+  - Argues for treating disparity reduction as a primary
+    design objective in healthcare AI.
+  - Cross-cutting: positioning piece for equity-as-goal.
+- Ghassemi M, Naumann T, Pierson E. *The False Hope of
+  Current Approaches to Explainable Artificial
+  Intelligence in Health Care.* Lancet Digital Health,
+  2021; 3(11):e745-e750.
+  - Argues that current explainable AI approaches do not
+    deliver what clinical users actually need from
+    explanations.
+  - Cross-cutting: critique of post-hoc explanation as a
+    general fairness or trust solution.
+
+## Reproducibility in healthcare ML
+
+- McDermott MBA, Wang S, Marinsek N, Ranganath R,
+  Foschini L, Ghassemi M. *Reproducibility in machine
+  learning for health research: still a ways to go.*
+  Science Translational Medicine, 2021; 13(586):eabb1655.
+  - Surveys reproducibility issues in clinical ML across
+    code release, data access, and reporting.
+  - Cross-cutting: empirical anchor for the
+    reproducibility argument in clinical ML.
+- Stupple A, Singerman D, Celi LA. *The reproducibility
+  crisis in the age of digital medicine.* npj Digital
+  Medicine, 2019; 2:2.
+  - Frames reproducibility for digital medicine, including
+    publication norms and data-sharing constraints.
+  - Cross-cutting: orientation piece on the broader
+    reproducibility problem.
+- Wynants L, Van Calster B, Collins GS, et al.
+  *Prediction models for diagnosis and prognosis of
+  covid-19: systematic review and critical appraisal.*
+  BMJ, 2020; 369:m1328.
+  - Systematic review judging most COVID-19 prediction
+    models at high risk of bias.
+  - Cross-cutting: large-scale empirical case for
+    methodological scrutiny of clinical ML.
+- Roberts M, Driggs D, Thorpe M, et al. *Common pitfalls
+  and recommendations for using machine learning to
+  detect and prognosticate for COVID-19 using chest
+  radiographs and CT scans.* Nature Machine Intelligence,
+  2021; 3:199-217.
+  - Reviews ML approaches to COVID-19 imaging and
+    catalogs recurring pitfalls including data leakage
+    and inadequate dataset description.
+  - Cross-cutting: detailed pitfalls catalog for clinical
+    imaging ML.
+- Wallach IZ, Heifets A. *Most Ligand-Based
+  Classification Benchmarks Reward Memorization Rather
+  than Generalization.* Journal of Chemical Information
+  and Modeling, 2018; 58(5):916-932.
+  - Shows that several molecular classification
+    benchmarks can be solved by memorization rather than
+    generalization, undermining apparent gains.
+  - Cross-cutting: foundational reproducibility critique
+    in chemistry ML.
+- Bender A, Cortes-Ciriano I. *Artificial intelligence in
+  drug discovery: what is realistic, what are illusions?
+  Part 1: Ways to make an impact, and why we are not
+  there yet.* Drug Discovery Today, 2021;
+  26(2):511-524.
+  - Critical assessment of the gap between AI drug
+    discovery claims and clinical impact.
+  - Cross-cutting: corrective reading on the discovery-
+    AI hype cycle.
+- Bender A, Cortes-Ciriano I. *Artificial intelligence in
+  drug discovery: what is realistic, what are illusions?
+  Part 2: A discussion of chemical and biological data.*
+  Drug Discovery Today, 2021; 26(4):1040-1052.
+  - Companion paper focused on data quality, dataset
+    diversity, and benchmark design problems in
+    discovery ML.
+  - Cross-cutting: detailed reading on data limits in
+    drug discovery ML.
+
+## Hospital cybersecurity, telehealth, and process mining
+
+- Coventry L, Branley D. *Cybersecurity in healthcare: A
+  narrative review of trends, threats and ways forward.*
+  Maturitas, 2018; 113:48-52.
+  - Narrative review of cybersecurity threats specific to
+    healthcare environments and proposed responses.
+  - Cross-cutting: orientation reference for healthcare
+    cybersecurity.
+- Webster P. *Virtual health care in the era of
+  COVID-19.* Lancet, 2020; 395(10231):1180-1181.
+  - Frames the rapid pandemic-era expansion of virtual
+    care and the questions it raised for health systems.
+  - Cross-cutting: short framing piece on telehealth
+    acceleration.
+- Mans RS, van der Aalst WMP, Vanwersch RJB. *Process
+  Mining in Healthcare: Evaluating and Exploiting
+  Operational Healthcare Processes.* Springer, 2015.
+  - Methodological treatment of process mining as applied
+    to healthcare event logs.
+  - Cross-cutting: book-length reference for healthcare
+    process mining.
+- Rojas E, Munoz-Gama J, Sepulveda M, Capurro D. *Process
+  mining in healthcare: A literature review.* Journal of
+  Biomedical Informatics, 2016; 61:224-236.
+  - Systematic review of healthcare process mining
+    studies, methods, and reporting practices.
+  - Cross-cutting: review article for the healthcare
+    process-mining literature.
+
+## Drug discovery extensions: knowledge graphs, protein design, trials, and pharmacovigilance
+
+- Reker D, Schneider G. *Active-learning strategies in
+  computer-assisted drug discovery.* Drug Discovery
+  Today, 2015; 20(4):458-465.
+  - Surveys active-learning approaches in
+    computer-assisted drug discovery and characterizes
+    where they pay off.
+  - Cross-cutting: orientation reference for active
+    learning in chemistry.
+- Himmelstein DS, Lizee A, Hessler C, et al. *Systematic
+  integration of biomedical knowledge prioritizes drugs
+  for repurposing.* eLife, 2017; 6:e26726.
+  - Introduces Hetionet, a heterogeneous biomedical
+    knowledge graph, and uses it for systematic
+    repurposing prioritization.
+  - Cross-cutting: foundational biomedical knowledge graph
+    paper.
+- Zitnik M, Agrawal M, Leskovec J. *Modeling polypharmacy
+  side effects with graph convolutional networks.*
+  Bioinformatics, 2018; 34(13):i457-i466.
+  - Introduces Decagon for graph-convolutional prediction
+    of polypharmacy side effects.
+  - Cross-cutting: applied biomedical knowledge graph ML
+    paper.
+- Dauparas J, Anishchenko I, Bennett N, et al. *Robust
+  deep learning-based protein sequence design using
+  ProteinMPNN.* Science, 2022; 378(6615):49-56.
+  - Introduces ProteinMPNN for sequence design given a
+    structural backbone, with experimental validation.
+  - Cross-cutting: protein sequence design baseline.
+- Watson JL, Juergens D, Bennett NR, et al. *De novo
+  design of protein structure and function with
+  RFdiffusion.* Nature, 2023; 620:1089-1100.
+  - Introduces RFdiffusion for de novo design of protein
+    structure and function via diffusion modeling on
+    structure.
+  - Cross-cutting: structure-side of the protein design
+    pipeline.
+- Harrer S, Shah P, Antony B, Hu J. *Artificial
+  Intelligence for Clinical Trial Design.* Trends in
+  Pharmacological Sciences, 2019; 40(8):577-591.
+  - Surveys AI applications across clinical trial design
+    including eligibility, site selection, and
+    stratification.
+  - Cross-cutting: orientation reference for AI in trial
+    design.
+- Liu R, Rizzo S, Whipple S, et al. *Evaluating
+  eligibility criteria of oncology trials using real-world
+  data and artificial intelligence.* Nature, 2021;
+  592:629-633.
+  - Uses real-world data and AI to evaluate the impact of
+    oncology trial eligibility criteria on patient
+    inclusion.
+  - Cross-cutting: empirical case for AI-supported
+    eligibility analysis.
+- Ball R, Dal Pan G. *"Artificial Intelligence" for
+  Pharmacovigilance: Ready for Prime Time?* Drug Safety,
+  2022; 45:429-438.
+  - Reviews readiness of AI methods for pharmacovigilance
+    and the evaluation challenges that remain.
+  - Cross-cutting: orientation reference for AI in
+    pharmacovigilance.
