@@ -129,6 +129,121 @@ into post-marketing data.
 - What does a unified record of a candidate look like, from
   target hypothesis to post-marketing surveillance?
 
+## Active learning and Bayesian optimization
+
+Generation and screening loops over chemical space rarely
+have the budget to evaluate every candidate. Active learning
+and Bayesian optimization choose which candidate to
+evaluate next, given uncertainty estimates from a surrogate
+model. Reker and Schneider (2015) survey active learning in
+computer-assisted drug discovery; Gomez-Bombarelli and
+colleagues (2018) demonstrate latent-space optimization
+over a learned chemical representation. The choice of
+acquisition function, the calibration of the surrogate, and
+the relationship between in-silico scores and assay
+behavior all shape whether the loop converges on useful
+chemistry or on artifacts.
+
+### Open questions
+
+- How are uncertainty estimates from a surrogate model
+  validated before they are trusted as inputs to an
+  acquisition function?
+- How is the cost structure of different assays reflected
+  in batch design?
+- When does an active-learning loop entrench artifacts of
+  the initial dataset rather than escape them?
+
+## Biomedical knowledge graphs
+
+Knowledge graphs combine structured biomedical knowledge —
+genes, proteins, diseases, drugs, side effects, pathways —
+into a relational substrate that can be queried, embedded,
+or reasoned over. Himmelstein and colleagues (2017)
+introduced Hetionet and used it for systematic drug
+repurposing prioritization. Zitnik, Agrawal, and Leskovec
+(2018) introduced Decagon for graph-convolutional
+prediction of polypharmacy side effects. Knowledge graphs
+sit alongside structure-based and chemistry-foundation-
+model approaches as another way to organize what is known
+about candidate biology.
+
+### Open questions
+
+- How is the curation provenance of a biomedical knowledge
+  graph documented, and how stale does it become between
+  releases?
+- How are negative or contradictory associations
+  represented, and how do downstream models behave around
+  them?
+- How are knowledge-graph embeddings evaluated for tasks
+  whose ground truth is years of laboratory work?
+
+## Antibody and protein design
+
+Beyond small molecules, deep learning has moved into the
+design of proteins themselves. Dauparas and colleagues
+(2022) introduced ProteinMPNN for sequence design given a
+backbone; Watson and colleagues (2023) introduced
+RFdiffusion for de novo design of protein structure and
+function. Antibody discovery and engineering are an active
+target for these methods. Foundational structure prediction
+work in the same generation (Lin et al., 2023, ESMFold)
+expands the inputs available to design.
+
+### Open questions
+
+- How is in-silico designed protein activity validated, and
+  what is the failure rate from design to functional
+  expression?
+- How are structural and sequence-based methods combined
+  in antibody design, and how is novelty distinguished from
+  rediscovery?
+- How do structure-prediction errors propagate into design
+  decisions?
+
+## AI in clinical trial design
+
+Clinical trial design and operations sit between drug
+design and drug efficacy evaluation. AI methods are now
+applied to eligibility-criteria refinement, site selection,
+patient stratification, and synthetic control arms. Harrer
+and colleagues (2019) survey applications across trial
+design; Liu and colleagues (2021) report on using
+real-world data and AI to evaluate eligibility criteria of
+oncology trials.
+
+### Open questions
+
+- How are AI-derived eligibility refinements assessed for
+  representation effects across populations?
+- When are external comparator arms — synthetic controls
+  drawn from real-world data — defensible, and when do
+  they introduce confounding equivalent to the missing
+  randomization?
+- How are AI-supported trial-design decisions documented
+  for regulatory review?
+
+## AI in pharmacovigilance
+
+Once a drug is in use, signal detection in adverse-event
+reports, EHR records, and unstructured text is itself a
+machine-learning problem. Ball and Dal Pan (2022) review
+the readiness of AI for pharmacovigilance with attention
+to evaluation challenges. Pharmacovigilance closes a loop
+back to the drug efficacy and real-world evidence
+considerations covered earlier in this repository.
+
+### Open questions
+
+- How are AI-derived safety signals evaluated when ground
+  truth itself depends on labor-intensive case adjudication?
+- Where do natural-language processing pipelines for
+  adverse events introduce biases that mirror the biases
+  in the underlying records?
+- How are pharmacovigilance signals fed back into design
+  and trial planning for next-generation candidates?
+
 ## Limitations and cautions
 
 - No claim is made that any candidate, target, or repurposed
@@ -142,3 +257,5 @@ into post-marketing data.
 - Public, synthetic, or simulated data only. No proprietary
   compound libraries, no licensed assay data, no internal
   pipeline documents.
+- Protein design and pharmacovigilance descriptions are
+  high-level orientation, not validated workflows.
