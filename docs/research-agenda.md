@@ -320,6 +320,43 @@ biomarkers anchor the trial.
 - Public datasets only; no proprietary compound libraries and
   no licensed assay data.
 
+## Cross-cutting topics
+
+Some questions cut across more than one track and live in
+their own topical notes rather than inside a single track.
+These are not separate research programs; they are framings
+that the tracks above need to share.
+
+- **Clinical AI deployment case studies** —
+  `docs/clinical-ai-case-studies.md`. Specific deployments
+  (Epic Sepsis, Thailand diabetic retinopathy, IBM Watson,
+  Duke translation pipeline) read for systems lessons.
+- **Regulatory landscape** — `docs/regulatory-landscape.md`.
+  FDA SaMD and Good Machine Learning Practice, EU MDR and
+  the AI Act, Model-Informed Drug Development, and
+  cross-jurisdiction comparison.
+- **Foundation models in healthcare** —
+  `docs/foundation-models-in-healthcare.md`. Clinical
+  language models, multimodal medical models, and chemistry
+  foundation models, with their distinct evaluation and
+  deployment risks.
+- **Federated and privacy-preserving learning** —
+  `docs/federated-and-privacy-preserving-learning.md`.
+  Federated learning, differential privacy, and their
+  combinations as multi-institution training options.
+- **Fairness and equity** — `docs/fairness-and-equity.md`.
+  Risk score bias, imaging disparities, equity-as-opportunity
+  cases, and equity questions inside the drug development
+  pipeline.
+- **Reproducibility in healthcare ML** —
+  `docs/reproducibility-in-healthcare-ml.md`. Reproducibility
+  for clinical ML and for discovery-stage chemistry ML, with
+  COVID-era case material.
+
+Each topical note ties back into the tracks it most affects.
+The notes are reading-style syntheses, not new research
+programs of their own.
+
 ## Near-term prototype ideas
 
 In rough order of how concrete they are:
