@@ -593,3 +593,178 @@ context.
 - Kola I, Landis J. *Can the pharmaceutical industry reduce attrition rates?* Nature Reviews Drug Discovery, 2004.
 - DiMasi JA, Grabowski HG, Hansen RW. *Innovation in the pharmaceutical industry: new estimates of R&D costs.* Journal of Health Economics, 2016.
 - Wouters OJ, McKee M, Luyten J. *Estimated Research and Development Investment Needed to Bring a New Medicine to Market, 2009-2018.* JAMA, 2020.
+
+## ADMET, toxicity prediction, and preclinical safety
+
+**Why this matters.** Preclinical attrition is dominated by
+safety and pharmacokinetic failure modes rather than lack
+of potency. AI ADMET and toxicity models are the most
+consequential place where in-silico predictions meet
+experimental and regulatory scrutiny, and where
+applicability domain and calibration decide whether a
+model is useful or misleading.
+
+**Questions to track.**
+
+- Which ADMET end points have public data in sufficient
+  quantity and consistency to support prospective
+  prediction, and which remain benchmark-stage?
+- How should applicability domain be reported so that
+  downstream consumers can tell when a prediction is
+  extrapolation?
+- Where do physics-grounded (PBPK, free-energy) and
+  learned models complement each other, and where do
+  they compete?
+- How is prospective accuracy of ADMET predictions
+  tracked over a program lifetime?
+
+**Readings.**
+
+- Huang R, Xia M, Nguyen D-T, et al. *Tox21 Challenge to Build Predictive Models of Nuclear Receptor and Stress Response Pathways as Mediated by Exposure to Environmental Chemicals and Drugs.* Frontiers in Environmental Science, 2016.
+- Richard AM, Judson RS, Houck KA, et al. *ToxCast Chemical Landscape: Paving the Road to 21st Century Toxicology.* Chemical Research in Toxicology, 2016.
+- Mayr A, Klambauer G, Unterthiner T, Hochreiter S. *DeepTox: Toxicity Prediction using Deep Learning.* Frontiers in Environmental Science, 2016.
+- Gayvert KM, Madhukar NS, Elemento O. *A Data-Driven Approach to Predicting Successes and Failures of Clinical Trials.* Cell Chemical Biology, 2016.
+- Feinberg EN, Sur D, Wu Z, et al. *PotentialNet for Molecular Property Prediction.* ACS Central Science, 2018.
+- Huang K, Fu T, Gao W, et al. *Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development.* NeurIPS Datasets and Benchmarks, 2021.
+- Fang X, Liu L, Lei J, et al. *Geometry-enhanced molecular representation learning for property prediction.* Nature Machine Intelligence, 2022.
+- ICH. *ICH M7(R2) Guideline on assessment and control of DNA reactive (mutagenic) impurities in pharmaceuticals.* 2023.
+- Bender A, Schneider N, Segler M, Walters WP, Engkvist O, Rodrigues T. *Evaluation guidelines for machine learning tools in the chemical sciences.* Nature Reviews Chemistry, 2022.
+
+## Clinical pharmacology, pharmacometrics, and MIDD
+
+**Why this matters.** Clinical pharmacology models convert
+a candidate's preclinical profile into dose, schedule,
+population, and label decisions. The MIDD paradigm makes
+these models formal regulatory evidence rather than
+support artifacts, which changes how reproducibility,
+documentation, and sensitivity analyses are expected to
+look.
+
+**Questions to track.**
+
+- How are ML-augmented pharmacometric workflows being
+  received by FDA and EMA reviewers?
+- Where does PBPK modeling substitute for dedicated
+  clinical studies, and where does it supplement them?
+- What qualifies a digital endpoint for use in E-R
+  modeling, and which qualifications have succeeded?
+- How is QSP evidence weighed at gate decisions when
+  its complexity exceeds the data available to
+  constrain it?
+
+**Readings.**
+
+- Sheiner LB, Beal SL. *Evaluation of methods for estimating population pharmacokinetic parameters. I. Michaelis-Menten model: routine clinical pharmacokinetic data.* Journal of Pharmacokinetics and Biopharmaceutics, 1980.
+- Lalonde RL, Kowalski KG, Hutmacher MM, et al. *Model-based drug development.* Clinical Pharmacology & Therapeutics, 2007.
+- Milligan PA, Brown MJ, Marchant B, et al. *Model-based drug development: a rational approach to efficiently accelerate drug development.* Clinical Pharmacology & Therapeutics, 2013.
+- Marshall SF, Burghaus R, Cosson V, et al. *Good Practices in Model-Informed Drug Discovery and Development: Practice, Application, and Documentation.* CPT: Pharmacometrics & Systems Pharmacology, 2016.
+- U.S. FDA. *Population Pharmacokinetics: Guidance for Industry.* 2022.
+- U.S. FDA. *Exposure-Response Relationships: Study Design, Data Analysis, and Regulatory Applications.* 2003.
+- U.S. FDA. *Physiologically Based Pharmacokinetic Analyses: Format and Content Guidance for Industry.* 2018.
+- Wang Y, Zhu H, Madabushi R, Liu Q, Huang S-M, Zineh I. *Model-Informed Drug Development: Current US Regulatory Practice and Future Considerations.* Clinical Pharmacology & Therapeutics, 2019.
+- Goldwater R, Hershey J, Nutt J, et al. *Quantitative systems pharmacology models as a regulatory tool: A systematic review of case studies.* CPT: Pharmacometrics & Systems Pharmacology, 2022.
+- Coravos A, Khozin S, Mandl KD. *Developing and adopting safe and effective digital biomarkers to improve patient outcomes.* npj Digital Medicine, 2019.
+
+## Pharmacoepidemiology methods
+
+**Why this matters.** Observational methodology specific
+to drug exposure and outcome is a deeper toolkit than
+general RWE — active comparator new user, self-controlled
+designs, high-dimensional propensity scores, signal
+detection, and distributed data networks are the applied
+layer that decides whether a real-world claim is
+defensible.
+
+**Questions to track.**
+
+- When does new-user restriction and active comparator
+  selection eliminate bias that naive comparisons would
+  leave in place?
+- Which signal-detection methods on spontaneous reports
+  have track records that justify specific thresholds?
+- How are distributed-network analyses audited when only
+  summary results leave the site?
+- What is the analog of target trial emulation for
+  repurposing hypotheses originating in discovery data?
+
+**Readings.**
+
+- Ray WA. *Evaluating Medication Effects Outside of Clinical Trials: New-User Designs.* American Journal of Epidemiology, 2003.
+- Suissa S. *Immortal time bias in pharmacoepidemiology.* American Journal of Epidemiology, 2008.
+- Bate A, Lindquist M, Edwards IR, et al. *A Bayesian neural network method for adverse drug reaction signal generation.* European Journal of Clinical Pharmacology, 1998.
+- DuMouchel W. *Bayesian Data Mining in Large Frequency Tables, with an Application to the FDA Spontaneous Reporting System.* The American Statistician, 1999.
+- Kulldorff M, Davis RL, Kolczak M, Lewis E, Lieu T, Platt R. *A maximized sequential probability ratio test for drug and vaccine safety surveillance.* Sequential Analysis, 2011.
+- Platt R, Brown JS, Robb M, et al. *The FDA Sentinel Initiative — An Evolving National Resource.* NEJM, 2018.
+- Gagne JJ, Glynn RJ, Avorn J, Levin R, Schneeweiss S. *A combined comorbidity score predicted mortality in elderly patients better than existing scores.* Journal of Clinical Epidemiology, 2011.
+- Reps JM, Schuemie MJ, Suchard MA, Ryan PB, Rijnbeek PR. *Design and implementation of a standardized framework to generate and evaluate patient-level prediction models using observational healthcare data.* JAMIA, 2018.
+- Hernan MA. *The C-Word: Scientific Euphemisms Do Not Improve Causal Inference From Observational Data.* American Journal of Public Health, 2018.
+- Franklin JM, Patorno E, Desai RJ, et al. *Emulating Randomized Clinical Trials with Nonrandomized Real-World Evidence Studies: First Results from the RCT DUPLICATE Initiative.* Circulation, 2021.
+
+## AI for clinical trial design and operations
+
+**Why this matters.** Clinical trial operations consume
+most of the cost and time of drug development. AI touches
+recruitment, site selection, adaptive design, external
+comparator arms, and digital endpoints — each an
+opportunity to shorten timelines and a risk of shifting
+the estimand the trial is meant to estimate.
+
+**Questions to track.**
+
+- When do external comparator arms substitute for
+  concurrent controls without introducing confounding
+  equivalent to missing randomization?
+- How are AI-assisted eligibility refinements audited
+  for representation effects across populations?
+- Which digital endpoints have been qualified for
+  regulatory use, and what did qualification require?
+- How do adaptive and platform trial infrastructures
+  connect to post-marketing observational data so that
+  the same question is carried across the lifecycle?
+
+**Readings.**
+
+- Bhatt DL, Mehta C. *Adaptive Designs for Clinical Trials.* NEJM, 2016.
+- U.S. FDA. *Adaptive Design Clinical Trials for Drugs and Biologics: Guidance for Industry.* 2019.
+- U.S. FDA. *Master Protocols: Efficient Clinical Trial Design Strategies to Expedite Development of Oncology Drugs and Biologics: Guidance for Industry.* 2022.
+- Berry SM, Carlin BP, Lee JJ, Muller P. *Bayesian Adaptive Methods for Clinical Trials.* CRC Press, 2010.
+- The REMAP-CAP Investigators. *Interleukin-6 Receptor Antagonists in Critically Ill Patients with Covid-19.* NEJM, 2021.
+- Park JJH, Siden E, Zoratti MJ, et al. *Systematic review of basket trials, umbrella trials, and platform trials.* Trials, 2019.
+- Thorlund K, Dron L, Park J, Hsu G, Forrest JI, Mills EJ. *Synthetic and External Controls in Clinical Trials — A Primer for Researchers.* Clinical Epidemiology, 2020.
+- Jahanshahi M, Gregg K, Davis G, et al. *The Use of External Controls in FDA Regulatory Decision Making.* Therapeutic Innovation & Regulatory Science, 2021.
+- Woo M. *An AI boost for clinical trials.* Nature, 2019.
+- ICH. *ICH E6(R3) Good Clinical Practice.* 2023.
+- U.S. FDA. *Framework for the Use of Digital Health Technologies in Drug and Biological Product Development.* Draft Guidance, 2023.
+
+## AI-enabled drug discovery and development case studies
+
+**Why this matters.** Program-level case material anchors
+discovery and development principles in specific public
+trajectories. Reading peer-reviewed papers alongside
+company disclosures exposes the gap between method-level
+success and program-level outcome that abstract framing
+often elides.
+
+**Questions to track.**
+
+- Which AI-contributed candidates have advanced through
+  clinical readouts, and what did the readouts show?
+- How are infrastructure platforms (structure
+  prediction, phenomic screening, biomedical knowledge
+  graphs) monetized differently from clinical
+  candidates?
+- Which discontinued programs have been written up in
+  sufficient detail to draw lessons from?
+
+**Readings.**
+
+- Stokes JM, Yang K, Swanson K, et al. *A Deep Learning Approach to Antibiotic Discovery.* Cell, 2020.
+- Ren F, Aliper A, Chen J, et al. *A small-molecule TNIK inhibitor targets fibrosis in preclinical and clinical models.* Nature Biotechnology, 2024.
+- Savage N. *Tapping into the drug discovery potential of AI.* Nature, 2021.
+- Richardson P, Griffin I, Tucker C, et al. *Baricitinib as potential treatment for 2019-nCoV acute respiratory disease.* Lancet, 2020.
+- Jumper J, Evans R, Pritzel A, et al. *Highly accurate protein structure prediction with AlphaFold.* Nature, 2021.
+- Varadi M, Anyango S, Deshpande M, et al. *AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models.* Nucleic Acids Research, 2022.
+- Evans R, O'Neill M, Pritzel A, et al. *Protein complex prediction with AlphaFold-Multimer.* bioRxiv, 2022.
+- Abramson J, Adler J, Dunger J, et al. *Accurate structure prediction of biomolecular interactions with AlphaFold 3.* Nature, 2024.
+- Celik S, Hutchinson JP, Yang KK, et al. *Building, benchmarking, and exploring perturbative maps of transcriptional and morphological data.* PLOS Computational Biology / Recursion disclosures, 2024.
+- Jayatunga MKP, Xie W, Ruder L, Schulze U, Meier C. *AI in small-molecule drug discovery: a coming wave?* Nature Reviews Drug Discovery, 2022.
