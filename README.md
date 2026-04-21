@@ -15,3 +15,9 @@ and deployed in healthcare workflows.
   processes
 - Monitoring, governance, and safety — post-deployment dataset
   shift, auditability, local validation
+- Hospital systems design — information systems,
+  interoperability, operations, hospital-scale AI integration
+  and governance
+- Drug design and discovery — AI for target identification,
+  molecular generation and property prediction, structure-based
+  design, repurposing
