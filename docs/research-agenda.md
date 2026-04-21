@@ -219,6 +219,107 @@ and feedback loops are part of the system, not afterthoughts.
   influence the inputs. Prototypes should note when that risk
   applies.
 
+## Track 5 — Hospital systems design
+
+### Motivation
+
+Decision support models, predictive risk scores, and
+clinician-facing interfaces all live inside larger hospital
+systems: clinical information systems, operational pipelines,
+governance structures, vendor relationships. The hospital is
+the deployment environment, not the background. Many of the
+deployment failure modes described in Tracks 3 and 4 are
+hospital-system failures: a model that runs against an
+extract that drifted, a workflow that does not survive a
+shift change, an inventory of models that no one maintains.
+
+### Open questions
+
+- How does a hospital maintain a current inventory of
+  deployed models, and who owns the inventory?
+- How are conflicting outputs from different models reconciled
+  at the bedside?
+- How are extract pipelines maintained when source systems
+  change underneath them, and how is that change communicated
+  to model owners?
+- What does a minimum viable hospital AI governance committee
+  look like at a single site?
+- How are operational AI outputs (length-of-stay, no-show,
+  surge forecasts) evaluated when they feed human scheduling
+  rather than acting directly?
+
+### Possible prototype ideas
+
+- A hospital-system inventory template that records, for each
+  deployed model, its data sources, owners, intended use,
+  monitoring footprint, and retirement criteria.
+- A simulated patient flow scenario that compares operational
+  decisions with and without a length-of-stay forecast,
+  recording where the forecast actually changed an action.
+- A multi-model dashboard sketch showing how outputs from
+  several models on a single patient encounter are presented
+  together, including conflict cases.
+
+### Limitations and cautions
+
+- Hospital design notes are descriptive, not prescriptive
+  policy, and do not represent any specific institution.
+- Operational simulations on synthetic flow data illustrate
+  trade-offs; they do not predict real hospital behavior.
+- Inventory and governance templates are starting points for
+  thinking, not artifacts intended for production use.
+
+## Track 6 — Drug design and discovery
+
+### Motivation
+
+Track 1 covers how a drug is evaluated once it exists.
+Track 6 covers the upstream side: how a candidate is found,
+optimized, and characterized before it reaches a trial. The
+two ends of the pipeline use different data and methods, but
+the design choices made upstream shape the questions that can
+be asked downstream — what targets are studied, what
+populations the candidates were optimized for, what
+biomarkers anchor the trial.
+
+### Open questions
+
+- When does a target identified from omics or genetic data
+  translate into a tractable drug target, and when does the
+  signal not survive validation?
+- How is a generative chemistry model evaluated when its
+  outputs are meant to be novel and therefore have no ground
+  truth?
+- How are property predictions (activity, selectivity, ADMET)
+  calibrated, and how is their applicability domain
+  communicated to a chemist?
+- For which targets is a predicted protein structure good
+  enough for structure-based design, and for which is it not?
+- How should design-stage records be structured so that a
+  later real-world evaluator can interpret them?
+
+### Possible prototype ideas
+
+- A property-prediction sketch on a public molecular dataset
+  (for example MoleculeNet) that compares simple baselines
+  against a graph neural network and reports calibration
+  alongside accuracy.
+- An applicability-domain template for a property model that
+  marks which compounds the model should not be trusted on.
+- A documentation template that records, for a candidate
+  molecule, the design rationale, the assays used, the
+  applicability domain of the predictions, and the known
+  caveats.
+
+### Limitations and cautions
+
+- No candidate, target, or repurposed compound discussed in
+  prototypes is positioned as suitable for clinical use.
+- Generative chemistry outputs are not synthesizable
+  candidates by virtue of being generated.
+- Public datasets only; no proprietary compound libraries and
+  no licensed assay data.
+
 ## Near-term prototype ideas
 
 In rough order of how concrete they are:
