@@ -246,3 +246,62 @@ social problem as much as a technical one.
 - Gebru T et al. *Datasheets for Datasets.* Communications of the ACM, 2021.
 - Reddy S et al. *A Governance Model for the Application of AI in Health Care.* JAMIA, 2020.
 - Raji ID et al. *Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing.* FAT*, 2020.
+
+## Hospital information systems and operations
+
+**Why this matters.** A clinical AI deployment lives inside a
+hospital information landscape — EHRs, ADT systems, lab and
+pharmacy systems, interoperability standards, and the
+governance structures around them. Understanding that
+landscape is a prerequisite for asking what a deployed model
+actually sees and how it interacts with care.
+
+**Questions to track.**
+
+- How have EHR adoption and meaningful-use policy shaped what
+  data is captured?
+- Which interoperability standards have stuck, and what
+  applications do they enable?
+- How are hospital-scale failures of clinical AI documented
+  in the literature?
+
+**Readings.**
+
+- Mandl KD, Kohane IS. *Escaping the EHR Trap — The Future of Health IT.* NEJM, 2012.
+- Sittig DF, Singh H. *A new sociotechnical model for studying health information technology in complex adaptive healthcare systems.* Quality and Safety in Health Care, 2010.
+- Adler-Milstein J, Jha AK. *HITECH Act drove large gains in hospital electronic health record adoption.* Health Affairs, 2017.
+- Mandel JC, Kreda DA, Mandl KD, Kohane IS, Ramoni RB. *SMART on FHIR: a standards-based, interoperable apps platform for electronic health records.* JAMIA, 2016.
+- Bates DW, Saria S, Ohno-Machado L, Shah A, Escobar G. *Big data in health care: Using analytics to identify and manage high-risk and high-cost patients.* Health Affairs, 2014.
+- Sendak MP, Gao M, Brajer N, Balu S. *Presenting machine learning model information to clinical end users with model facts labels.* npj Digital Medicine, 2020.
+- Wong A, Otles E, Donnelly JP, et al. *External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients.* JAMA Internal Medicine, 2021.
+
+## Drug discovery and computational drug design
+
+**Why this matters.** Drug discovery sits upstream of the
+efficacy questions covered in earlier categories. AI methods
+now appear at every stage of discovery — target
+identification, generative chemistry, property prediction,
+structure prediction — with very different data and failure
+modes at each stage.
+
+**Questions to track.**
+
+- Where in the discovery pipeline does AI demonstrably add
+  value, and where is the evidence still preliminary?
+- How are generative chemistry models evaluated when their
+  outputs are intended to be novel?
+- How are property and structure predictions used together,
+  and how is their joint uncertainty handled?
+
+**Readings.**
+
+- Vamathevan J, Clark D, Czodrowski P, et al. *Applications of machine learning in drug discovery and development.* Nature Reviews Drug Discovery, 2019.
+- Schneider P, Walters WP, Plowright AT, et al. *Rethinking drug design in the artificial intelligence era.* Nature Reviews Drug Discovery, 2020.
+- Stokes JM, Yang K, Swanson K, et al. *A Deep Learning Approach to Antibiotic Discovery.* Cell, 2020.
+- Jumper J, Evans R, Pritzel A, et al. *Highly accurate protein structure prediction with AlphaFold.* Nature, 2021.
+- Gomez-Bombarelli R, Wei JN, Duvenaud D, et al. *Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules.* ACS Central Science, 2018.
+- Segler MHS, Preuss M, Waller MP. *Planning chemical syntheses with deep neural networks and symbolic AI.* Nature, 2018.
+- Wu Z, Ramsundar B, Feinberg EN, et al. *MoleculeNet: A Benchmark for Molecular Machine Learning.* Chemical Science, 2018.
+- Pushpakom S, Iorio F, Eyers PA, et al. *Drug repurposing: progress, challenges and recommendations.* Nature Reviews Drug Discovery, 2019.
+- Yang K, Swanson K, Jin W, et al. *Analyzing Learned Molecular Representations for Property Prediction.* Journal of Chemical Information and Modeling, 2019.
+- Walters WP, Murcko M. *Assessing the impact of generative AI on medicinal chemistry.* Nature Biotechnology, 2020.
