@@ -514,3 +514,82 @@ upstream design to downstream evidence.
 - Harrer S, Shah P, Antony B, Hu J. *Artificial Intelligence for Clinical Trial Design.* Trends in Pharmacological Sciences, 2019.
 - Liu R, Rizzo S, Whipple S, et al. *Evaluating eligibility criteria of oncology trials using real-world data and AI.* Nature, 2021.
 - Ball R, Dal Pan G. *"Artificial Intelligence" for Pharmacovigilance: Ready for Prime Time?* Drug Safety, 2022.
+
+## Systems engineering and architecture methods
+
+**Why this matters.** Healthcare AI systems are complex
+sociotechnical artifacts. Formal systems-engineering
+methods offer structured ways to decompose, analyze, and
+communicate their design — from reference architecture to
+dependency analysis to feedback-loop reasoning.
+
+**Questions to track.**
+
+- Which formal methods change architectural decisions in
+  practice, and which are notation overhead?
+- How do component DSMs and organizational DSMs interact
+  for healthcare AI deployments?
+- Where have system dynamics models of clinical AI
+  adoption or drift been reported?
+
+**Readings.**
+
+- Crawley E, Cameron B, Selva D. *System Architecture: Strategy and Product Development for Complex Systems.* Pearson, 2015.
+- de Weck OL, Roos D, Magee CL. *Engineering Systems: Meeting Human Needs in a Complex Technological World.* MIT Press, 2011.
+- Eppinger SD, Browning TR. *Design Structure Matrix Methods and Applications.* MIT Press, 2012.
+- Suh NP. *Axiomatic Design: Advances and Applications.* Oxford University Press, 2001.
+- Sterman JD. *Business Dynamics: Systems Thinking and Modeling for a Complex World.* Irwin McGraw-Hill, 2000.
+- Dori D. *Model-Based Systems Engineering with OPM and SysML.* Springer, 2016.
+- INCOSE. *INCOSE Systems Engineering Handbook.* 5th edition, Wiley, 2023.
+
+## ML engineering, operations, and technical debt
+
+**Why this matters.** An AI system in production is a
+service with reliability, change-control, and operational
+requirements that are not covered by model training. The
+ML-engineering literature documents what breaks in
+production and the practices that mitigate it.
+
+**Questions to track.**
+
+- Which production ML failure modes are specific to
+  clinical settings, and which are generic?
+- How do MLOps practices adapt to the slow-feedback and
+  high-consequence nature of clinical outcomes?
+- What does an ML production-readiness rubric look like
+  for healthcare?
+
+**Readings.**
+
+- Amershi S, Begel A, Bird C, et al. *Software Engineering for Machine Learning: A Case Study.* International Conference on Software Engineering (ICSE), 2019.
+- Paleyes A, Urma RG, Lawrence ND. *Challenges in Deploying Machine Learning: A Survey of Case Studies.* ACM Computing Surveys, 2022.
+- Breck E, Cai S, Nielsen E, Salib M, Sculley D. *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.* IEEE International Conference on Big Data, 2017.
+- Kreuzberger D, Kuhl N, Hirschl S. *Machine Learning Operations (MLOps): Overview, Definition, and Architecture.* IEEE Access, 2023.
+- Shankar S, Garcia R, Hellerstein JM, Parameswaran AG. *Operationalizing Machine Learning: An Interview Study.* arXiv:2209.09125, 2022.
+- Huyen C. *Designing Machine Learning Systems.* O'Reilly, 2022.
+- Wiens J, Saria S, Sendak M, et al. *Do no harm: a roadmap for responsible machine learning for health care.* Nature Medicine, 2019.
+
+## Pharmaceutical R&D economics and portfolio strategy
+
+**Why this matters.** AI in drug discovery sits inside a
+pharmaceutical R&D system with known attrition rates,
+cost structures, and portfolio pressures. Program-level
+AI decisions have to be read against that economic
+context.
+
+**Questions to track.**
+
+- How are attrition, R&D cost, and cycle time partitioned
+  across discovery stages, and where do AI interventions
+  plausibly move the needle?
+- How are AI capability investments justified at the
+  portfolio level when effect sizes are uncertain?
+- How are sourcing decisions (in-house vs. partner vs.
+  open source) structured across discovery programs?
+
+**Readings.**
+
+- Paul SM, Mytelka DS, Dunwiddie CT, et al. *How to improve R&D productivity: the pharmaceutical industry's grand challenge.* Nature Reviews Drug Discovery, 2010.
+- Kola I, Landis J. *Can the pharmaceutical industry reduce attrition rates?* Nature Reviews Drug Discovery, 2004.
+- DiMasi JA, Grabowski HG, Hansen RW. *Innovation in the pharmaceutical industry: new estimates of R&D costs.* Journal of Health Economics, 2016.
+- Wouters OJ, McKee M, Luyten J. *Estimated Research and Development Investment Needed to Bring a New Medicine to Market, 2009-2018.* JAMA, 2020.
