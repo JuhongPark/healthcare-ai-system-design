@@ -256,6 +256,33 @@ capabilities are sourced, and how documentation flows to
 regulatory review. The method-level notes above are
 inputs to that architecture, not substitutes for it.
 
+## Related topical notes
+
+The method-level survey in this note points into several
+topical notes that develop specific stages in more
+detail:
+
+- `docs/admet-and-preclinical-safety.md` — in-silico
+  ADMET and preclinical safety, applicability domain,
+  and gate evidence packaging for development-candidate
+  decisions.
+- `docs/clinical-pharmacology-and-midd.md` — PK/PD,
+  exposure-response, population PK, and
+  model-informed drug development as the regulatory-
+  facing modeling layer.
+- `docs/ai-for-clinical-trials.md` — patient
+  recruitment and matching, site selection, external
+  comparator arms, adaptive designs, and digital
+  endpoints.
+- `docs/pharmacoepidemiology-methods.md` — active
+  comparator new-user design, target trial emulation,
+  self-controlled designs, signal detection, and
+  distributed data networks that pick up the evidence
+  thread once a drug is in use.
+- `docs/pharma-ai-case-studies.md` — publicly
+  documented AI-enabled discovery and development
+  programs read for program-level lessons.
+
 ## Limitations and cautions
 
 - No claim is made that any candidate, target, or repurposed

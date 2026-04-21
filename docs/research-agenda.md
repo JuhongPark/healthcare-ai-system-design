@@ -71,6 +71,20 @@ and measurement error are all substantial.
   definition, eligibility window, and outcome ascertainment to
   show how robust (or fragile) an estimate is.
 
+### Topical notes supporting this track
+
+- `docs/pharmacoepidemiology-methods.md` — design
+  choices (active comparator new user, target trial
+  emulation, self-controlled designs), confounder
+  adjustment, signal detection, and distributed data
+  networks.
+- `docs/clinical-pharmacology-and-midd.md` — how
+  exposure-response and population PK evidence connects
+  the efficacy question to dose, label, and population.
+- `docs/ai-for-clinical-trials.md` — external comparator
+  arms and synthetic controls that sit at the boundary
+  of trial and observational evidence.
+
 ### Limitations and cautions
 
 - Synthetic data cannot stand in for real evidence generation.
@@ -287,7 +301,10 @@ two ends of the pipeline use different data and methods, but
 the design choices made upstream shape the questions that can
 be asked downstream — what targets are studied, what
 populations the candidates were optimized for, what
-biomarkers anchor the trial.
+biomarkers anchor the trial. Between the two ends sit
+preclinical ADMET, clinical pharmacology, and trial design
+and operations, each covered in dedicated notes that this
+track points into rather than restates.
 
 ### Open questions
 
@@ -304,6 +321,11 @@ biomarkers anchor the trial.
   enough for structure-based design, and for which is it not?
 - How should design-stage records be structured so that a
   later real-world evaluator can interpret them?
+- How does AI-supported evidence cross stage gates from
+  target identification through preclinical safety, first-
+  in-human dosing, and pivotal trial design without losing
+  version and applicability-domain information along the
+  way?
 
 ### Possible prototype ideas
 
@@ -317,6 +339,32 @@ biomarkers anchor the trial.
   molecule, the design rationale, the assays used, the
   applicability domain of the predictions, and the known
   caveats.
+- A preclinical ADMET reporting sketch on public benchmark
+  tasks (Therapeutics Data Commons ADMET group) that pairs
+  ranking metrics with calibration and applicability-domain
+  reporting.
+- A minimal stage-gate evidence package template that
+  carries AI-supported evidence from discovery into
+  clinical pharmacology and trial design.
+
+### Topical notes supporting this track
+
+- `docs/drug-design.md` — method-level survey across the
+  discovery pipeline.
+- `docs/drug-discovery-program-architecture.md` — program-
+  level system-of-systems view and stage gates.
+- `docs/admet-and-preclinical-safety.md` — in-silico ADMET
+  and preclinical safety, applicability domain, and gate
+  evidence packaging.
+- `docs/clinical-pharmacology-and-midd.md` — PK/PD,
+  exposure-response, and the MIDD framing for
+  regulatory-facing modeling.
+- `docs/ai-for-clinical-trials.md` — AI in recruitment,
+  site selection, external comparator arms, adaptive
+  designs, and digital endpoints.
+- `docs/pharma-ai-case-studies.md` — reading of
+  publicly documented AI-enabled discovery and
+  development programs.
 
 ### Limitations and cautions
 
@@ -420,6 +468,11 @@ that the tracks above need to share.
   `docs/clinical-ai-case-studies.md`. Specific deployments
   (Epic Sepsis, Thailand diabetic retinopathy, IBM Watson,
   Duke translation pipeline) read for systems lessons.
+- **Pharma AI case studies** — `docs/pharma-ai-case-studies.md`.
+  Publicly documented AI-enabled discovery and
+  development programs (Halicin, DSP-1181, INS018_055,
+  Recursion, Isomorphic, baricitinib repositioning,
+  AlphaFold lineage) read for program-level lessons.
 - **Regulatory landscape** — `docs/regulatory-landscape.md`.
   FDA SaMD and Good Machine Learning Practice, EU MDR and
   the AI Act, Model-Informed Drug Development, and
@@ -441,6 +494,22 @@ that the tracks above need to share.
   `docs/reproducibility-in-healthcare-ml.md`. Reproducibility
   for clinical ML and for discovery-stage chemistry ML, with
   COVID-era case material.
+- **ADMET and preclinical safety** —
+  `docs/admet-and-preclinical-safety.md`. In-silico ADMET,
+  applicability domain, and how preclinical predictions
+  enter development-candidate gate evidence.
+- **Clinical pharmacology and MIDD** —
+  `docs/clinical-pharmacology-and-midd.md`. PK/PD,
+  exposure-response, and model-informed drug development
+  as the regulatory-facing modeling layer.
+- **Pharmacoepidemiology methods** —
+  `docs/pharmacoepidemiology-methods.md`. Active
+  comparator new-user, target trial emulation, signal
+  detection, and distributed data networks.
+- **AI for clinical trials** —
+  `docs/ai-for-clinical-trials.md`. Recruitment and site
+  selection, external comparator arms, adaptive designs,
+  and digital endpoints.
 
 Each topical note ties back into the tracks it most affects.
 The notes are reading-style syntheses, not new research

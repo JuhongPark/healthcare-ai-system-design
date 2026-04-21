@@ -153,6 +153,25 @@ The program architecture should surface this
 documentation as part of the stage-gate artifact set, not
 as a separate regulatory activity.
 
+## Stage-specific topical notes
+
+The gate architecture above summarizes the evidence
+shape at each stage. Stage-specific topical notes carry
+the detail:
+
+- Discovery method survey: `docs/drug-design.md`.
+- Preclinical safety evidence at Gate D and E:
+  `docs/admet-and-preclinical-safety.md`.
+- First-in-human and exposure-response at Gate E and
+  F: `docs/clinical-pharmacology-and-midd.md`.
+- Trial design and operations feeding Gate F:
+  `docs/ai-for-clinical-trials.md`.
+- Post-approval observational evidence that feeds back
+  into next-generation programs:
+  `docs/pharmacoepidemiology-methods.md`.
+- Program-level case material:
+  `docs/pharma-ai-case-studies.md`.
+
 ## Open questions
 
 - Which capabilities are most effective to centralize
