@@ -1010,3 +1010,387 @@ Format, once a real reference is added:
     counterpoint to prior industry-data estimates.
   - Track 7 and 6: public-data anchor for pharma R&D
     cost discussions.
+
+## ADMET, toxicity prediction, and preclinical safety
+
+- Huang R, Xia M, Nguyen D-T, et al. *Tox21 Challenge to
+  Build Predictive Models of Nuclear Receptor and Stress
+  Response Pathways as Mediated by Exposure to
+  Environmental Chemicals and Drugs.* Frontiers in
+  Environmental Science, 2016; 3:85.
+  - Describes the Tox21 public challenge dataset and the
+    top-performing model families for in-vitro toxicity
+    end points.
+  - Track 6: canonical public benchmark for ML toxicity
+    prediction.
+- Richard AM, Judson RS, Houck KA, et al. *ToxCast
+  Chemical Landscape: Paving the Road to 21st Century
+  Toxicology.* Chemical Research in Toxicology, 2016;
+  29(8):1225-1251.
+  - Describes the ToxCast chemical library and assay
+    panel used for in-vitro high-throughput toxicology.
+  - Track 6: companion data resource to Tox21.
+- Mayr A, Klambauer G, Unterthiner T, Hochreiter S.
+  *DeepTox: Toxicity Prediction using Deep Learning.*
+  Frontiers in Environmental Science, 2016; 3:80.
+  - Winning approach on the Tox21 challenge using deep
+    neural networks on descriptor features.
+  - Track 6: early deep-learning result on a curated
+    toxicity benchmark.
+- Gayvert KM, Madhukar NS, Elemento O. *A Data-Driven
+  Approach to Predicting Successes and Failures of
+  Clinical Trials.* Cell Chemical Biology, 2016;
+  23(10):1294-1301.
+  - Predicts clinical-stage toxicity failures from
+    chemical and pharmacological features, introducing
+    the ClinTox dataset later absorbed into MoleculeNet.
+  - Track 6: dataset and framing for toxicity-driven
+    clinical failure prediction.
+- Feinberg EN, Sur D, Wu Z, et al. *PotentialNet for
+  Molecular Property Prediction.* ACS Central Science,
+  2018; 4(11):1520-1530.
+  - Graph-convolutional architecture with spatial
+    awareness for protein-ligand and property tasks.
+  - Track 6: architectural reference for property
+    prediction.
+- Huang K, Fu T, Gao W, et al. *Therapeutics Data
+  Commons: Machine Learning Datasets and Tasks for Drug
+  Discovery and Development.* NeurIPS Datasets and
+  Benchmarks, 2021.
+  - Introduces Therapeutics Data Commons including the
+    ADMET Benchmark Group covering twenty-plus tasks.
+  - Track 6: current standard benchmark suite for ADMET
+    ML.
+- Fang X, Liu L, Lei J, et al. *Geometry-enhanced
+  molecular representation learning for property
+  prediction.* Nature Machine Intelligence, 2022;
+  4:127-134.
+  - Introduces GEM, a geometry-aware pretrained
+    molecular representation with strong ADMET
+    performance.
+  - Track 6: geometry-aware pretraining baseline.
+- ICH. *ICH M7(R2) Assessment and Control of DNA
+  Reactive (Mutagenic) Impurities in Pharmaceuticals.*
+  ICH, 2023.
+  - Regulatory guideline that explicitly accepts two
+    complementary (Q)SAR models as evidence for DNA
+    reactivity assessment.
+  - Track 6: regulatory precedent for in-silico safety
+    evidence.
+- Bender A, Schneider N, Segler M, Walters WP, Engkvist
+  O, Rodrigues T. *Evaluation guidelines for machine
+  learning tools in the chemical sciences.* Nature
+  Reviews Chemistry, 2022; 6:428-442.
+  - Proposes evaluation guidelines for chemistry ML
+    covering splits, baselines, uncertainty, and
+    applicability domain.
+  - Track 6: methodological standard for ADMET and
+    property model evaluation.
+
+## Clinical pharmacology, pharmacometrics, and MIDD
+
+- Sheiner LB, Beal SL. *Evaluation of methods for
+  estimating population pharmacokinetic parameters. I.
+  Michaelis-Menten model: routine clinical
+  pharmacokinetic data.* Journal of Pharmacokinetics and
+  Biopharmaceutics, 1980; 8(6):553-571.
+  - Foundational paper introducing the population-PK
+    mixed-effects approach later embodied in NONMEM.
+  - Track 6: origin reference for population
+    pharmacokinetics.
+- Lalonde RL, Kowalski KG, Hutmacher MM, et al.
+  *Model-based drug development.* Clinical Pharmacology
+  & Therapeutics, 2007; 82(1):21-32.
+  - Articulates the model-based drug development
+    framework that preceded the current MIDD language.
+  - Track 6: conceptual predecessor of MIDD.
+- Milligan PA, Brown MJ, Marchant B, et al. *Model-based
+  drug development: a rational approach to efficiently
+  accelerate drug development.* Clinical Pharmacology &
+  Therapeutics, 2013; 93(6):502-514.
+  - Case-based argument for model-based development
+    with examples from Pfizer programs.
+  - Track 6: industry perspective on MBDD practice.
+- Marshall SF, Burghaus R, Cosson V, et al. *Good
+  Practices in Model-Informed Drug Discovery and
+  Development: Practice, Application, and
+  Documentation.* CPT: Pharmacometrics & Systems
+  Pharmacology, 2016; 5(3):93-122.
+  - Proposes reporting and documentation good
+    practices for MIDD deliverables.
+  - Track 6: standard reference for MIDD
+    documentation practice.
+- U.S. FDA. *Population Pharmacokinetics: Guidance for
+  Industry.* FDA, 2022.
+  - Current FDA guidance on popPK analyses, covering
+    data, modeling, reporting, and regulatory use.
+  - Track 6: regulatory anchor for popPK submissions.
+- U.S. FDA. *Exposure-Response Relationships: Study
+  Design, Data Analysis, and Regulatory Applications.*
+  FDA, 2003.
+  - Guidance on E-R analysis and its role in dose and
+    label decisions.
+  - Track 6: regulatory framework for E-R evidence.
+- U.S. FDA. *Physiologically Based Pharmacokinetic
+  Analyses: Format and Content Guidance for Industry.*
+  FDA, 2018.
+  - Guidance on format and content for PBPK
+    submissions.
+  - Track 6: regulatory framework for PBPK evidence.
+- Wang Y, Zhu H, Madabushi R, Liu Q, Huang S-M, Zineh
+  I. *Model-Informed Drug Development: Current US
+  Regulatory Practice and Future Considerations.*
+  Clinical Pharmacology & Therapeutics, 2019;
+  105(4):899-911.
+  - FDA review of current MIDD practice across
+    therapeutic areas and regulatory applications.
+  - Track 6: regulator-authored survey of MIDD use.
+- Coravos A, Khozin S, Mandl KD. *Developing and
+  adopting safe and effective digital biomarkers to
+  improve patient outcomes.* npj Digital Medicine,
+  2019; 2:14.
+  - Frames digital biomarker qualification as an
+    evidence and infrastructure problem.
+  - Track 6: orientation reference for digital
+    endpoints in MIDD-adjacent submissions.
+
+## Pharmacoepidemiology methods
+
+- Ray WA. *Evaluating Medication Effects Outside of
+  Clinical Trials: New-User Designs.* American Journal
+  of Epidemiology, 2003; 158(9):915-920.
+  - Introduces new-user restriction as the default
+    design choice for observational drug-effect
+    studies.
+  - Track 1: canonical argument against prevalent-user
+    bias.
+- Suissa S. *Immortal Time Bias in Pharmacoepidemiology.*
+  American Journal of Epidemiology, 2008;
+  167(4):492-499.
+  - Defines and illustrates immortal-time bias, a
+    recurring error in observational cohort designs.
+  - Track 1: standard reference for a specific,
+    correctable bias class.
+- Bate A, Lindquist M, Edwards IR, et al. *A Bayesian
+  neural network method for adverse drug reaction
+  signal generation.* European Journal of Clinical
+  Pharmacology, 1998; 54(4):315-321.
+  - Introduces the Bayesian confidence propagation
+    neural network (BCPNN) for disproportionality
+    analysis on spontaneous reports.
+  - Track 1: origin reference for Bayesian signal
+    detection.
+- DuMouchel W. *Bayesian Data Mining in Large Frequency
+  Tables, with an Application to the FDA Spontaneous
+  Reporting System.* The American Statistician, 1999;
+  53(3):177-190.
+  - Introduces empirical-Bayes shrinkage
+    (Multi-item Gamma-Poisson Shrinker) for
+    disproportionality analysis.
+  - Track 1: standard statistical reference for FAERS
+    signal detection.
+- Kulldorff M, Davis RL, Kolczak M, Lewis E, Lieu T,
+  Platt R. *A maximized sequential probability ratio
+  test for drug and vaccine safety surveillance.*
+  Sequential Analysis, 2011; 30(1):58-78.
+  - Sequential test used in vaccine and drug safety
+    surveillance with error-rate control.
+  - Track 1: statistical backbone of sequential
+    surveillance in Sentinel-style programs.
+- Platt R, Brown JS, Robb M, et al. *The FDA Sentinel
+  Initiative — An Evolving National Resource.* NEJM,
+  2018; 379(22):2091-2093.
+  - Describes the FDA Sentinel System for active
+    post-market surveillance across health plans and
+    EHR data.
+  - Track 1: orientation reference for distributed
+    pharmacovigilance.
+- Gagne JJ, Glynn RJ, Avorn J, Levin R, Schneeweiss S.
+  *A combined comorbidity score predicted mortality in
+  elderly patients better than existing scores.*
+  Journal of Clinical Epidemiology, 2011;
+  64(7):749-759.
+  - Constructs a combined comorbidity score commonly
+    used as a covariate in propensity-score models on
+    claims data.
+  - Track 1: practical adjustment tool in
+    claims-based pharmacoepidemiology.
+- Reps JM, Schuemie MJ, Suchard MA, Ryan PB, Rijnbeek
+  PR. *Design and implementation of a standardized
+  framework to generate and evaluate patient-level
+  prediction models using observational healthcare
+  data.* JAMIA, 2018; 25(8):969-975.
+  - Introduces OHDSI's patient-level prediction
+    framework with standardized reporting for
+    observational prediction models.
+  - Track 1: OHDSI reference for prediction model
+    reproducibility.
+- Hernan MA. *The C-Word: Scientific Euphemisms Do Not
+  Improve Causal Inference From Observational Data.*
+  American Journal of Public Health, 2018;
+  108(5):616-619.
+  - Argues that observational studies answering causal
+    questions should say so rather than hide behind
+    associational language.
+  - Track 1: positional reference on causal framing.
+- Franklin JM, Patorno E, Desai RJ, et al. *Emulating
+  Randomized Clinical Trials With Nonrandomized
+  Real-World Evidence Studies: First Results From the
+  RCT DUPLICATE Initiative.* Circulation, 2021;
+  143(10):1002-1013.
+  - Empirical emulation of completed randomized trials
+    using real-world data, comparing effect estimates
+    and design decisions.
+  - Track 1: empirical anchor for target-trial
+    emulation debates.
+
+## AI for clinical trial design and operations
+
+- Bhatt DL, Mehta C. *Adaptive Designs for Clinical
+  Trials.* NEJM, 2016; 375(1):65-74.
+  - Review of adaptive trial designs with examples
+    from cardiovascular and oncology programs.
+  - Track 6: concise orientation to adaptive designs
+    that AI methods feed into.
+- U.S. FDA. *Adaptive Design Clinical Trials for Drugs
+  and Biologics: Guidance for Industry.* FDA, 2019.
+  - Current FDA guidance on adaptive designs and
+    their regulatory requirements.
+  - Track 6: regulatory framework for adaptive trial
+    work.
+- U.S. FDA. *Master Protocols: Efficient Clinical Trial
+  Design Strategies to Expedite Development of Oncology
+  Drugs and Biologics: Guidance for Industry.* FDA,
+  2022.
+  - Guidance on umbrella, basket, and platform
+    protocols in oncology drug development.
+  - Track 6: regulatory framework for master
+    protocols.
+- Berry SM, Carlin BP, Lee JJ, Muller P. *Bayesian
+  Adaptive Methods for Clinical Trials.* CRC Press,
+  2010.
+  - Textbook on Bayesian adaptive trial design and
+    operating characteristic evaluation.
+  - Track 6: methodological reference for
+    simulation-based adaptive design.
+- The REMAP-CAP Investigators. *Interleukin-6 Receptor
+  Antagonists in Critically Ill Patients with Covid-19.*
+  NEJM, 2021; 384(16):1491-1502.
+  - Platform-trial result showing how REMAP-CAP's
+    adaptive platform evaluated multiple
+    interventions during the COVID-19 pandemic.
+  - Track 6: real-world platform-trial case.
+- Park JJH, Siden E, Zoratti MJ, et al. *Systematic
+  review of basket trials, umbrella trials, and
+  platform trials: a landscape analysis of master
+  protocols.* Trials, 2019; 20(1):572.
+  - Systematic review of the master-protocol
+    landscape.
+  - Track 6: empirical snapshot of master-protocol
+    adoption.
+- Thorlund K, Dron L, Park J, Hsu G, Forrest JI, Mills
+  EJ. *Synthetic and External Controls in Clinical
+  Trials — A Primer for Researchers.* Clinical
+  Epidemiology, 2020; 12:457-467.
+  - Introductory primer on external and synthetic
+    control arms.
+  - Track 6: orientation reference for external
+    comparator methodology.
+- Jahanshahi M, Gregg K, Davis G, et al. *The Use of
+  External Controls in FDA Regulatory Decision
+  Making.* Therapeutic Innovation & Regulatory
+  Science, 2021; 55(5):1019-1035.
+  - Review of FDA approvals that relied on external
+    controls, with case characteristics and
+    review-side reasoning.
+  - Track 6: empirical anchor for regulatory
+    acceptance of external comparators.
+- Woo M. *An AI boost for clinical trials.* Nature,
+  2019; 573:S100-S102.
+  - Journalistic overview of early AI applications in
+    clinical trials including recruitment and protocol
+    design.
+  - Track 6: orientation reading on AI-in-trials
+    framing.
+- ICH. *ICH E6(R3) Good Clinical Practice.* ICH, 2023.
+  - Updated ICH GCP guideline with risk-based
+    approaches to trial quality management.
+  - Track 6: current GCP reference for trial
+    operations.
+- U.S. FDA. *Framework for the Use of Digital Health
+  Technologies in Drug and Biological Product
+  Development.* Draft Guidance, FDA, 2023.
+  - Draft FDA guidance on digital health technologies
+    in drug development.
+  - Track 6: regulatory framing for digital endpoints.
+
+## AI-enabled drug discovery and development case studies
+
+- Stokes JM, Yang K, Swanson K, et al. *A Deep Learning
+  Approach to Antibiotic Discovery.* Cell, 2020;
+  180(4):688-702.e13.
+  - Graph-neural-network screening study that
+    identified halicin and structurally distinct
+    antibacterial candidates.
+  - Cross-cutting: canonical case for discovery-stage
+    screening with deep learning.
+- Ren F, Aliper A, Chen J, et al. *A small-molecule
+  TNIK inhibitor targets fibrosis in preclinical and
+  clinical models.* Nature Biotechnology, 2024.
+  - Reports preclinical and early clinical
+    characterization of INS018_055, an AI-designed
+    candidate against fibrosis.
+  - Cross-cutting: peer-reviewed anchor for the
+    Insilico end-to-end pipeline narrative.
+- Savage N. *Tapping into the drug discovery potential
+  of AI.* Nature, 2021; 600:S14-S16.
+  - Journalistic survey of AI drug discovery
+    including Exscientia and partnered programs.
+  - Cross-cutting: orientation reading alongside
+    peer-reviewed program material.
+- Richardson P, Griffin I, Tucker C, et al. *Baricitinib
+  as potential treatment for 2019-nCoV acute
+  respiratory disease.* Lancet, 2020;
+  395(10223):e30-e31.
+  - Knowledge-graph-driven repositioning hypothesis
+    nominating baricitinib for COVID-19.
+  - Cross-cutting: case reference for
+    knowledge-graph-based repositioning.
+- Jumper J, Evans R, Pritzel A, et al. *Highly accurate
+  protein structure prediction with AlphaFold.* Nature,
+  2021; 596:583-589.
+  - Introduces AlphaFold 2 and its evaluation on CASP14
+    structural prediction targets.
+  - Cross-cutting: infrastructure baseline for
+    structure-based drug design.
+- Varadi M, Anyango S, Deshpande M, et al. *AlphaFold
+  Protein Structure Database: massively expanding the
+  structural coverage of protein-sequence space with
+  high-accuracy models.* Nucleic Acids Research, 2022;
+  50(D1):D439-D444.
+  - Describes the proteome-scale AlphaFold structure
+    database made available as a shared resource.
+  - Cross-cutting: community infrastructure reference.
+- Evans R, O'Neill M, Pritzel A, et al. *Protein
+  complex prediction with AlphaFold-Multimer.*
+  bioRxiv, 2022.
+  - Extends AlphaFold to protein complexes with
+    multiple chains.
+  - Cross-cutting: reference for multimer prediction
+    infrastructure.
+- Abramson J, Adler J, Dunger J, et al. *Accurate
+  structure prediction of biomolecular interactions
+  with AlphaFold 3.* Nature, 2024; 630:493-500.
+  - Extends structure prediction to protein-ligand,
+    protein-nucleic acid, and other biomolecular
+    complexes.
+  - Cross-cutting: current-generation structure
+    prediction reference with drug-discovery
+    implications.
+- Jayatunga MKP, Xie W, Ruder L, Schulze U, Meier C.
+  *AI in small-molecule drug discovery: a coming wave?*
+  Nature Reviews Drug Discovery, 2022; 21:175-176.
+  - Industry-side analysis of AI-originated clinical
+    candidates and their pipeline progression.
+  - Cross-cutting: portfolio-level snapshot of AI in
+    discovery.
