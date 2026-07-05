@@ -52,6 +52,10 @@ Each prototype directory should contain, at minimum:
   workflow-aware decision support on synthetic patient-like
   data. Includes a static dashboard generator, example audit
   output, committed HTML output, and tests.
+- `monitoring-loop-sketch/` — prototype for Track 4 questions
+  about input drift, outcome incidence, calibration, and
+  monitoring escalation on a synthetic stream. Includes a report
+  generator, example outputs, and tests.
 
 Both current prototypes are executable sketches. They remain
 research artifacts, not validated tools.

@@ -604,7 +604,8 @@ In rough order of how concrete they are:
   synthetic patient-like data, for Track 3 design questions.
 - A monitoring loop over a synthetic data stream that reports
   input drift, outcome shift, and calibration changes, for
-  Track 4.
+  Track 4. Implemented as
+  `prototypes/monitoring-loop-sketch/`.
 
 Each of these is a sketch, intended to expose design questions
 rather than produce evidence.

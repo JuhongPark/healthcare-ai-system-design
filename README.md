@@ -77,11 +77,13 @@ or public data only.
 ## Current prototype priorities
 
 1. Synthetic real-world-evidence analysis for treatment-outcome
-   questions.
+   questions. Implemented in `prototypes/rwe-drug-efficacy-sketch/`.
 2. Workflow-aware clinical decision support dashboard sketch on
-   synthetic patient-like records.
+   synthetic patient-like records. Implemented in
+   `prototypes/cds-risk-dashboard/`.
 3. Synthetic monitoring loop for drift, calibration, and
-   governance questions.
+   governance questions. Implemented in
+   `prototypes/monitoring-loop-sketch/`.
 
 Each prototype is a research sketch. Outputs illustrate method
 behavior and system-design trade-offs; they do not support
