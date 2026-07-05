@@ -1,0 +1,5 @@
+sequence,event_type,actor_role,captured_value
+1,dashboard_viewed,synthetic reviewer,encounter=SYN-ENC-009
+2,risk_panel_viewed,synthetic reviewer,risk_score=0.721
+3,limitations_acknowledged,synthetic reviewer,synthetic-only limitations visible
+4,override_reason_recorded,synthetic reviewer,workflow context outside model display

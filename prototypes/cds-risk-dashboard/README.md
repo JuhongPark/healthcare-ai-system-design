@@ -1,9 +1,9 @@
 # CDS risk dashboard sketch
 
 Prototype sketch for Track 3: a workflow-aware clinical decision
-support dashboard on synthetic patient-like data. This document
-describes the intended scope of the sketch; implementation is
-not yet committed.
+support dashboard on synthetic patient-like data. The current
+implementation generates a static HTML dashboard using only the
+Python standard library.
 
 ## Design question
 
@@ -60,6 +60,25 @@ includes:
 - the subgroup breakdowns that would be required before use;
 - a note on what would have to be true before any local
   deployment conversation.
+
+## How to run
+
+```bash
+python prototypes/cds-risk-dashboard/generate_dashboard.py
+```
+
+The script writes:
+
+- `outputs/synthetic_patients.csv` — regenerated synthetic
+  patient-like records, ignored by git.
+- `outputs/example_audit_log.csv` — minimum audit trail
+  example.
+- `outputs/cds_dashboard.html` — static dashboard sketch that
+  can be opened directly in a browser.
+
+The dashboard is intentionally static. It exists to show how
+risk, uncertainty, limitations, override capture, and audit
+review might share one workflow surface.
 
 ## Limitations and cautions
 

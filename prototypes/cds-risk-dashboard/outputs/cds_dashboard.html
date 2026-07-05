@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Synthetic CDS Risk Dashboard Sketch</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #17202a;
+  --muted: #53616f;
+  --line: #cfd8dc;
+  --page: #f6f8f9;
+  --panel: #ffffff;
+  --teal: #1f7a76;
+  --blue: #315f9c;
+  --amber: #a76500;
+  --red: #a33a3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  background: #ffffff;
+  padding: 18px 24px;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.subhead {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.safety {
+  margin-top: 14px;
+  border: 1px solid #d7c59a;
+  border-left: 5px solid var(--amber);
+  background: #fff8e8;
+  padding: 10px 12px;
+  max-width: 980px;
+  border-radius: 6px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px 24px 28px;
+}
+
+section, aside {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+aside {
+  padding: 14px;
+}
+
+.workspace {
+  display: grid;
+  gap: 14px;
+}
+
+.panel {
+  padding: 16px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  min-height: 102px;
+}
+
+.label {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.risk-high {
+  color: var(--red);
+}
+
+.risk-elevated {
+  color: var(--amber);
+}
+
+.risk-watch {
+  color: var(--blue);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #e5ebee;
+  font-size: 13px;
+  padding: 8px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.queue td:last-child,
+.queue th:last-child {
+  text-align: right;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.callout {
+  border-left: 4px solid var(--teal);
+  background: #edf7f5;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.warning {
+  border-left-color: var(--amber);
+  background: #fff8e8;
+}
+
+.audit {
+  border-left-color: var(--blue);
+  background: #eef4fb;
+}
+
+.override-grid {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.field {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-height: 38px;
+  padding: 9px 10px;
+  background: #fafcfd;
+}
+
+@media (max-width: 860px) {
+  main,
+  .two-column,
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Synthetic CDS Risk Dashboard Sketch</h1>
+    <p class="subhead">Workflow-aware display for a simulated risk estimate, uncertainty, limitations, override capture, and audit review.</p>
+    <div class="safety">
+      This static dashboard uses synthetic patient-like records only. It is not medical advice, not clinical decision support, not a validated tool, and not evidence about real patients.
+    </div>
+  </header>
+  <main>
+    <aside>
+      <h2>Encounter Queue</h2>
+      <table class="queue">
+        <thead>
+          <tr><th>Encounter</th><th>Area</th><th>Acuity</th><th>Risk</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SYN-ENC-009</td><td>Observation</td><td>escalating</td><td>72.1%</td></tr>
+<tr><td>SYN-ENC-004</td><td>Ward</td><td>escalating</td><td>58.2%</td></tr>
+<tr><td>SYN-ENC-006</td><td>Observation</td><td>watch</td><td>57.9%</td></tr>
+<tr><td>SYN-ENC-002</td><td>Ward</td><td>escalating</td><td>55.2%</td></tr>
+<tr><td>SYN-ENC-001</td><td>Emergency</td><td>watch</td><td>51.5%</td></tr>
+<tr><td>SYN-ENC-012</td><td>Observation</td><td>escalating</td><td>50.2%</td></tr>
+<tr><td>SYN-ENC-010</td><td>Emergency</td><td>stable</td><td>45.8%</td></tr>
+<tr><td>SYN-ENC-005</td><td>Ward</td><td>watch</td><td>43.0%</td></tr>
+<tr><td>SYN-ENC-003</td><td>Ward</td><td>escalating</td><td>36.1%</td></tr>
+<tr><td>SYN-ENC-011</td><td>Emergency</td><td>stable</td><td>32.5%</td></tr>
+<tr><td>SYN-ENC-007</td><td>Emergency</td><td>stable</td><td>25.5%</td></tr>
+<tr><td>SYN-ENC-008</td><td>Ward</td><td>stable</td><td>20.9%</td></tr>
+        </tbody>
+      </table>
+    </aside>
+    <div class="workspace">
+      <section class="panel">
+        <h2>Selected Synthetic Encounter</h2>
+        <div class="metric-grid">
+          <div class="metric">
+            <span class="label">72-hour synthetic risk label</span>
+            <span class="value risk-high">72.1%</span>
+            <span class="label">Not a patient-care recommendation</span>
+          </div>
+          <div class="metric">
+            <span class="label">Uncertainty range</span>
+            <span class="value">64.1% to 80.1%</span>
+            <span class="label">moderate uncertainty</span>
+          </div>
+          <div class="metric">
+            <span class="label">Synthetic encounter</span>
+            <span class="value">SYN-ENC-009</span>
+            <span class="label">Observation</span>
+          </div>
+        </div>
+      </section>
+      <section class="panel two-column">
+        <div>
+          <h2>Signal Context</h2>
+          <table>
+            <tbody>
+              <tr><th>Age band</th><td>55-64</td></tr>
+              <tr><th>Acuity signal</th><td>escalating</td></tr>
+              <tr><th>Lab trend</th><td>marked change</td></tr>
+              <tr><th>Prior utilization count</th><td>3</td></tr>
+              <tr><th>Missing signals</th><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <h2>Explanation Caveats</h2>
+          <p>The display shows which synthetic signals are present near the score. It does not prove causality, explain a real patient trajectory, or validate any action.</p>
+          <p>The uncertainty band widens when synthetic inputs are missing or the acuity signal is escalating.</p>
+        </div>
+      </section>
+      <section class="panel two-column">
+        <div class="callout warning">
+          <h2>Limitations Visible With Output</h2>
+          <p>Risk values describe generated labels in a simulated dataset. They should not be used for triage, diagnosis, treatment, staffing, or real workflow decisions.</p>
+          <p>Workflow claims from this page are design hypotheses only.</p>
+        </div>
+        <div>
+          <h2>Override Capture Mock</h2>
+          <div class="override-grid">
+            <span class="label">Disposition</span>
+            <span class="field">No action recorded in prototype</span>
+            <span class="label">Reason category</span>
+            <span class="field">Workflow context outside model display</span>
+            <span class="label">Reviewer note</span>
+            <span class="field">Synthetic audit example only</span>
+          </div>
+        </div>
+      </section>
+      <section class="panel callout audit">
+        <h2>Minimum Audit Trail Example</h2>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Event</th><th>Actor role</th><th>Captured value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>dashboard_viewed</td><td>synthetic reviewer</td><td>encounter=SYN-ENC-009</td></tr>
+<tr><td>2</td><td>risk_panel_viewed</td><td>synthetic reviewer</td><td>risk_score=0.721</td></tr>
+<tr><td>3</td><td>limitations_acknowledged</td><td>synthetic reviewer</td><td>synthetic-only limitations visible</td></tr>
+<tr><td>4</td><td>override_reason_recorded</td><td>synthetic reviewer</td><td>workflow context outside model display</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

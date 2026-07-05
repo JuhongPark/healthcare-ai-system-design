@@ -193,6 +193,7 @@ cython_debug/
 
 # Prototype generated data
 prototypes/rwe-drug-efficacy-sketch/outputs/synthetic_cohort.csv
+prototypes/cds-risk-dashboard/outputs/synthetic_patients.csv
 
 # PyPI configuration file
 .pypirc
