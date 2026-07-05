@@ -1,0 +1,13 @@
+analysis,estimand,value,interpretation
+cohort,synthetic rows,800,Number of synthetic records analyzed.
+cohort,treatment prevalence,0.4800,Fraction assigned to synthetic treatment.
+known truth,true treatment log odds,-0.4500,Protective effect encoded in the generator.
+known truth,oracle primary risk difference,-0.0512,Average synthetic risk difference if treatment were set by intervention.
+crude,primary risk difference,0.0028,"Unadjusted association, confounded by design."
+ipw adjusted,primary risk difference,-0.0516,Association after estimated propensity weighting.
+crude,primary odds ratio,1.0258,Unadjusted event odds ratio.
+ipw adjusted,effective sample size,727.6,Weight stability diagnostic for the adjusted analysis.
+balance,max absolute SMD before weighting,0.5504,Largest observed covariate imbalance before weighting.
+balance,max absolute SMD after weighting,0.0470,Largest observed covariate imbalance after weighting.
+negative control,crude risk difference,-0.0012,Residual association for an outcome with no treatment effect in the generator.
+negative control,ipw risk difference,-0.0059,Weighted residual association for the negative-control outcome.

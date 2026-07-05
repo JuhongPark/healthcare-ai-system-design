@@ -1,9 +1,9 @@
 # RWE drug efficacy sketch
 
 Prototype sketch for Track 1: real-world evidence and drug
-efficacy evaluation on synthetic data. This document describes
-the intended scope of the sketch; implementation is not yet
-committed.
+efficacy evaluation on synthetic data. The current
+implementation is a small executable sketch using only the
+Python standard library.
 
 ## Design question
 
@@ -68,6 +68,44 @@ structures, sample sizes, and effect sizes.
 - The known data-generating process is revealed at the end, so
   a reader can see how the methods did against the ground
   truth.
+
+## How to run
+
+Generate a cohort:
+
+```bash
+python prototypes/rwe-drug-efficacy-sketch/generate_synthetic_cohort.py
+```
+
+Run the analysis:
+
+```bash
+python prototypes/rwe-drug-efficacy-sketch/run_analysis.py
+```
+
+The analysis writes:
+
+- `outputs/synthetic_cohort.csv` — regenerated synthetic data,
+  ignored by git.
+- `outputs/example_summary.csv` — compact summary table.
+- `outputs/example_report.md` — human-readable report with
+  assumptions, diagnostics, and limitations.
+
+The committed example report can be regenerated with the
+default seed.
+
+## Implemented methods
+
+- Synthetic confounded treatment assignment.
+- Synthetic binary primary outcome with a known treatment log
+  odds.
+- Synthetic negative-control outcome with no encoded treatment
+  effect.
+- Estimated propensity score weighting using a small logistic
+  model fit to observed synthetic covariates.
+- Covariate balance diagnostics using standardized mean
+  differences.
+- Crude and adjusted association summaries.
 
 ## Limitations and cautions
 

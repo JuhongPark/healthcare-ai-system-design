@@ -191,6 +191,9 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# Prototype generated data
+prototypes/rwe-drug-efficacy-sketch/outputs/synthetic_cohort.csv
+
 # PyPI configuration file
 .pypirc
 
