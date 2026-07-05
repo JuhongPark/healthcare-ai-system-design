@@ -46,10 +46,12 @@ Each prototype directory should contain, at minimum:
 
 - `rwe-drug-efficacy-sketch/` — prototype for Track 1 questions
   about observational treatment-outcome analysis on synthetic
-  data.
+  data. Includes a synthetic cohort generator, an analysis
+  script, example outputs, and tests.
 - `cds-risk-dashboard/` — prototype for Track 3 questions about
   workflow-aware decision support on synthetic patient-like
-  data.
+  data. Includes a static dashboard generator, example audit
+  output, committed HTML output, and tests.
 
-Each directory currently describes what the sketch will
-explore; implementation is not yet committed.
+Both current prototypes are executable sketches. They remain
+research artifacts, not validated tools.
