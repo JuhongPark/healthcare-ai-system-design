@@ -16,8 +16,8 @@ Each reading should have a short entry containing:
   reading should influence in the repository, and why.
 - **Limitations.** Known constraints on the reading — scope,
   sample, assumptions, conflicts of interest if relevant.
-- **Relevance to repository tracks.** Which of Tracks 1–4 the
-  reading relates to, and in what way.
+- **Relevance to repository tracks.** Which of Tracks 1–7 or
+  cross-cutting notes the reading relates to, and in what way.
 
 Entries should be honest about what the reader (i.e., the
 author of the note) did and did not understand.

@@ -3,7 +3,7 @@
 Notes on research directions for designing, evaluating, and
 deploying AI in healthcare workflows. The goal is to articulate
 open questions, design frameworks, and prototype ideas across
-four connected tracks.
+seven connected tracks.
 
 ## Overview
 
@@ -16,8 +16,10 @@ Healthcare AI touches several interconnected problems:
   is usable, interpretable, and safe
 - maintaining systems over time as data, workflows, and
   populations change
+- designing hospital-scale and pharma-scale AI systems as
+  engineered, governed portfolios
 
-The sections below outline four research tracks. They are not
+The sections below outline seven research tracks. They are not
 independent — a model trained in Track 2 still needs the
 governance of Track 4 to be usable, and the modeling choices in
 Track 1 constrain what claims can be communicated in Track 3.

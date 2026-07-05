@@ -35,7 +35,12 @@ Each prototype directory should contain, at minimum:
   is not;
 - a clearly labeled entry point (notebook or script);
 - a note on where the synthetic data comes from and how to
-  regenerate it.
+  regenerate it;
+- a small example output or report when the prototype is
+  executable;
+- a visible statement that the output is not medical advice,
+  not clinical decision support, and not evidence about real
+  patients.
 
 ## Current directories
 

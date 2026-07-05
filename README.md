@@ -3,7 +3,19 @@
 Research on how AI and data systems can be designed, evaluated,
 and deployed in healthcare workflows.
 
-## Planned work
+## Repository purpose
+
+This repository is a research and prototyping workspace for
+healthcare AI system design. The unit of analysis is the full
+system: data, model, workflow, interface, monitoring,
+governance, and organizational ownership.
+
+The repository does not contain clinical tools, medical advice,
+protected health information, private patient data, or validated
+decision-support products. Prototypes use synthetic, simulated,
+or public data only.
+
+## Tracks
 
 - Drug efficacy evaluation with real-world evidence —
   observational data, comparative effectiveness, association vs.
@@ -48,3 +60,29 @@ and deployed in healthcare workflows.
 - Pharma AI system of systems — cross-stage integration
   spanning discovery, preclinical, clinical development,
   manufacturing, and pharmacovigilance
+
+## Main materials
+
+- `docs/research-agenda.md` — the seven-track research agenda
+  and near-term prototype queue.
+- `docs/literature-map.md` — verified reading areas organized
+  by topic.
+- `references/reading-list.md` — citation-oriented reading
+  list and short relevance notes.
+- `docs/system-design-framework.md` — a reusable design
+  question framework for healthcare AI systems.
+- `prototypes/` — executable or planned sketches that make
+  selected design questions concrete.
+
+## Current prototype priorities
+
+1. Synthetic real-world-evidence analysis for treatment-outcome
+   questions.
+2. Workflow-aware clinical decision support dashboard sketch on
+   synthetic patient-like records.
+3. Synthetic monitoring loop for drift, calibration, and
+   governance questions.
+
+Each prototype is a research sketch. Outputs illustrate method
+behavior and system-design trade-offs; they do not support
+claims about real patients or real populations.
