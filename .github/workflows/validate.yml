@@ -1,0 +1,37 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  prototypes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate RWE prototype outputs
+        run: |
+          python prototypes/rwe-drug-efficacy-sketch/generate_synthetic_cohort.py
+          python prototypes/rwe-drug-efficacy-sketch/run_analysis.py
+
+      - name: Regenerate CDS dashboard output
+        run: python prototypes/cds-risk-dashboard/generate_dashboard.py
+
+      - name: Regenerate monitoring loop output
+        run: python prototypes/monitoring-loop-sketch/generate_monitoring_report.py
+
+      - name: Run safety scan
+        run: python scripts/check_claims.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests
