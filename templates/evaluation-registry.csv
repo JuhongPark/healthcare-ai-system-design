@@ -1,0 +1,2 @@
+prototype,artifact,evaluation_id,stage,data_version,metric_or_check,result,decision,status,owner,citation_ids,notes
+example-prototype,example-artifact,EV-001,internal-validation,v0,synthetic safety boundary,present,continue,example,repository,E005;E019;E020,Replace this row with prototype-specific evaluations.
