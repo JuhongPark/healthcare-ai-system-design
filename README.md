@@ -65,10 +65,16 @@ or public data only.
 
 - `docs/research-agenda.md` — the seven-track research agenda
   and near-term prototype queue.
+- `docs/evidence-base.md` — literature-backed synthesis of why
+  the repository treats healthcare AI as a system-design problem.
+- `docs/research-gaps.md` — evidence-based gaps and next
+  development sequence.
 - `docs/literature-map.md` — verified reading areas organized
   by topic.
 - `references/reading-list.md` — citation-oriented reading
   list and short relevance notes.
+- `references/evidence-matrix.csv` — source-by-source claim and
+  design-implication map.
 - `docs/system-design-framework.md` — a reusable design
   question framework for healthcare AI systems.
 - `prototypes/` — executable or planned sketches that make

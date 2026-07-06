@@ -1,0 +1,152 @@
+# Research gaps and next development plan
+
+This document converts the literature review into development
+work. The goal is to identify what the repository still lacks
+relative to its own system-design thesis.
+
+## High-priority gaps
+
+### Unified synthetic case study
+
+The repository has three useful prototypes: RWE, CDS, and
+monitoring. They are still separate sketches. The literature
+supports a stronger story in which the same synthetic clinical
+program moves from evidence design, to workflow display, to
+post-deployment monitoring.
+
+Next work: create a `case-studies/synthetic-care-program/`
+folder that links one synthetic dataset, one analysis, one
+dashboard, one monitoring report, and one governance review.
+
+### Data and model documentation
+
+Datasheets, Model Cards, CONSORT-AI, SPIRIT-AI, DECIDE-AI, and
+WHO guidance all point toward structured documentation. The repo
+has good README caveats, but not reusable documentation
+templates.
+
+Next work: add:
+
+- `templates/data-card.md`
+- `templates/model-card.md`
+- `templates/evaluation-registry.csv`
+- `templates/interface-contract.md`
+- `templates/governance-gate-review.md`
+
+### RWE protocol discipline
+
+The RWE prototype demonstrates confounding, weighting, balance,
+and a negative-control outcome. It does not yet make target
+trial emulation or active comparator new-user design explicit.
+
+Next work: add a target trial table to the example report,
+including eligibility, treatment strategies, assignment time,
+follow-up, outcome, causal contrast, and analysis plan. Add a
+sensitivity grid that varies comparator, eligibility window, and
+outcome ascertainment.
+
+### CDS workflow experiment
+
+The dashboard is a single interface sketch. The CDS literature
+suggests that workflow timing and alert form are core design
+variables, not polish.
+
+Next work: generate three dashboard variants: passive banner,
+inline action prompt, and interruptive alert. Report the
+expected user burden, audit event, and failure mode for each.
+
+### Monitoring incident workflow
+
+The monitoring loop detects drift and calibration movement, but
+it does not yet show how a governance owner acts on a signal.
+
+Next work: add incident records with severity, trigger metric,
+suspected root cause, required review, decision, owner, and
+follow-up date. Link incidents to evaluation registry entries.
+
+### Equity and proxy-label audit
+
+The repository discusses fairness, but no prototype performs a
+proxy-label audit. Obermeyer et al. make this a high-value next
+step because proxy choice can encode inequity before model
+training begins.
+
+Next work: add a small synthetic audit that compares a proxy
+label against a latent need variable, then shows how performance
+and allocation differ by subgroup.
+
+### Pharma executable prototype
+
+The pharma track is conceptually developed but lacks an
+executable sketch. The literature suggests a public-data
+property-prediction or ADMET prototype with careful benchmark
+framing.
+
+Next work: build a lightweight public benchmark prototype that
+reports data split, applicability domain, calibration, and
+handoff decision. Avoid therapeutic claims.
+
+## Evidence gaps
+
+The current survey is broad enough to justify the repository's
+direction, but it is not the final literature base.
+
+Missing or shallow areas:
+
+- recent AI prediction-model reporting standards beyond the
+  current guideline set
+- implementation science for clinical AI adoption
+- alert fatigue and clinician workload measurement
+- post-deployment monitoring methods for single-site clinical AI
+- evaluation of foundation models and generative AI in health
+- regulatory change-control practice after AI/ML SaMD guidance
+- drug discovery applicability-domain and assay-handoff
+  literature
+
+These should be handled as additional waves, not mixed into the
+first survey retroactively.
+
+## Proposed research waves
+
+### Wave 2: reporting and evaluation guidelines
+
+Extend the evidence matrix with prediction-model reporting,
+diagnostic accuracy, early evaluation, prospective validation,
+and reproducibility guidance. Output: a repo-specific evaluation
+packet template.
+
+### Wave 3: implementation science and workflow evidence
+
+Survey CDS implementation, alert fatigue, human factors,
+workflow integration, and audit logging. Output: dashboard
+variant requirements and a usability-evaluation checklist.
+
+### Wave 4: monitoring and regulated MLOps
+
+Survey dataset shift, performance monitoring, update governance,
+change control, rollback, and incident management. Output:
+monitoring incident schema and governance gate definitions.
+
+### Wave 5: pharma and drug development validation
+
+Survey molecular ML benchmarking, ADMET, applicability domain,
+assay validation, model-informed drug development, and
+AI-enabled discovery case studies. Output: first public-data
+pharma prototype design.
+
+## Implementation order
+
+1. Add shared templates for data cards, model cards, interface
+   contracts, evaluation registry, and governance gate reviews.
+2. Apply the templates to the three existing prototypes.
+3. Expand the RWE prototype with target-trial and sensitivity
+   design sections.
+4. Expand the monitoring loop with incident and governance
+   actions.
+5. Add CDS dashboard variants for workflow comparison.
+6. Add a proxy-label fairness audit.
+7. Add the first public-data pharma prototype.
+
+This order keeps the repository aligned with the literature:
+make the system spine explicit before adding larger or more
+ambitious modeling work.
