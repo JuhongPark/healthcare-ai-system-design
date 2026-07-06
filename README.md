@@ -67,6 +67,11 @@ or public data only.
   and near-term prototype queue.
 - `docs/evidence-base.md` — literature-backed synthesis of why
   the repository treats healthcare AI as a system-design problem.
+- `docs/project-thesis.md` — concise thesis for healthcare AI
+  as a lifecycle evidence and safety-case problem.
+- `docs/safety-case-framework.md` — object model for synthetic
+  safety cases, incidents, evidence, hazards, and governance
+  decisions.
 - `docs/research-gaps.md` — evidence-based gaps and next
   development sequence.
 - `docs/major-improvement-milestones.md` — flagship improvement
