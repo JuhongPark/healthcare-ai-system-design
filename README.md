@@ -69,6 +69,9 @@ or public data only.
   the repository treats healthcare AI as a system-design problem.
 - `docs/research-gaps.md` — evidence-based gaps and next
   development sequence.
+- `docs/major-improvement-milestones.md` — flagship improvement
+  plan for turning the repository into an executable synthetic
+  healthcare AI safety-case framework.
 - `docs/literature-map.md` — verified reading areas organized
   by topic.
 - `references/reading-list.md` — citation-oriented reading
