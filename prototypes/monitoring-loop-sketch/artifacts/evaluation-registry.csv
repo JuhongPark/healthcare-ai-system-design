@@ -1,0 +1,5 @@
+prototype,artifact,evaluation_id,stage,data_version,metric_or_check,result,decision,status,owner,citation_ids,notes
+monitoring-loop-sketch,synthetic-monitoring-rules,MON-EV-001,documentation-review,default-generator,synthetic safety boundary,present,continue,complete,repository,E007;E019,Monitoring stream remains synthetic-only and not medical advice.
+monitoring-loop-sketch,synthetic-monitoring-rules,MON-EV-002,internal-validation,default-generator,input shift summary,present,continue,complete,repository,E001;E002,Input shift index is reported as a lifecycle signal.
+monitoring-loop-sketch,synthetic-monitoring-rules,MON-EV-003,internal-validation,default-generator,calibration summary,present,continue,complete,repository,E003;E010,Calibration error is reported as a synthetic monitoring metric.
+monitoring-loop-sketch,synthetic-monitoring-rules,MON-EV-004,governance-review,default-generator,review action hint,present,continue,complete,repository,E009;E010,Alert level points to review rather than automatic deployment action.

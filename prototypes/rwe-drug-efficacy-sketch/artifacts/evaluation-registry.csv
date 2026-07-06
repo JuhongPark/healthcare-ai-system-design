@@ -1,0 +1,5 @@
+prototype,artifact,evaluation_id,stage,data_version,metric_or_check,result,decision,status,owner,citation_ids,notes
+rwe-drug-efficacy-sketch,synthetic-rwe-analysis,RWE-EV-001,internal-validation,default-generator,synthetic safety boundary,present,continue,complete,repository,E007;E019,Dataset and report remain synthetic-only and not medical advice.
+rwe-drug-efficacy-sketch,synthetic-rwe-analysis,RWE-EV-002,internal-validation,default-generator,covariate balance diagnostics,present,continue,complete,repository,E013,Standardized mean differences are reported as method diagnostics.
+rwe-drug-efficacy-sketch,synthetic-rwe-analysis,RWE-EV-003,internal-validation,default-generator,negative-control diagnostic,present,continue,complete,repository,E014,Negative control is labeled as a bias diagnostic rather than causal proof.
+rwe-drug-efficacy-sketch,synthetic-rwe-analysis,RWE-EV-004,documentation-review,default-generator,association boundary,present,continue,complete,repository,E008;E011;E012,Effect estimates are framed as synthetic associations.

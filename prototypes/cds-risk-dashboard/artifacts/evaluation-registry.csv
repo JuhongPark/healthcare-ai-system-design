@@ -1,0 +1,5 @@
+prototype,artifact,evaluation_id,stage,data_version,metric_or_check,result,decision,status,owner,citation_ids,notes
+cds-risk-dashboard,static-dashboard,CDS-EV-001,documentation-review,default-generator,synthetic safety boundary,present,continue,complete,repository,E007;E019,Dashboard records remain synthetic-only and not medical advice.
+cds-risk-dashboard,static-dashboard,CDS-EV-002,interface-review,default-generator,visible limitation panel,present,continue,complete,repository,E017;E018,Explanation and limitation surfaces are visible in the dashboard concept.
+cds-risk-dashboard,static-dashboard,CDS-EV-003,interface-review,default-generator,audit event example,present,continue,complete,repository,E004;E027,Example audit log represents override capture but is not a clinical workflow log.
+cds-risk-dashboard,static-dashboard,CDS-EV-004,governance-review,default-generator,clinical-use boundary,present,continue,complete,repository,E001;E015;E016,Current decision is documentation release only.
