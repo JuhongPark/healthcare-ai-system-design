@@ -3,3 +3,5 @@ synthetic-care-program,synthetic-cohort,SCP-EV-001,data-boundary-review,SCP-001,
 synthetic-care-program,target-trial-spec,SCP-EV-002,evidence-design-review,SCP-001,association boundary,present,continue,complete,repository,E008;E011;E012,Causal claims are blocked by missing evidence.
 synthetic-care-program,cds-dashboard,SCP-EV-003,workflow-interface-review,SCP-001,no clinical recommendation language,present,continue,complete,repository,E015;E016;E017;E027,Dashboard is labeled as workflow hypothesis only.
 synthetic-care-program,monitoring-report,SCP-EV-004,monitoring-review,SCP-001,monthly monitoring summary,present,continue,complete,repository,E001;E002;E003;E010,Monitoring output is synthetic and not operating policy.
+synthetic-care-program,incidents,SCP-EV-005,incident-review,SCP-001,failure-first incidents,present,pause,complete,repository,E001;E002;E003;E007;E010,Default run generates incidents for governance review.
+synthetic-care-program,governance-decision,SCP-EV-006,governance-review,SCP-001,decision references incidents,present,pause,complete,repository,E001;E007;E009;E010;E027,Governance decision blocks deployment authorization.

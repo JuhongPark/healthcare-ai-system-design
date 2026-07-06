@@ -39,10 +39,13 @@ python case-studies/synthetic-care-program/run_case.py --output-dir /tmp/synthet
 - `workflow_audit_log.csv` — example audit trail.
 - `monitoring_stream.csv` — synthetic model-output stream.
 - `monitoring_report.md` — monitoring summary.
+- `incidents.csv` — failure-first incident table.
+- `governance_decision.md` — decision record linked to
+  incidents and evaluation rows.
 - `evaluation_registry.csv` — traceability registry for checks.
 
-Later milestones extend this case with incidents, governance
-decisions, and a generated safety-case report.
+Later milestones extend this case with a generated safety-case
+report.
 
 ## Evidence references
 

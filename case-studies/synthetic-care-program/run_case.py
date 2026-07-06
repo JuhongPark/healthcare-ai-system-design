@@ -45,6 +45,21 @@ class MonitoringRow:
     alert: int
 
 
+@dataclass(frozen=True)
+class Incident:
+    incident_id: str
+    severity: str
+    trigger_metric: str
+    observed_value: str
+    threshold: str
+    suspected_root_cause: str
+    required_review: str
+    owner: str
+    decision: str
+    follow_up_date: str
+    linked_evaluation_id: str
+
+
 def logistic(value: float) -> float:
     return 1.0 / (1.0 + math.exp(-value))
 
@@ -520,7 +535,253 @@ def write_evaluation_registry(path: Path) -> None:
                 "citation_ids": "E001;E002;E003;E010",
                 "notes": "Monitoring output is synthetic and not operating policy.",
             },
+            {
+                "prototype": "synthetic-care-program",
+                "artifact": "incidents",
+                "evaluation_id": "SCP-EV-005",
+                "stage": "incident-review",
+                "data_version": CASE_ID,
+                "metric_or_check": "failure-first incidents",
+                "result": "present",
+                "decision": "pause",
+                "status": "complete",
+                "owner": "repository",
+                "citation_ids": "E001;E002;E003;E007;E010",
+                "notes": "Default run generates incidents for governance review.",
+            },
+            {
+                "prototype": "synthetic-care-program",
+                "artifact": "governance-decision",
+                "evaluation_id": "SCP-EV-006",
+                "stage": "governance-review",
+                "data_version": CASE_ID,
+                "metric_or_check": "decision references incidents",
+                "result": "present",
+                "decision": "pause",
+                "status": "complete",
+                "owner": "repository",
+                "citation_ids": "E001;E007;E009;E010;E027",
+                "notes": "Governance decision blocks deployment authorization.",
+            },
         ],
+    )
+
+
+def negative_control_gap(rows: list[CohortRow]) -> float:
+    return rate(rows, "negative_control", 1) - rate(rows, "negative_control", 0)
+
+
+def proxy_label_warning(rows: list[CohortRow]) -> float:
+    mean_need = sum(row.latent_need for row in rows) / len(rows)
+    high_proxy = [row for row in rows if row.proxy_cost_score >= 7]
+    if not high_proxy:
+        return 0.0
+    low_need_high_proxy = [row for row in high_proxy if row.latent_need < mean_need]
+    return len(low_need_high_proxy) / len(high_proxy)
+
+
+def generate_incidents(
+    cohort: list[CohortRow], monitoring: list[MonitoringRow]
+) -> list[Incident]:
+    incidents: list[Incident] = []
+    summaries = monthly_summary(monitoring)
+    max_shift = max(summaries, key=lambda item: abs(float(item["shift_index"])))
+    max_calibration = max(summaries, key=lambda item: abs(float(item["calibration_gap"])))
+    max_alert = max(summaries, key=lambda item: float(item["alert_rate"]))
+    neg_gap = negative_control_gap(cohort)
+    proxy_warning = proxy_label_warning(cohort)
+
+    if abs(float(max_shift["shift_index"])) >= 2.5:
+        incidents.append(
+            Incident(
+                incident_id="SCP-INC-001",
+                severity="high",
+                trigger_metric=f"month {max_shift['month']} shift_index",
+                observed_value=f"{float(max_shift['shift_index']):.2f}",
+                threshold="2.50",
+                suspected_root_cause="synthetic later-period acuity mix shift",
+                required_review="review data drift before any deployment claim",
+                owner="repository maintainer",
+                decision="pause",
+                follow_up_date="before next generated release",
+                linked_evaluation_id="SCP-EV-004",
+            )
+        )
+
+    if abs(float(max_calibration["calibration_gap"])) >= 0.075:
+        incidents.append(
+            Incident(
+                incident_id="SCP-INC-002",
+                severity="high",
+                trigger_metric=f"month {max_calibration['month']} calibration_gap",
+                observed_value=f"{float(max_calibration['calibration_gap']):.3f}",
+                threshold="0.075",
+                suspected_root_cause="synthetic outcome process shifted after baseline",
+                required_review="review calibration and outcome lag assumptions",
+                owner="repository maintainer",
+                decision="pause",
+                follow_up_date="before next generated release",
+                linked_evaluation_id="SCP-EV-004",
+            )
+        )
+
+    if float(max_alert["alert_rate"]) >= 0.35:
+        incidents.append(
+            Incident(
+                incident_id="SCP-INC-003",
+                severity="medium",
+                trigger_metric=f"month {max_alert['month']} alert_rate",
+                observed_value=f"{float(max_alert['alert_rate']):.3f}",
+                threshold="0.350",
+                suspected_root_cause="synthetic risk scores crossed passive display threshold",
+                required_review="review workflow burden and alert fatigue risk",
+                owner="repository maintainer",
+                decision="monitor",
+                follow_up_date="before dashboard variant work",
+                linked_evaluation_id="SCP-EV-003",
+            )
+        )
+
+    if abs(neg_gap) >= 0.12:
+        incidents.append(
+            Incident(
+                incident_id="SCP-INC-004",
+                severity="medium",
+                trigger_metric="negative_control_rate_difference",
+                observed_value=f"{neg_gap:.3f}",
+                threshold="0.120",
+                suspected_root_cause="synthetic imbalance remains visible in negative-control outcome",
+                required_review="review confounding and target-trial assumptions",
+                owner="repository maintainer",
+                decision="update",
+                follow_up_date="before RWE target-trial expansion",
+                linked_evaluation_id="SCP-EV-002",
+            )
+        )
+
+    if proxy_warning >= 0.30:
+        incidents.append(
+            Incident(
+                incident_id="SCP-INC-005",
+                severity="medium",
+                trigger_metric="high_proxy_low_need_share",
+                observed_value=f"{proxy_warning:.3f}",
+                threshold="0.300",
+                suspected_root_cause="synthetic proxy score can diverge from latent need",
+                required_review="review proxy-label bias before allocation claims",
+                owner="repository maintainer",
+                decision="update",
+                follow_up_date="before fairness audit prototype",
+                linked_evaluation_id="SCP-EV-001",
+            )
+        )
+
+    return incidents
+
+
+def write_incidents(path: Path, incidents: list[Incident]) -> None:
+    write_csv(
+        path,
+        [
+            "case_id",
+            "incident_id",
+            "severity",
+            "trigger_metric",
+            "observed_value",
+            "threshold",
+            "suspected_root_cause",
+            "required_review",
+            "owner",
+            "decision",
+            "follow_up_date",
+            "linked_evaluation_id",
+        ],
+        [
+            {
+                "case_id": CASE_ID,
+                "incident_id": incident.incident_id,
+                "severity": incident.severity,
+                "trigger_metric": incident.trigger_metric,
+                "observed_value": incident.observed_value,
+                "threshold": incident.threshold,
+                "suspected_root_cause": incident.suspected_root_cause,
+                "required_review": incident.required_review,
+                "owner": incident.owner,
+                "decision": incident.decision,
+                "follow_up_date": incident.follow_up_date,
+                "linked_evaluation_id": incident.linked_evaluation_id,
+            }
+            for incident in incidents
+        ],
+    )
+
+
+def governance_decision(incidents: list[Incident]) -> str:
+    if any(incident.severity == "high" for incident in incidents):
+        return "pause"
+    if any(incident.decision == "update" for incident in incidents):
+        return "update"
+    if incidents:
+        return "monitor"
+    return "continue"
+
+
+def write_governance_decision(path: Path, incidents: list[Incident]) -> None:
+    decision = governance_decision(incidents)
+    incident_ids = ", ".join(incident.incident_id for incident in incidents)
+    evaluation_ids = ", ".join(
+        sorted({incident.linked_evaluation_id for incident in incidents} | {"SCP-EV-005", "SCP-EV-006"})
+    )
+    high_count = sum(1 for incident in incidents if incident.severity == "high")
+    medium_count = sum(1 for incident in incidents if incident.severity == "medium")
+
+    path.write_text(
+        f"""# Governance decision
+
+Case ID: `{CASE_ID}`
+
+{SAFETY_BOUNDARY}
+
+## Decision
+
+Decision: `{decision}`
+
+This decision does not authorize deployment, clinical use,
+medical advice, or clinical decision support. It records the
+synthetic governance response for the case study.
+
+## Evidence reviewed
+
+- Incident artifact: `outputs/incidents.csv`
+- Evaluation artifact: `outputs/evaluation_registry.csv`
+- Linked incident IDs: {incident_ids}
+- Linked evaluation IDs: {evaluation_ids}
+
+## Incident summary
+
+- Total incidents: {len(incidents)}
+- High severity incidents: {high_count}
+- Medium severity incidents: {medium_count}
+
+## Rationale
+
+The default case is paused because high-severity synthetic
+monitoring signals require review before any deployment-readiness
+claim. Missing local validation and unresolved evidence gaps
+also block any clinical-use claim.
+
+## Required follow-up
+
+- Review drift and calibration assumptions.
+- Review workflow burden before adding alert variants.
+- Review negative-control and proxy-label warnings.
+- Regenerate the safety case after changes.
+
+## Evidence references
+
+Primary citation IDs: E001, E002, E003, E007, E009, E010, E027.
+""",
+        encoding="utf-8",
     )
 
 
@@ -528,6 +789,7 @@ def generate_case(output_dir: Path) -> list[Path]:
     output_dir.mkdir(parents=True, exist_ok=True)
     cohort = generate_cohort()
     monitoring = generate_monitoring_stream()
+    incidents = generate_incidents(cohort, monitoring)
     paths = {
         "synthetic_cohort": output_dir / "synthetic_cohort.csv",
         "target_trial": output_dir / "target_trial_spec.md",
@@ -536,6 +798,8 @@ def generate_case(output_dir: Path) -> list[Path]:
         "audit_log": output_dir / "workflow_audit_log.csv",
         "monitoring_stream": output_dir / "monitoring_stream.csv",
         "monitoring_report": output_dir / "monitoring_report.md",
+        "incidents": output_dir / "incidents.csv",
+        "governance_decision": output_dir / "governance_decision.md",
         "evaluation_registry": output_dir / "evaluation_registry.csv",
     }
     write_cohort(paths["synthetic_cohort"], cohort)
@@ -545,6 +809,8 @@ def generate_case(output_dir: Path) -> list[Path]:
     write_audit_log(paths["audit_log"], cohort)
     write_monitoring_stream(paths["monitoring_stream"], monitoring)
     write_monitoring_report(paths["monitoring_report"], monitoring)
+    write_incidents(paths["incidents"], incidents)
+    write_governance_decision(paths["governance_decision"], incidents)
     write_evaluation_registry(paths["evaluation_registry"])
     return list(paths.values())
 

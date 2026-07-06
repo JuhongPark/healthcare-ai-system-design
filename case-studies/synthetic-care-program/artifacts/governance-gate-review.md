@@ -18,7 +18,7 @@ support, real-world monitoring, or use with real patient data.
 
 - Release: documentation and synthetic example release.
 - Monitoring: generated monitoring report only.
-- Update: future failure-first incident workflow.
+- Update: generated failure-first incident workflow.
 - Pause: required if outputs imply real clinical use.
 - Rollback: required if safety boundaries are removed.
 - Retirement: required if the flagship case is replaced.
@@ -30,7 +30,7 @@ support, real-world monitoring, or use with real patient data.
 - Interface contract: `artifacts/interface-contract.md`.
 - Evaluation registry entries: `outputs/evaluation_registry.csv`.
 - Monitoring report: `outputs/monitoring_report.md`.
-- Known incidents: future milestone.
+- Known incidents: `outputs/incidents.csv`.
 
 ## Decision criteria
 
@@ -39,7 +39,7 @@ support, real-world monitoring, or use with real patient data.
 - Limitations are visible: yes.
 - Evaluation stage is stated: yes.
 - Owner is named: yes.
-- Next review date is set: before incident workflow milestone.
+- Next review date is set: before safety-case report milestone.
 
 ## Risks and mitigations
 
@@ -48,8 +48,7 @@ support, real-world monitoring, or use with real patient data.
 - Mitigation: preserve safety boundaries in generated outputs
   and tests.
 - Residual risk: readers may overinterpret the dashboard.
-- Required follow-up: generate incidents, governance decision,
-  and safety-case report.
+- Required follow-up: generate the safety-case report and tests.
 
 ## Outcome
 
