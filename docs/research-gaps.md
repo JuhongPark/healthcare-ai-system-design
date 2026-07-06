@@ -14,9 +14,15 @@ supports a stronger story in which the same synthetic clinical
 program moves from evidence design, to workflow display, to
 post-deployment monitoring.
 
-Next work: create a `case-studies/synthetic-care-program/`
-folder that links one synthetic dataset, one analysis, one
-dashboard, one monitoring report, and one governance review.
+Completed foundation: `case-studies/synthetic-care-program/`
+now links one synthetic dataset, one evidence-design report, one
+dashboard, one monitoring report, one incident table, one
+governance decision, one safety-case report, and one evaluation
+registry.
+
+Next work: deepen the case with richer target-trial sensitivity
+sections, dashboard variants, proxy-label audit, and more
+realistic synthetic data adapters.
 
 ### Data and model documentation
 
@@ -143,22 +149,29 @@ pharma prototype design.
 
 Completed:
 
+- Major improvement milestones are saved in
+  `docs/major-improvement-milestones.md`.
+- Safety-case thesis and object model are defined in
+  `docs/project-thesis.md` and `docs/safety-case-framework.md`.
+- The flagship executable case lives in
+  `case-studies/synthetic-care-program/`.
 - Shared templates for data cards, model cards, interface
   contracts, evaluation registry, and governance gate reviews.
 - First-pass application of those artifacts to the three
   existing executable prototypes.
 - Automated tests that check artifact presence, safety language,
-  evaluation registry columns, and citation ID validity.
+  evaluation registry columns, citation ID validity, and the
+  synthetic safety-case workflow.
 
 Next:
 
-1. Expand the RWE prototype with target-trial and sensitivity
+1. Expand the flagship case with richer target-trial sensitivity
    design sections.
-2. Expand the monitoring loop with incident and governance
-   actions.
-3. Add CDS dashboard variants for workflow comparison.
-4. Add a proxy-label fairness audit.
-5. Add the first public-data pharma prototype.
+2. Add CDS dashboard variants for workflow comparison.
+3. Add a proxy-label fairness audit.
+4. Add a realistic synthetic data adapter.
+5. Add the first public-data pharma prototype after the
+   healthcare safety case remains stable.
 
 This order keeps the repository aligned with the literature:
 make the system spine explicit before adding larger or more

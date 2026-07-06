@@ -1,19 +1,25 @@
 # Healthcare AI System Design
 
 Research on how AI and data systems can be designed, evaluated,
-and deployed in healthcare workflows.
+monitored, and governed in healthcare workflows.
 
 ## Repository purpose
 
 This repository is a research and prototyping workspace for
-healthcare AI system design. The unit of analysis is the full
-system: data, model, workflow, interface, monitoring,
-governance, and organizational ownership.
+healthcare AI safety-case design. The unit of analysis is the
+full system: data, model, workflow, interface, monitoring,
+incidents, governance, and organizational ownership.
 
 The repository does not contain clinical tools, medical advice,
 protected health information, private patient data, or validated
 decision-support products. Prototypes use synthetic, simulated,
 or public data only.
+
+The flagship artifact is an executable synthetic safety case:
+`case-studies/synthetic-care-program/`. It shows how evidence
+design, workflow display, monitoring, incidents, governance
+decisions, and a safety-case report can be linked through one
+synthetic lifecycle.
 
 ## Tracks
 
@@ -72,6 +78,8 @@ or public data only.
 - `docs/safety-case-framework.md` — object model for synthetic
   safety cases, incidents, evidence, hazards, and governance
   decisions.
+- `case-studies/synthetic-care-program/` — executable flagship
+  safety case.
 - `docs/research-gaps.md` — evidence-based gaps and next
   development sequence.
 - `docs/major-improvement-milestones.md` — flagship improvement
@@ -87,10 +95,27 @@ or public data only.
   evaluation-registry, and governance gate artifacts.
 - `docs/system-design-framework.md` — a reusable design
   question framework for healthcare AI systems.
-- `prototypes/` — executable or planned sketches that make
-  selected design questions concrete.
+- `prototypes/` — component sketches that feed the safety-case
+  approach.
 
-## Current prototype priorities
+## Flagship case study
+
+Run the end-to-end synthetic safety case with:
+
+```bash
+python case-studies/synthetic-care-program/run_case.py
+```
+
+The command regenerates a synthetic cohort, target trial
+specification, evidence report, dashboard, audit log, monitoring
+stream, monitoring report, incident table, governance decision,
+safety-case report, and evaluation registry.
+
+The default generated conclusion is **not ready for deployment**.
+That is the point: the case demonstrates lifecycle evidence and
+governance reasoning, not clinical validity.
+
+## Component prototype priorities
 
 1. Synthetic real-world-evidence analysis for treatment-outcome
    questions. Implemented in `prototypes/rwe-drug-efficacy-sketch/`.

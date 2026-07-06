@@ -1,7 +1,9 @@
 # Prototypes
 
 This directory holds prototype sketches. Each sketch exists to
-make a specific design question concrete.
+make a specific design question concrete. Prototypes are now
+component sketches for the executable safety-case direction in
+`case-studies/`.
 
 ## Philosophy
 
@@ -49,16 +51,17 @@ Each prototype directory should contain, at minimum:
 
 - `rwe-drug-efficacy-sketch/` — prototype for Track 1 questions
   about observational treatment-outcome analysis on synthetic
-  data. Includes a synthetic cohort generator, an analysis
-  script, example outputs, and tests.
+  data. It informs target-trial and evidence-design sections in
+  the flagship safety case.
 - `cds-risk-dashboard/` — prototype for Track 3 questions about
   workflow-aware decision support on synthetic patient-like
-  data. Includes a static dashboard generator, example audit
-  output, committed HTML output, and tests.
+  data. It informs dashboard and audit-log sections in the
+  flagship safety case.
 - `monitoring-loop-sketch/` — prototype for Track 4 questions
   about input drift, outcome incidence, calibration, and
-  monitoring escalation on a synthetic stream. Includes a report
-  generator, example outputs, and tests.
+  monitoring escalation on a synthetic stream. It informs
+  monitoring, incident, and governance sections in the flagship
+  safety case.
 
 Current executable prototypes are research artifacts, not
 validated tools. Their `artifacts/` directories are part of the
