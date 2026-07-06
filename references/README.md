@@ -35,3 +35,9 @@ author of the note) did and did not understand.
 - `reading-list.md` — reading list organized by the same
   categories as `docs/literature-map.md`. Populated as entries
   are added.
+- `evidence-matrix.csv` — source-by-source claim, implication,
+  track, prototype, and verification status table.
+- `annotated-bibliography.md` — short source annotations focused
+  on design implications for this repository.
+- `claim-to-citation-map.md` — repository-level claims mapped to
+  supporting citations and resulting design requirements.
