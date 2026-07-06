@@ -48,7 +48,8 @@ support, real-world monitoring, or use with real patient data.
 - Mitigation: preserve safety boundaries in generated outputs
   and tests.
 - Residual risk: readers may overinterpret the dashboard.
-- Required follow-up: generate the safety-case report and tests.
+- Required follow-up: add automated tests for the generated
+  safety-case report.
 
 ## Outcome
 
@@ -56,7 +57,7 @@ support, real-world monitoring, or use with real patient data.
 - Rationale: suitable as a synthetic lifecycle traceability
   sketch.
 - Owner: repository maintainer.
-- Follow-up date: before safety-case report generation.
+- Follow-up date: before safety-case test coverage.
 
 ## Evidence references
 

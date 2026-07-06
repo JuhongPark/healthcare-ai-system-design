@@ -5,3 +5,4 @@ synthetic-care-program,cds-dashboard,SCP-EV-003,workflow-interface-review,SCP-00
 synthetic-care-program,monitoring-report,SCP-EV-004,monitoring-review,SCP-001,monthly monitoring summary,present,continue,complete,repository,E001;E002;E003;E010,Monitoring output is synthetic and not operating policy.
 synthetic-care-program,incidents,SCP-EV-005,incident-review,SCP-001,failure-first incidents,present,pause,complete,repository,E001;E002;E003;E007;E010,Default run generates incidents for governance review.
 synthetic-care-program,governance-decision,SCP-EV-006,governance-review,SCP-001,decision references incidents,present,pause,complete,repository,E001;E007;E009;E010;E027,Governance decision blocks deployment authorization.
+synthetic-care-program,safety-case-report,SCP-EV-007,safety-case-review,SCP-001,deployment readiness conclusion,not ready,pause,complete,repository,E001;E005;E006;E007;E010;E027,Safety case lists missing evidence and blocks deployment.

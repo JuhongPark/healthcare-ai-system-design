@@ -42,10 +42,10 @@ python case-studies/synthetic-care-program/run_case.py --output-dir /tmp/synthet
 - `incidents.csv` — failure-first incident table.
 - `governance_decision.md` — decision record linked to
   incidents and evaluation rows.
+- `safety_case.md` — generated safety-case report.
 - `evaluation_registry.csv` — traceability registry for checks.
 
-Later milestones extend this case with a generated safety-case
-report.
+The default generated safety case does not authorize deployment.
 
 ## Evidence references
 

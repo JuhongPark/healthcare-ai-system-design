@@ -563,6 +563,20 @@ def write_evaluation_registry(path: Path) -> None:
                 "citation_ids": "E001;E007;E009;E010;E027",
                 "notes": "Governance decision blocks deployment authorization.",
             },
+            {
+                "prototype": "synthetic-care-program",
+                "artifact": "safety-case-report",
+                "evaluation_id": "SCP-EV-007",
+                "stage": "safety-case-review",
+                "data_version": CASE_ID,
+                "metric_or_check": "deployment readiness conclusion",
+                "result": "not ready",
+                "decision": "pause",
+                "status": "complete",
+                "owner": "repository",
+                "citation_ids": "E001;E005;E006;E007;E010;E027",
+                "notes": "Safety case lists missing evidence and blocks deployment.",
+            },
         ],
     )
 
@@ -785,6 +799,120 @@ Primary citation IDs: E001, E002, E003, E007, E009, E010, E027.
     )
 
 
+def write_safety_case(path: Path, incidents: list[Incident]) -> None:
+    decision = governance_decision(incidents)
+    incident_rows = "\n".join(
+        f"| {incident.incident_id} | {incident.severity} | {incident.trigger_metric} | {incident.observed_value} | {incident.decision} | {incident.linked_evaluation_id} |"
+        for incident in incidents
+    )
+    incident_ids = ", ".join(incident.incident_id for incident in incidents)
+    evaluation_ids = ", ".join(
+        sorted(
+            {incident.linked_evaluation_id for incident in incidents}
+            | {"SCP-EV-001", "SCP-EV-002", "SCP-EV-003", "SCP-EV-004", "SCP-EV-005", "SCP-EV-006", "SCP-EV-007"}
+        )
+    )
+
+    path.write_text(
+        f"""# Synthetic healthcare AI safety case
+
+Case ID: `{CASE_ID}`
+
+{SAFETY_BOUNDARY}
+
+## Deployment-readiness conclusion
+
+Conclusion: **not ready for deployment**.
+
+The generated governance decision is `{decision}`. The decision
+does not authorize deployment, clinical use, medical advice,
+clinical decision support, or use with real patient data.
+
+## System claim reviewed
+
+Claim `SCP-CL-001`: the synthetic system is not ready for
+deployment because lifecycle evidence is incomplete and failure
+signals require review.
+
+Claim status: supported.
+
+## Supporting evidence
+
+- Target trial specification: `outputs/target_trial_spec.md`.
+- Evidence report: `outputs/evidence_report.md`.
+- Dashboard: `outputs/cds_dashboard.html`.
+- Workflow audit log: `outputs/workflow_audit_log.csv`.
+- Monitoring report: `outputs/monitoring_report.md`.
+- Incident table: `outputs/incidents.csv`.
+- Governance decision: `outputs/governance_decision.md`.
+- Evaluation registry: `outputs/evaluation_registry.csv`.
+
+Linked incident IDs: {incident_ids}
+
+Linked evaluation IDs: {evaluation_ids}
+
+## Missing evidence
+
+- Real data provenance and data-quality review.
+- External validation.
+- Local validation.
+- Prospective validation.
+- Calibration review using real delayed outcomes.
+- Human-factors and workflow-burden evaluation.
+- Subgroup and proxy-label audit with real governance review.
+- Approved change-control and rollback plan.
+
+## Known hazards
+
+- Dataset shift can make monitoring metrics diverge from
+  baseline expectations.
+- Calibration drift can make displayed risk values misleading.
+- Alert burden can increase even for a passive dashboard.
+- Negative-control imbalance can reveal unresolved confounding.
+- Proxy labels can diverge from latent need.
+- A dashboard can look more actionable than its evidence allows.
+
+## Generated incidents
+
+| Incident | Severity | Trigger metric | Observed value | Decision | Linked evaluation |
+| --- | --- | --- | ---: | --- | --- |
+{incident_rows}
+
+## Governance decision
+
+Decision: `{decision}`.
+
+Rationale: high-severity synthetic monitoring incidents and
+missing lifecycle evidence block any deployment-readiness claim.
+The correct next step is review and redesign, not clinical use.
+
+## Open assumptions
+
+- The synthetic data generator is intentionally simplified.
+- Monitoring thresholds are illustrative and not operating
+  policy.
+- The dashboard is a workflow hypothesis, not a validated
+  interface.
+- The evaluation registry demonstrates traceability, not
+  regulatory sufficiency.
+
+## Next required review
+
+1. Review incident root-cause assumptions.
+2. Add richer target-trial and sensitivity sections.
+3. Add workflow variant comparison.
+4. Add proxy-label fairness audit.
+5. Regenerate this safety case after changes.
+
+## Evidence references
+
+Primary citation IDs: E001, E002, E003, E005, E006, E007, E009,
+E010, E019, E020, E027.
+""",
+        encoding="utf-8",
+    )
+
+
 def generate_case(output_dir: Path) -> list[Path]:
     output_dir.mkdir(parents=True, exist_ok=True)
     cohort = generate_cohort()
@@ -800,6 +928,7 @@ def generate_case(output_dir: Path) -> list[Path]:
         "monitoring_report": output_dir / "monitoring_report.md",
         "incidents": output_dir / "incidents.csv",
         "governance_decision": output_dir / "governance_decision.md",
+        "safety_case": output_dir / "safety_case.md",
         "evaluation_registry": output_dir / "evaluation_registry.csv",
     }
     write_cohort(paths["synthetic_cohort"], cohort)
@@ -811,6 +940,7 @@ def generate_case(output_dir: Path) -> list[Path]:
     write_monitoring_report(paths["monitoring_report"], monitoring)
     write_incidents(paths["incidents"], incidents)
     write_governance_decision(paths["governance_decision"], incidents)
+    write_safety_case(paths["safety_case"], incidents)
     write_evaluation_registry(paths["evaluation_registry"])
     return list(paths.values())
 
