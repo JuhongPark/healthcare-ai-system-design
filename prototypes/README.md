@@ -38,6 +38,9 @@ Each prototype directory should contain, at minimum:
   regenerate it;
 - a small example output or report when the prototype is
   executable;
+- an `artifacts/` directory with the relevant data card,
+  model or analysis card, interface contract, evaluation
+  registry, and governance gate review;
 - a visible statement that the output is not medical advice,
   not clinical decision support, and not evidence about real
   patients.
@@ -57,5 +60,9 @@ Each prototype directory should contain, at minimum:
   monitoring escalation on a synthetic stream. Includes a report
   generator, example outputs, and tests.
 
-Both current prototypes are executable sketches. They remain
-research artifacts, not validated tools.
+Current executable prototypes are research artifacts, not
+validated tools. Their `artifacts/` directories are part of the
+prototype, not administrative decoration: they record the safety
+boundary, intended use, evaluation stage, and governance
+decision that make the sketch readable as a system-design
+example.

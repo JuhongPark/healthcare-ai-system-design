@@ -22,16 +22,21 @@ dashboard, one monitoring report, and one governance review.
 
 Datasheets, Model Cards, CONSORT-AI, SPIRIT-AI, DECIDE-AI, and
 WHO guidance all point toward structured documentation. The repo
-has good README caveats, but not reusable documentation
-templates.
+now has reusable documentation templates and first-pass
+prototype artifacts. The remaining gap is to keep those artifacts
+current as prototype behavior changes and to deepen them where a
+prototype becomes more executable.
 
-Next work: add:
+Completed foundation:
 
 - `templates/data-card.md`
 - `templates/model-card.md`
 - `templates/evaluation-registry.csv`
 - `templates/interface-contract.md`
 - `templates/governance-gate-review.md`
+
+Next work: add richer prototype-specific evidence packets when
+the RWE, CDS, monitoring, fairness, and pharma sketches expand.
 
 ### RWE protocol discipline
 
@@ -136,16 +141,24 @@ pharma prototype design.
 
 ## Implementation order
 
-1. Add shared templates for data cards, model cards, interface
-   contracts, evaluation registry, and governance gate reviews.
-2. Apply the templates to the three existing prototypes.
-3. Expand the RWE prototype with target-trial and sensitivity
+Completed:
+
+- Shared templates for data cards, model cards, interface
+  contracts, evaluation registry, and governance gate reviews.
+- First-pass application of those artifacts to the three
+  existing executable prototypes.
+- Automated tests that check artifact presence, safety language,
+  evaluation registry columns, and citation ID validity.
+
+Next:
+
+1. Expand the RWE prototype with target-trial and sensitivity
    design sections.
-4. Expand the monitoring loop with incident and governance
+2. Expand the monitoring loop with incident and governance
    actions.
-5. Add CDS dashboard variants for workflow comparison.
-6. Add a proxy-label fairness audit.
-7. Add the first public-data pharma prototype.
+3. Add CDS dashboard variants for workflow comparison.
+4. Add a proxy-label fairness audit.
+5. Add the first public-data pharma prototype.
 
 This order keeps the repository aligned with the literature:
 make the system spine explicit before adding larger or more

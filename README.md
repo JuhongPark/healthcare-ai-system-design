@@ -75,6 +75,8 @@ or public data only.
   list and short relevance notes.
 - `references/evidence-matrix.csv` — source-by-source claim and
   design-implication map.
+- `templates/` — reusable data-card, model-card, interface,
+  evaluation-registry, and governance gate artifacts.
 - `docs/system-design-framework.md` — a reusable design
   question framework for healthcare AI systems.
 - `prototypes/` — executable or planned sketches that make
@@ -94,3 +96,19 @@ or public data only.
 Each prototype is a research sketch. Outputs illustrate method
 behavior and system-design trade-offs; they do not support
 claims about real patients or real populations.
+
+## Governance artifact spine
+
+The current executable prototypes now carry lightweight
+governance artifacts under each prototype's `artifacts/`
+directory. These artifacts document the data boundary, model-like
+or analysis output, interface contract where relevant,
+evaluation registry entries, and governance gate review where
+relevant.
+
+The artifacts are intentionally small. Their role is to make the
+system boundary visible: synthetic-only data, intended use,
+limitations, evaluation stage, owner, and follow-up decision.
+The structure is backed by the literature synthesis in
+`docs/evidence-base.md` and checked by
+`tests/test_governance_artifacts.py`.
