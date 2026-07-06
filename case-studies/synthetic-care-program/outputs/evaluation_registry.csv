@@ -1,0 +1,5 @@
+prototype,artifact,evaluation_id,stage,data_version,metric_or_check,result,decision,status,owner,citation_ids,notes
+synthetic-care-program,synthetic-cohort,SCP-EV-001,data-boundary-review,SCP-001,synthetic safety boundary,present,continue,complete,repository,E007;E019,No real patient data or clinical-use claim.
+synthetic-care-program,target-trial-spec,SCP-EV-002,evidence-design-review,SCP-001,association boundary,present,continue,complete,repository,E008;E011;E012,Causal claims are blocked by missing evidence.
+synthetic-care-program,cds-dashboard,SCP-EV-003,workflow-interface-review,SCP-001,no clinical recommendation language,present,continue,complete,repository,E015;E016;E017;E027,Dashboard is labeled as workflow hypothesis only.
+synthetic-care-program,monitoring-report,SCP-EV-004,monitoring-review,SCP-001,monthly monitoring summary,present,continue,complete,repository,E001;E002;E003;E010,Monitoring output is synthetic and not operating policy.

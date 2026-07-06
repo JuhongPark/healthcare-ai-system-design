@@ -1,0 +1,5 @@
+case_id,audit_event_id,subject_id,displayed_risk_band,user_action,reason_captured,safety_boundary
+SCP-001,SCP-AUD-001,SCP-001-S011,high,reviewed synthetic display,workflow hypothesis review,synthetic only; not medical advice; not clinical decision support
+SCP-001,SCP-AUD-002,SCP-001-S061,high,reviewed synthetic display,workflow hypothesis review,synthetic only; not medical advice; not clinical decision support
+SCP-001,SCP-AUD-003,SCP-001-S033,high,reviewed synthetic display,workflow hypothesis review,synthetic only; not medical advice; not clinical decision support
+SCP-001,SCP-AUD-004,SCP-001-S005,high,reviewed synthetic display,workflow hypothesis review,synthetic only; not medical advice; not clinical decision support
